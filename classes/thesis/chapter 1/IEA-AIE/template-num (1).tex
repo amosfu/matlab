@@ -1,0 +1,943 @@
+% Template article for preprint document class `elsart'
+% SP 2001/01/05
+
+\documentclass[journal,10pt]{elsart}
+
+% Use the option doublespacing or reviewcopy to obtain double line spacing
+% \documentclass[doublespacing]{elsart}
+
+% if you use PostScript figures in your article
+% use the graphics package for simple commands
+% \usepackage{graphics}
+% or use the graphicx package for more complicated commands
+% \usepackage{graphicx}
+% or use the epsfig package if you prefer to use the old commands
+\usepackage{epsfig}
+
+% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+
+\begin{frontmatter}
+
+% Title, authors and addresses
+
+% use the thanksref command within \title, \author or \address for footnotes;
+% use the corauthref command within \author for corresponding author footnotes;
+% use the ead command for the email address,
+% and the form \ead[url] for the home page:
+% \title{Title\thanksref{label1}}
+% \thanks[label1]{}
+% \author{Name\corauthref{cor1}\thanksref{label2}}
+% \ead{email address}
+% \ead[url]{home page}
+% \thanks[label2]{}
+% \corauth[cor1]{}
+% \address{Address\thanksref{label3}}
+% \thanks[label3]{}
+\title{A Fully Bayesian Model Based on Reversible Jump MCMC and Finite Beta Mixtures for Clustering}
+
+% use optional labels to link authors explicitly to addresses:
+
+\author{Nizar Bouguila \corauthref{cor1}} \ead{bouguila@ciise.concordia.ca}, \author{Tarek Elguebaly}
+\ead{t\_elgue@encs.concordia.ca}
+\corauth[cor1]{Corresponding author}
+\address{Concordia Institute for Information Systems Engineering,
+Faculty of Engineering and Computer Science, Concordia University,
+Montreal, Qc, Canada H3G 2W1}
+\begin{abstract}
+The use of mixture models in image and signal processing has proved to be of considerable interest in terms of
+both theoretical development and in their usefulness in several applications.
+Researchers have approached the mixture estimation and selection problem, to model complex datasets,
+with different techniques in the last few years.
+In theory, it is well-known that full Bayesian approaches, to handle this problem, are fully optimal.
+The Bayesian learning allows the incorporation of prior knowledge in a formal coherent way that avoids overfitting problems.
+In this paper, we propose a fully Bayesian approach for finite Beta mixtures learning using
+a Reversible Jump Markov Chain Monte Carlo (RJMCMC) technique which simultaneously allows cluster assignments,
+parameters estimation, and the selection of the optimal number of clusters.
+The adverb ``fully'' is justified by the fact that all parameters of interest in our model
+including number of clusters and missing values are considered as random variables for which priors are specified and posteriors
+are approximated using RJMCMC. Our work is motivated by the fact that Beta mixtures are able to fit any unknown distributional
+shape and then can be considered as a useful class of flexible models to address several problems and applications
+involving measurements and features having well-known marked deviation from the Gaussian shape.
+The usefulness of the proposed approach is confirmed using synthetic mixture data, real data, and through
+an interesting application namely texture classification and retrieval.
+\end{abstract}
+\begin{keyword}
+Beta distribution, mixture modeling, Bayesian analysis, MCMC, reversible jump, Gibbs
+sampling, Metropolis-Hastings, texture classification, retrieval.
+\end{keyword}
+\end{frontmatter}
+%#####################
+\section{Introduction}
+%#####################
+In recent years Bayesian approaches have found an increased interest in the image and signal processing community \cite{Fitzgerald99}.
+An increasingly important topic in statistical signal and image processing is the modeling of non-Gaussian signals, features and data.
+Finite mixture models provide a powerful, flexible and well principled statistical approach and have been commonly used to model complex data in many applications \cite{McLachlan2000}.
+An important problem in mixture modeling is the choice of the components densities.
+In particular, Gaussian mixture models have received a lot of attention.
+As a smooth, bell-shaped distribution that can be completely characterized by its mean and its standard deviation, the Gaussian is in general used and justified for asymptotic reasons (i.e the sample is supposed to be sufficiently large) \cite{Robert2007}.
+Although a Gaussian mixture may provide a reasonable approximation to many real-word distribution, it is certainly not always the best approximation especially in image and signal processing application where we often deal with small samples \cite{Meignen2006}.
+Indeed, there are many phenomena and applications for which the Gaussian model is not realistic (for instance, it is well-known that natural image clutter is generally non-Gaussian).
+Another important problem is the parameters estimation.
+This problem is not straightforward and many deterministic and Bayesian approaches have been proposed.
+In classical deterministic inference, data are taken as random while parameters are taken as fixed and unknown, and the inference is based in general on the likelihood of the data.
+Although deterministic methods have dominated mixture models estimation, many works have shown that severe problems may arise due to singularities and local maxima in the log-likelihood function.
+It is well-known, for instance, that the use of maximum likelihood approaches lead to more complex models and then overfitting \cite{Robert2007}.
+An alternative approach is the use of pure Bayesian techniques which could give better results.
+Indeed, the application of Bayesian inference have been found to be useful in many practical applications in different domains thanks to the development of MCMC methods and techniques.
+The reader interested in the general Bayesian theory is referred to accessible expositions in \cite{Ghosh2006,Robert2007}. \\
+In Bayesian inference, the parameters themselves are considered random and then follow probability distributions \cite{Robert2007}.
+These distributions are called prior distributions and describe our knowledge before considering the data.
+The likelihood is a part of the model used to update our prior beliefs and this update is summarized by the posterior density.
+Moreover, Bayesian inference provides consistent learning frameworks for model uncertainty, through the use of posterior model probabilities, which is fundamental in image processing applications \cite{Wilson1984}.
+Lack of knowledge on the number of clusters is another challenging problem in mixture modeling and considerable efforts already have been made to investigate this important aspect.
+The majority of the approaches that have been proposed separate the estimation and the selection of the number of components (i.e a certain criterion should be compared for different number of clusters) (see, for instance,\cite{McLachlan2000,BouguilaPAMI2007} for interesting discussions and comparisons between different criteria).
+Note, however, that both estimation and selection problems are strongly related and depend heavily on the underlying mixture density components choice. \\
+In this paper, we propose to simultaneously estimate and select finite Beta mixture models using the reversible jump samplers
+introduced by Green \cite{Green1995} and which have been applied successfully for instance to Gaussian
+\cite{Green1997,Marrs1997,Zhang2004,Dellaportas2006}, Poisson \cite{Viallefont2002,Meligkotsidou2007},
+exponential \cite{Robert1999} mixtures, to variable selection \cite{Petros2002}, and to model selection in general \cite{Andrieu1999,Brooks2001}.
+The basic idea of RJMCMC approach is that it is possible to move between parameter subspaces corresponding to statistical models, such as mixture models with different number of components, which offers effective model selection (i.e structure discovery) and produces a good mixing of the Markov chains.
+Using RJMCMC allows us to explore simultaneously both the parameter and model space by treating the number of clusters as a random variable having a prior distribution \footnote{It is noteworthy that other works, that we do not investigate in this paper, have put prior distribution on the number of components (see, for instance, \cite{Roeder1997,Stephens2000Annals,Nobile2004,Nobile2007}).}
+and it does not need to be specified in advance, since it can be automatically adjusted during iterations.
+Our work is motivated by the compactly supported nature of the data generally handled in image and signal processing applications and by the fact that the Beta distribution is able to model any unknown distributional shape generated by this kind of data.
+Despite these advantages, finite Beta mixtures have been largely ignored and relatively less visited avenue of study compared to finite Gaussian mixtures.
+Moreover, it is well-know that any continuous density can be well-approximated by a mixture of Beta distributions (See \cite{Diaconis1985}, for instance, for formal statement and detailed proof).
+For this reason the Beta distribution and mixtures of Beta have been widely used to model expert opinion, as a prior, in Bayesian settings \cite{Gelfand1995,Brooks2001,Berkhof2003}.
+In this work, however, Beta is used as a parent distribution to model directly the data.\\
+This paper is structured as follows. After presenting our hierarchical finite mixture Beta Bayesian framework in Section 2,
+the complete RJMCMC algorithm is discussed and developed in Section 3.
+Section 4 is devoted to the experimental results.
+Finally, some conclusions are drawn in Section 5.
+\section{Bayesian Analysis of Beta Mixture Model}
+\subsection{Finite General Beta Mixture Model}
+\subsubsection{General Beta Distribution}
+If the random variable $x$, where $a<x<b$ and $(a,b) \in \mathbb{R}^2$, follows a general Beta distribution with parameters $\alpha$ and $\beta$, then
+the density function is given by \cite{Kotz1995}:
+\begin{equation}\label{eq1}
+p(x|\alpha,\beta)=\frac{\Gamma(\alpha+\beta)}{(b-a)^{\alpha+\beta-1}\Gamma(\alpha)\Gamma(\beta)}(x-a)^{\alpha-1}(b-x)^{\beta-1}
+\end{equation}
+where $\alpha > 0$ and $\beta > 0$. Note that this distribution is reduced to the well-known Beta when $(a,b)=(0,1)$, which is actually the univariate case of the Dirichlet distribution which has proven high flexibility to model data
+\cite{BouguilaIEEETIP2004}. The mean and variance of the general Beta distribution are given by:
+\begin{equation}\label{eq2}
+m=E(x)=(b-a)\frac{\alpha}{\alpha+\beta}+a
+\end{equation}
+\begin{equation}\label{variance}
+v=Var(x)=(b-a)^2\frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}
+\end{equation}
+Using equation~\ref{eq2}, it is easy to obtain the following location-scale parametrization of the general Beta:
+\begin{equation}
+p(x|m,s)=\frac{\Gamma(s)}{(b-a)^{s-1}\Gamma\big(\frac{s(m-a)}{b-a}\big)\Gamma\big(s(1-\frac{m-a}{b-a})\big)}(x-a)^{\frac{s(m-a)}{b-a}-1}(b-x)^{s(1-\frac{m-a}{b-a})-1}
+\end{equation}
+where $s=\alpha+\beta$ and represents the scale of the distribution and $m$ represents the location. Note that this alternative
+provides interpretable parameters because $m$ and $s$
+represent the mean and a measure of the sharpness of the distribution,
+respectively \cite{MacKay1994}. A large value of $s$
+produces a sharply peaked distribution around the mean $m$.
+And when $s$ decreases, the distribution becomes
+broader. An additional advantage of this
+parametrization is that $m$ lies within the bounded
+space $[a,b]$, leading to an increase in computational efficiency. Therefore, this
+parametrization will be adopted for learning.
+\subsubsection{Finite General Beta Mixture}
+A general Beta mixture with $M$ components is defined as:
+\begin{equation}\label{eq4}
+p(x|\Theta)=\sum_{j=1}^M p(x|m_j,s_j)p_j
+\end{equation}
+where $\{p_j\}$ are the
+mixing proportions which are constrained to be non-negative and sum to one, and $p(x|m_j,s_j)$ is the general Beta distribution. The
+symbol $\Theta=(\xi,P)$ refers to the entire set of parameters to be
+estimated, where $\xi=(m_1,s_1\ldots,m_M,s_M)$, and $P=(p_1,\ldots,p_M)$.\\
+Given a set of data with $N$ observations $\mathcal{X}=\{x_1,\ldots,x_N\}$, the classical approach to estimate the parameters of a mixture model is to maximize the likelihood through the Expectation Maximization (EM) algorithm  which theoretical framework was first introduced in the seminal paper by Dempster et \emph{al.} \cite{Demp1}. The EM, however, guarantees convergence only to a local maximum which quality depends highly on the initialization step (i.e as a deterministic approach the EM gets stuck at local maxima that are not globally optimal). Moreover, it is well-known that estimation approaches based on maximizing the likelihood can cause overfitting by preferring complex models. Many researchers have developed modifications and extensions of the EM algorithm (the interested reader is refereed to \cite{McLachlan1997,Meng1997,Jamshidian1997}) \footnote{In particular the authors in \cite{Jamshidian1997} classify these extensions into three groups: pure, hybrid and EM-type accelerators.}. A detailed discussion about the drawbacks of deterministic estimation in the case of finite Beta mixtures can be found in \cite{Bouguilastat2006}.  EM is based on the idea of explicitly representing the mixture components generating each observation via latent allocation variables $Z_i$, $i=1,\ldots,N$. Each $Z_i$ is an integer in $\{1,\ldots,M\}$ denoting the unknown component from which $x_i$ is drawn. The unobserved (or missing) vector $Z=(Z_1,\ldots,Z_N)$ is generally called the ``membership vector" of the mixture model and its different elements $Z_i$ are supposed to be drawn independently from the distributions
+\begin{equation} \label{Zproba}
+p(Z_i=j)=p_j \quad j=1,\ldots,M.
+\end{equation}
+The same idea has an important role when using Bayesian approaches which are now widely applied as an alternative thanks to modern Bayesian computational tools. Bayesian estimation has become feasible due to the development of simulation-based numerical integration techniques such as Markov chain Monte Carlo (MCMC) methods \cite{Robert2007}. MCMC methods have revolutionized Bayesian statistics by allowing inference for highly complex models which can be treated tractably, albeit numerically, through the simulation of required estimates by running appropriate Markov Chains using specific algorithms such as Gibbs sampler. The Gibbs sampler, however, can be difficult to implement when the conditioning distributions have complicated awkward forms. In this case, solutions include the Metropolis-Hastings algorithm \cite{Robert2007} which we will use in this work. Among the important problems that arise in using Bayesian techniques is the choice of priors. In the following, we present our Bayesian model, the priors that we have considered and the resulting posteriors.
+\subsection{Hierarchical Model, Priors and Posteriors}
+\subsubsection{Hierarchical Model}
+Fully Bayesian analysis considers the number of components $M$ as a parameter in the model for which a conditional distribution should be found.
+Moreover, the unknowns $M$, $\xi$ and $P$, in our mixture model, are regarded as random variables drawn from some prior distributions. The joint distribution of all these variables is
+\begin{equation*}
+p(M,P,Z,\xi,\mathcal{X})=p(M)p(P|M)P(Z|P,M)p(\xi|Z,P,M)p(\mathcal{X}|\xi,Z,P,M)
+\end{equation*}
+A common approach is to impose conditional independencies \cite{Green1997}, $p(\xi|Z,P,M)=p(\xi|M)$ and $p(\mathcal{X}|\xi,Z,P,M)=p(\mathcal{X}|\xi,Z)$, which give us the following joint distribution
+\begin{equation*}
+p(M,P,Z,\xi,\mathcal{X})=p(M)p(P|M)P(Z|P,M)p(\xi|M)p(\mathcal{X}|\xi,Z)
+\end{equation*}
+It is worth mentioning that if we condition on $Z$, the distribution of $x_i$ is simply given by the $Z_{i}$th component in the mixture, $p(\mathcal{X}|\xi,Z)=\prod_{i=1}^Np(x_i|\xi_{Z_i})$. Moreover, an extra layer can be introduced to the hierarchy to represent the model parameters $(M,P,\xi)$ priors, which gives the following final form of the joint distribution
+\begin{equation}\label{finaljoint}
+p(\lambda,\delta,\eta,M,P,Z,\xi,\mathcal{X})=p(\lambda)p(\delta)p(\eta)p(M|\lambda)p(P|M,\delta)p(Z|P,M)p(\xi|M,\eta)\prod_{i=1}^Np(x_i|\xi_{Z_i})
+\end{equation}
+where $\lambda,\delta$ and $\eta$ are the hyperparameters on which $M, P$ and $\xi$ depend, respectively.
+\subsubsection{Priors and Posteriors}
+Let us now define the priors, which we suppose that are all drawn independently \footnote{The choice of a simple independence prior structure is a common assumption taken generally when defining Bayesian models.}, of the different parameters in our hierarchical model. We know that each location $m_{j}$ is defined in the compact support [a,b], then an appealing flexible choice as a prior is a general Beta distribution, with location $\varepsilon$ and scale $\zeta$ common to all components, which was found flexible in real applications. Thus, ${m}_j$ for each component is given the following prior:
+\begin{equation}\label{priorm}
+p({m}_j|\varepsilon,\zeta) \sim  \frac{\Gamma(\zeta)}{(b-a)^{\zeta-1}\Gamma\big(\frac{\zeta(\varepsilon-a)}{b-a}\big)\Gamma\big(\zeta(1-\frac{\varepsilon-a}{b-a})\big)}({m}_j-a)^{\frac{\zeta(\varepsilon-a)}{b-a}-1}(b-{m}_j)^{\zeta(1-\frac{\varepsilon-a}{b-a})-1}
+\end{equation}
+Since $s_j$ control the
+dispersion of the distributions, a common choice as a prior is an
+inverse gamma with shape $\vartheta$ and scale $\varpi$ common to all
+components \cite{Carlin2000}, then
+\begin{equation}\label{priors}
+p(s_j|\vartheta,\varpi) \sim \frac{\varpi^\vartheta\exp(-\varpi/
+s_j)}{\Gamma(\vartheta)s_j^{\vartheta+1}}
+\end{equation}
+using the two previous equations, we have
+\begin{equation}\label{priormeansum}
+p(\xi|M,\eta)=\prod_{j=1}^M p({m}_j|\varepsilon,\zeta)p(s_j|\vartheta,\varpi)
+=\frac{\varpi^{M\vartheta}\Gamma(\zeta)^M\prod_{j=1}^M \frac{\exp(-\varpi/
+s_j)({m}_j-a)^{\frac{\zeta(\varepsilon-a)}{b-a}-1}(b-{m}_j)^{\zeta(1-\frac{\varepsilon-a}{b-a})-1}}{s_j^{\vartheta+1}}}{\Gamma(\vartheta)^M(b-a)^{M(\zeta-1)}\bigg[\Gamma\big(\frac{\zeta(\varepsilon-a)}{b-a}\big)\Gamma\big(\zeta(1-\frac{\varepsilon-a}{b-a})\big)\bigg]^M}
+\end{equation}
+Having this priors in hand, the $\eta$ hyperparameter in equation~\ref{finaljoint} is actually $(\varepsilon,\zeta,\vartheta,\varpi)$. Thus, according to the previous equation and our joint distribution in equation~\ref{finaljoint}, the full conditional posterior distributions for $m_j$ and $s_j$ are
+\begin{eqnarray}\label{posteriormean}
+\nonumber &&p(m_j|\ldots)\propto\prod_{j=1}^M p({m}_j|\varepsilon,\zeta)p(s_j|\vartheta,\varpi)\prod_{i=1}^Np(x_i|\xi_{Z_i})\propto p({m}_j|\varepsilon,\zeta)\prod_{i=1}^Np(x_i|\xi_{Z_i})\\
+\nonumber &\propto& \bigg[\frac{\Gamma(s_j)}{(b-a)^{s_j-1}\Gamma\big(\frac{s(m_j-a)}{b-a}\big)\Gamma\big(s_j(1-\frac{m_j-a}{b-a})\big)}\bigg]^{n_j}\prod_{Z_i=j}\bigg[(x_i-a)^{\frac{s_j(m_j-a)}{b-a}-1}(b-x_i)^{s_j(1-\frac{m_j-a}{b-a})-1}\bigg]\\
+&\times&\frac{\Gamma(\zeta)}{(b-a)^{\zeta-1}\Gamma\big(\frac{\zeta(\varepsilon-a)}{b-a}\big)\Gamma\big(\zeta(1-\frac{\varepsilon-a}{b-a})\big)}({m}_j-a)^{\frac{\zeta(\varepsilon-a)}{b-a}-1}(b-{m}_j)^{\zeta(1-\frac{\varepsilon-a}{b-a})-1}
+\end{eqnarray}
+\begin{eqnarray}\label{posteriorsum}
+\nonumber &&p(s_j|\ldots)\propto\prod_{j=1}^M p({m}_j|\varepsilon,\zeta)p(s_j|\vartheta,\varpi)\prod_{i=1}^Np(x_i|\xi_{Z_i})\propto p(s_j|\vartheta,\varpi)\prod_{i=1}^Np(x_i|\xi_{Z_i})\\
+\nonumber &\propto& \bigg[\frac{\Gamma(s_j)}{(b-a)^{s_j-1}\Gamma\big(\frac{s(m_j-a)}{b-a}\big)\Gamma\big(s_j(1-\frac{m_j-a}{b-a})\big)}\bigg]^{n_j}\prod_{Z_i=j}\bigg[(x_i-a)^{\frac{s_j(m_j-a)}{b-a}-1}(b-x_i)^{s_j(1-\frac{m_j-a}{b-a})-1}\bigg]\\
+&\times&\frac{\varpi^\vartheta\exp(-\varpi/
+s_j)}{\Gamma(\vartheta)s_j^{\vartheta+1}}
+\end{eqnarray}
+where
+$n_j=\sum_{i=1}^N \mathbb{I}_{Z_{i}=j}$ and represents the number of vectors belonging to cluster $j$.\\
+Moreover, we know that the
+vector $P$ is defined on the simplex $\{(p_1,\ldots,p_M):
+\sum_{j=1}^{M-1} p_j< 1\}$, then the typical choice, as a prior, for
+this vector is a  Dirichlet distribution
+with parameters $\delta=(\delta_1,\ldots,\delta_M)$ \cite{Robert2007}
+\begin{equation}\label{Pprior}
+p(P|M,\delta)=\frac{\Gamma(\sum_{j=1}^M\delta_j)}{\prod_{j=1}^{M}\Gamma(\delta_j)}\prod_{j=1}^{M}p_j^{\delta_j-1}
+\end{equation}
+According to equation~\ref{Zproba}, we have also
+\begin{equation}
+p(Z|P,M)=\prod_{j=1}^M p_j^{n_j}
+\end{equation}
+Using the two previous equations and our joint distribution in equation~\ref{finaljoint}, we obtain
+\begin{equation}\label{mixinggeneration}
+p(P|\ldots)\propto p(Z|P,M)p(P|M,\delta)\propto \prod_{j=1}^M p_j^{n_j}\frac{\Gamma(\sum_{j=1}^M\delta_j)}{\prod_{j=1}^{M}\Gamma(\delta_j)}\prod_{j=1}^{M}p_j^{\delta_j-1}\propto\prod_{j=1}^M p_j^{n_j+\delta_j-1}
+\end{equation}
+which is actually proportional to a  Dirichlet distribution with parameters
+$(\delta_1+n_1,\ldots,\delta_M+n_M)$. It is noteworthy that
+the prior and the posterior distributions, $p(P|M,\delta)$ and
+$\pi(P|\ldots)$, are both Dirichlet. In this case we say that
+the Dirichlet distribution is a conjugate prior for the
+mixture proportions. In addition, using equations \ref{Zproba} and \ref{finaljoint}, we have the following posterior for the membership variables
+\begin{equation}\label{posteriormembership}
+p(Z_i=j|\ldots) \propto \frac{p_j\Gamma(s_j)}{(b-a)^{s_j-1}\Gamma\big(\frac{s_j(m_j-a)}{b-a}\big)\Gamma\big(s_j(1-\frac{m_j-a}{b-a})\big)}(x-a)^{\frac{s_j(m_j-a)}{b-a}-1}(b-x)^{s_j(1-\frac{m_j-a}{b-a})-1}
+\end{equation}
+In order to have a more flexible model, we introduce an additional hierarchical level by allowing the hyperparameters
+to follow some selected distributions. The hyperparameters, $\varepsilon$ and $\zeta$, associated with the $m_{j}$ are given uniform
+(we have started by testing a general Beta prior for $\varepsilon$, and the best experimental results were obtained with location equal to $b$ and scale fixed to 2,
+which corresponds actually to a uniform distribution) and inverse Gamma priors, respectively:
+\begin{equation}\label{priorpriorprior11}
+p(\varepsilon) \sim \mathcal{U}_{[a,b]}
+\end{equation}
+\begin{equation}\label{priorprior99}
+p(\zeta|\varphi,\varrho) \sim \frac{\varrho^\varphi\exp(-\varrho/
+\zeta)}{\Gamma(\varphi)\zeta^{\varphi+1}}
+\end{equation}
+Thus, according to these two previous equations and equations~\ref{priormeansum} and \ref{finaljoint}, we have
+\begin{eqnarray}\label{posteriorvarepsilon}
+p(\varepsilon|\ldots)&\propto& p(\varepsilon)\prod_{j=1}^M p({m}_j|\varepsilon,\zeta)\\\nonumber&\propto& \prod_{j=1}^M \frac{\Gamma(\zeta)}{(b-a)^{\zeta-1}\Gamma\big(\frac{\zeta(\varepsilon-a)}{b-a}\big)\Gamma\big(\zeta(1-\frac{\varepsilon-a}{b-a})\big)}({m}_j-a)^{\frac{\zeta(\varepsilon-a)}{b-a}-1}(b-{m}_j)^{\zeta(1-\frac{\varepsilon-a}{b-a})-1}
+\end{eqnarray}
+\begin{eqnarray}\label{posteriorzeta}
+&&p(\zeta|\ldots)\propto p(\zeta|\varphi,\varrho)\prod_{j=1}^M p({m}_j|\varepsilon,\zeta)\\\nonumber&\propto& \frac{\varrho^\varphi\exp(-\varrho/
+\zeta)}{\Gamma(\varphi)\zeta^{\varphi+1}} \prod_{j=1}^M \frac{\Gamma(\zeta)}{(b-a)^{\zeta-1}\Gamma\big(\frac{\zeta(\varepsilon-a)}{b-a}\big)\Gamma\big(\zeta(1-\frac{\varepsilon-a}{b-a})\big)}({m}_j-a)^{\frac{\zeta(\varepsilon-a)}{b-a}-1}(b-{m}_j)^{\zeta(1-\frac{\varepsilon-a}{b-a})-1}
+\end{eqnarray}
+The hyperparameters, $\vartheta$ and $\varpi$, associated with the $s_{j}$ are given inverse Gamma and exponential priors, respectively:
+\begin{equation}\label{priorprior1}
+p(\vartheta|\lambda,\mu) \sim \frac{\mu^\lambda\exp(-\mu/
+\vartheta)}{\Gamma(\lambda)\vartheta^{\lambda+1}}
+\end{equation}
+\begin{equation}\label{priorprior}
+p(\varpi|\phi) \sim \phi \exp(-\phi\varpi)
+\end{equation}
+Thus, according to these two previous equations and equations~\ref{priormeansum} and \ref{finaljoint}, we have
+\begin{equation}\label{posteriorvartheta}
+p(\vartheta|\ldots)\propto p(\vartheta|\lambda,\mu)\prod_{j=1}^M p(s_j|\vartheta,\varpi)\propto \frac{\mu^\lambda\exp(-\mu/
+\vartheta)}{\Gamma(\lambda)\vartheta^{\lambda+1}} \prod_{j=1}^M \frac{\varpi^\vartheta\exp(-\varpi/
+s_j)}{\Gamma(\vartheta)s_j^{\vartheta+1}}
+\end{equation}
+\begin{equation}\label{posteriorvarpi}
+p(\varpi|\ldots)\propto p(\varpi|\phi)\prod_{j=1}^M p(s_j|\vartheta,\varpi)\propto \phi \exp(-\phi\varpi) \prod_{j=1}^M \frac{\varpi^\vartheta\exp(-\varpi/
+s_j)}{\Gamma(\vartheta)s_j^{\vartheta+1}}
+\end{equation}
+For the number of components $M$, which has no particular reason to be fixed in advance, we take as a prior a common choice which is a Uniform $\{1,\ldots,\sigma\}$ distribution, where $\sigma$ is a constant representing the maximum value allowed for $M$.
+Our hierarchical model can be displayed as a directed acyclic graph (DAG) as shown in Fig.~\ref{hierarchy}.
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[height=50mm,width=70mm]{dag.ps}
+\caption{Graphical Model representation of the Bayesian Hierarchical finite general Beta mixture model. Nodes in this graph represent random variables, rounded boxes are fixed hyperparameters, boxes indicate repetition (with the number of repetitions in the lower right) and arcs describe conditional dependencies between variables.
+\label{hierarchy}}
+\end{center}
+\end{figure}
+\section{Reversible Jump MCMC Algorithm}
+\subsection{RJMCMC Move Types}
+Let $\Delta_{M}$ denotes the complete set of unknown variables (i.e the sate variable), $\Delta_{M}=(Z,P,M,\xi,\vartheta,\varpi,\varepsilon,\zeta)$.
+We consider also a countable family of move types, indexed by $t=1,2,\ldots$.
+In our case, and following \cite{Green1997}, the moves consist of:
+(1) updating the mixing parameters, (2) updating the parameters $s$ and $m$, (3) updating $Z$,
+(4) updating the hyperparameters $\vartheta,\varpi,\varepsilon,\zeta$, (5) splitting one component into two, or merging two into one,
+(6) the birth or death of an empty component. In \cite{Green1997} \emph{a sweep} is defined as a complete pass over the six moves and
+is considered as the basis time step of the complete learning algorithm. The first four moves  do not change the dimensionality of the parameter
+vector and are actually classic Gibbs sampling moves. Note, however, that moves (5) and (6) necessitate changing $(\xi,P,Z)$ and changing $M$ by 1.
+The MCMC step representing move (5) takes the form of a Metropolis-Hastings step by proposing a move from a state $\Delta_{M}$ to
+$\Delta_{M}'$ with a target probability distribution (posterior distribution) $p(\Delta_{M}|\mathcal{X})$ and proposal distribution
+$q_t(\Delta_{M},\Delta_{M}')$ for the move $t$. When the current state is $\Delta_M$, a given move $t$ to destination $\Delta_M'$ is
+accepted with probability
+\begin{equation}
+\pi_t(\Delta_M,\Delta_M')=\min \bigg\{1,\frac{p(\Delta_M'|\mathcal{X})q_t(\Delta_M',\Delta_M)}{p(\Delta_M|\mathcal{X})q_t(\Delta_M,\Delta_M')} \bigg\}
+\end{equation}
+When we have a move, lying in a higher dimensional space, from a state $\Delta_M$ to another state $\Delta_M'$, it is possible to implement this move by drawing a vector of continuous random variables $u$, independent of $\Delta_M$ \cite{Green1997}. And the new $\Delta_M'$ state is set through an invertible deterministic function of $\Delta_M$ and $u$: $f(\Delta_M,u)$. Thus, the move acceptance probability is given by
+\begin{equation}\label{acceptanceproba}
+\pi_t(\Delta_M,\Delta_M')=\min \bigg\{1,\frac{p(\Delta_M'|\mathcal{X})r_t(\Delta_M')}{p(\Delta_M|\mathcal{X})r_t(\Delta_M)q(u)}\bigg|\frac{\partial\Delta_M'}{\partial(\Delta_M,u)}\bigg| \bigg\}
+\end{equation}
+where $r_t(\Delta_M)$ is the probability of choosing move type $t$ when in state $\Delta_M$, $q(u)$ is the density function of $u$ and $\bigg|\frac{\partial\Delta_M'}{\partial(\Delta_M,u)}\bigg|$ is the Jacobian function arising from the variable change from $(\Delta_M,u)$ to $\Delta_M'$.
+\subsection{Implementation of the Moves}
+\subsubsection{Gibbs Sampling Moves}
+As we mentioned above the first four moves are classic Gibbs sampling moves. For the first move the mixing parameters are generated from equation~\ref{mixinggeneration}.
+The second move is based on the generation of $m_j$ and $s_j$. It is noteworthy that the sampling of $m_j$ and $s_j$ is more complex,
+since the conditional posteriors given by equations~\ref{posteriormean} and \ref{posteriorsum} do not have known forms.
+Thus, we have used the Metropolis-Hastings algorithm (M-H)  (see, for instance, \cite{Chib1995}, for a detailed introductory exposition and discussions).
+At iteration $t$, the steps of the M-H algorithm, to generate ${s}_j$, can be described as follows
+\begin{enumerate}
+    \item Generate $\tilde{s}_j \sim
+    q({s}_j|{s}_j^{(t-1)})$ and $u \sim \mathcal{U}_{[0,1]}$
+    \item Compute $r=\frac{p(\tilde{{s}}_j|\ldots)q({{s}}_j^{(t-1)}|\tilde{{s}}_j)}{p({s}_j^{(t-1)}|\ldots)q(\tilde{{s}}_j|{{s}}_j^{(t-1)})}$
+    \item If $r < u$ then
+    ${s}_j^{(t)}=\tilde{{s}}_j$ else
+    ${s}_j^{(t)}={s}_j^{(t-1)}$
+\end{enumerate}
+The major problem in this algorithm is the need to choose the
+proposal distribution $q$. The most generic proposal is the random
+walk Metropolis-Hastings algorithm where each unconstrained
+parameter is the mean of the proposal distribution for the new
+value. As $\tilde{s}_{j} >0$, we have chosen the
+following proposal $\tilde{{s}}_j \sim \mathcal{L}\mathcal{N}(\log({s}_j^{(t-1)}),e^2)$,
+where $\mathcal{L}\mathcal{N}(\log({s}_j^{(t-1)}),e^2)$
+refers to the log-normal distribution with mean
+$\log({s}_j^{(t-1)})$ and variance $e^2$. Note that this is actually equivalent
+to $\log(\tilde{s}_{j})=
+\log(s_{j}^{(t-1)})+\epsilon_{j}$,
+where $\epsilon_{j} \sim \mathcal{N}(0,e^2)$. In the case of $m_{j}$ we have opted for general Beta proposals, centered at the current values, to assure that $m_{j} \in [a,b]$. With
+these proposals the  M-H algorithm, to generate $m_{j}$, is composed of the
+following steps:
+\begin{enumerate}
+    \item Generate $\tilde{{m}}_{j}\sim
+\mathcal{B}({m}_{j}^{{(t-1)}},S)$ and $u
+\sim
+    \mathcal{U}_{[0,1]}$.
+    \item Compute $r=\frac{p({\tilde{m}}_{j}|\ldots)
+\mathcal{B}({m}_{j}^{{(t-1)}}|{\tilde{m}}_{j},S)}{p(m_{j}^{(t-1)}|\ldots)\mathcal{B}(\tilde{m}_{j}|{m}_{j}^{{(t-1)}},S)}$
+    \item If $r < u$ then
+    ${m}_{j}^{{(t)}}={\tilde{m}}_{j}$ else
+    ${m}_{j}^{{(t)}}={m}_{j}^{{(t-1)}}$
+\end{enumerate}
+where $\mathcal{B}({m}_{jl}^{{(t-1)}},S)$ is a general Beta distribution with location ${m}_{j}^{{(t-1)}}$ and scale $S$.
+The third move is based on the
+generation of the missing data $Z_i, i=1,\ldots,N$ from standard uniform random variables $r_n$, where $Z_i=j$ if
+$p(Z_i=1|\ldots)+\ldots,p(Z_i=j-1|\ldots) < r_n \leq p(Z_i=1|\ldots)+\ldots+p(Z_i=j|\ldots)$ (see equation~\ref{posteriormembership}) \cite{Zhang2004}.
+The
+fourth move consists of updating the hyperparameters $\vartheta,\varpi,\varepsilon,\zeta$. The posterior distribution of $\varepsilon$, $\zeta$, $\vartheta$ and $\varpi$,
+given by equations~\ref{posteriorvarepsilon}, \ref{posteriorzeta}, \ref{posteriorvartheta} and \ref{posteriorvarpi}, respectively, are not of standard forms.
+However, it is possible to show that they are log-concave \cite{Applegate1991} (i.e it is straightforward to show that the second derivatives of the logarithms of these functions are negative), then the samples generation
+is based on the adaptive rejection sampling (ARS)
+\cite{Gilks1993}.
+\subsubsection{Split and Merge Moves}
+In move (5), we have to choose between splitting or merging a given component with probabilities $a_M$ and $b_M=1-a_M$, respectively, depending on $M$.
+Note that $b_1=0$ and $a_{\sigma}=0$ (recall that $\sigma$ is a constant representing the maximum value allowed for $M$), otherwise $a_M=b_M=0.5$.
+The merging proposal works as follows: choose two components $j_1$ and $j_2$, where $m_{j_1}<m_{j_2}$ with no other $m_j \in [m_{j_1},m_{j_2}]$ (i.e adjacency condition).
+If these components are merged, we reduce $M$ by 1, which forms a new components $j*$ containing all the observation previously allocated to $j_1$ and $j_2$ and then creates values for $p_{j*},s_{j*},m_{j*}$, by preserving the first two moments, as follows (see Appendix~\ref{appendix1})
+\begin{equation}\label{merge1}
+p_{j*}=p_{j_1}+p_{j_2}
+\end{equation}
+\begin{equation}\label{merge2}
+m_{j*}=\frac{p_{j_1}m_{j_1}+p_{j_2}m_{j_2}}{p_{j_1}+p_{j_2}}
+\end{equation}
+\begin{equation}\label{merge3}
+s_{j*}=\frac{p_{j*}(m_{j*}-a)(b-m_{j*})}{p_{j_1}\bigg(m_{j_1}^2+\frac{(m_{j_1}-a)(b-m_{j_1})}{s_{j_1}+1}\bigg)+p_{j_2}\bigg(m_{j_2}^2+\frac{(m_{j_2}-a)(b-m_{j_2})}{s_{j_2}+1}\bigg)-p_{j*}m_{j*}^2}-1
+\end{equation}
+When the decision is to split, we choose a component $j*$ at random to define two new components $j_1$ and $j_2$ having weights and parameters $(p_{j_1},m_{j_1},s_{j_1})$ and $(p_{j_2},m_{j_2},s_{j_2})$, respectively, conforming to equations~\ref{merge1}, \ref{merge2} and \ref{merge3}. According to this transformation, there are 3 degrees of freedom, thus we need to generate 3 random numbers $u=(u_1,u_2,u_3)$ drawn from Beta distributions with parameters $(2,2)$, $(2,2)$ and $(1,1)$, respectively \cite{Green1997}. The split transformations are thus defined as following (see Appendix~\ref{appendix2})
+\begin{equation}\label{split1}
+p_{j_1}=u_1 p_{j*}\qquad p_{j_2}=(1-u_1) p_{j*}
+\end{equation}
+\begin{equation}\label{split2}
+m_{j_1}=m_{j*}-u_2\sqrt{\frac{(m_{j*}-a)(b-m_{j*})p_{j_2}}{(s_{j*}+1)p_{j_1}}} \qquad m_{j_2}=m_{j*}+u_2\sqrt{\frac{(m_{j*}-a)(b-m_{j*})p_{j_1}}{(s_{j*}+1)p_{j_2}}}
+\end{equation}
+\begin{equation}\label{split4}
+s_{j_1}=\frac{(m_{j_1}-a)(b-m_{j_1})}{u_3(1-u_2^2)\frac{(m_{j*}-a)(b-m_{j*})}{s_{j*}+1}\frac{p_{j*}}{p_{j_1}}}-1 \qquad s_{j_2}=\frac{(m_{j_2}-a)(b-m_{j_2})}{(1-u_3)(1-u_2^2)\frac{(m_{j*}-a)(b-m_{j*})}{s_{j*}+1}\frac{p_{j*}}{p_{j_2}}}-1
+\end{equation}
+Note that we have also to check the adjacency condition previously defined for the split move. If this condition passed, then we assign the different $x_i$ previously in $j*$ in $j_1$ or $j_2$ using equation~\ref{posteriormembership} (i.e Bayes rule). If the condition is not satisfied, we reject the move in order to preserve the reversibility of split/combine moves.\\
+Now, we calculate the acceptance probabilities of split and combine moves: $\min\{1, A\}$ and $\min\{1,A^{-1}\}$, where we have the following according to equation~\ref{acceptanceproba}:
+\begin{equation}
+A=\frac{p(Z,P,M+1,\xi,\vartheta,\varpi,\varepsilon,\zeta|\mathcal{X})b_{M+1}}{p(Z,P,M,\xi,\vartheta,\varpi,\varepsilon,\zeta|\mathcal{X})a_{M}P_{alloc}q(u)}\bigg|\frac{\partial\Delta_M'}{\partial(\Delta_M,u)}\bigg|
+\end{equation}
+where $P_{alloc}$ is the probability of making this particular current allocation of data to components $j_1$ and $j_2$:
+\begin{eqnarray}
+\nonumber P_{alloc}&=&\prod_{Z_i=j_1}\frac{p_{j_{1}}p(x_i|m_{j_1},s_{j_1})}{p_{j_{1}}p(x_i|m_{j_1},s_{j_1})+p_{j_{2}}p(x_i|m_{j_2},s_{j_2})}\prod_{Z_i=j_2}\frac{p_{j_{2}}p(x_i|m_{j_2},s_{j_2})}{p_{j_{1}}p(x_i|m_{j_1},s_{j_1})+p_{j_{2}}p(x_i|m_{j_2},s_{j_2})}\\
+&=&\frac{\prod_{Z_i=j_1}p_{j_{1}}p(x_i|m_{j_1},s_{j_1})\prod_{Z_i=j_2}p_{j_{2}}p(x_i|m_{j_2},s_{j_2})}{\prod_{Z_i=j*}p_{j_{1}}p(x_i|m_{j_1},s_{j_1})+p_{j_{2}}p(x_i|m_{j_2},s_{j_2})}
+\end{eqnarray}
+\begin{equation}
+q(u)=p(u_1)p(u_2)p(u_3)
+\end{equation}
+$\frac{p(Z,P,M+1,\xi,\vartheta,\varpi,\varepsilon,\zeta|\mathcal{X})}{p(Z,P,M,\xi,\vartheta,\varpi,\varepsilon,\zeta|\mathcal{X})}$
+is developed in Appendix~\ref{appendix3} and it is straightforward to show that
+$\bigg|\frac{\partial\Delta_M'}{\partial(\Delta_M,u)}\bigg|$ is given by
+\begin{equation}
+\bigg|\frac{\partial\Delta_M'}{\partial(\Delta_M,u)}\bigg|=\bigg|\frac{\partial (p_{j_1},p_{j_2},m_{j_1},m_{j_2},s_{j_1},s_{j_2})}{\partial (u_1,p_{j*},m_{j*},u_2,s_{j*},u_3)}\bigg|=p_{j*}\frac{(m_{j_2}-m_{j_1})(s_{j_1}+1)(s_{j_2}+1)}{u_2(1-u_2^2)u_3(1-u_3)(s_{j*}+1)}
+\end{equation}
+which is the Jacobian that arises from transforming $(u_1,p_{j*},m_{j*},u_2,s_{j*},u_3)$ to $(p_{j_1},p_{j_2},m_{j_1},m_{j_2},s_{j_1},s_{j_2})$.
+\subsubsection{Birth and Death Moves}
+In move (6), birth-and-death, the first step is to choose randomly between birth and death with probabilities $a_M$ and $b_M$ as above.
+The birth step consists in adding a new general Beta component in the mixture by generating its parameters, $m_{j*}$ and $s_{j*}$, from the associated prior distributions given by equations~\ref{priorm} and \ref{priors}, respectively.
+The weight of the new component, $p_{j*}$, is generated from the marginal distribution of $p_{j*}$ derived from the distribution of $P=(p_1,\ldots,p_M,p_{j*})$.
+The vector $P$ follows a Dirichlet with parameters $(\delta_1,\ldots,\delta_{M},\delta_{j*})$ (see equation~\ref{Pprior}),
+thus the marginal of $p_{j*}$ is a Beta distribution with parameters $(\delta_{j*},\sum_{j=1}^M \delta_j)$ \cite{Kotz1995}.
+Note that in order to keep the mixture constraint $\sum_{j=1}^{M} p_j+p_{j*}=1$, the previous weights $p_j, j=1,\ldots,M$ have to be rescaled and then all multiplied by $(1-p_{j*})$.
+The Jacobian corresponding to the birth move is then  $(1-p_{j*})^M$.
+For the opposite move, we choose randomly an existing empty component to delete,
+then of course the remaining weights have to be rescaled to keep the unit-sum constraint.
+The acceptance probabilities of birth and death moves: $\min\{1, A\}$ and $\min\{1,A^{-1}\}$,
+are calculated according to equation~\ref{acceptanceproba} (see Appendix~\ref{appendix5}):
+\begin{equation}
+A=\frac{p(M+1)}{p(M)}\frac{\Gamma(\delta_{j*}+\sum_{j=1}^{M}\delta_j)}{\Gamma(\delta_{j*})\Gamma(\sum_{j=1}^{M}\delta_j)}p_{j*}^{\delta_{j*}-1}(1-p_{j*})^{N+\sum_{j=1}^M\delta_j-M}(M+1)\frac{b_{M+1}}{a_M(M_0+1)}\frac{1}{p(p_{j*})}(1-p_{j*})^M
+\end{equation}
+where $M_0$ is the number of empty components before the birth.
+\section{Experimental results}
+In this section we report results on different interesting applications.
+In the first application, we briefly discuss the results obtained with some artificially generated data sets.
+The discussion will not be very detailed since, the experiments with generated data are not as significant as those with real data.
+We investigate the effectiveness of our algorithm by applying it on four well-known real data sets,
+while comparing it to the RJMCMC in the case of Gaussian mixture model \cite{Green1997} in the second application. Last but not least, we demonstrate the usefulness of our algorithm for texture image classification and retrieval.
+In these applications our specific choices for the hyperparameters were $\eta_1=\ldots,\eta_M=1$, ($\varphi, \varrho, \lambda,\mu, \phi$)=(2,5,0.2,2,1),
+$S$ and $e^2$ (in the M-H algorithms) were set to 2 and 0.01, respectively, and $\sigma$ (the maximum value allowed for $M$) was set to 30.
+\subsection{Synthetic Data Sets}
+We dedicate this section for the analysis of generated data.
+The goal of this section is to investigate if our algorithm is able to: estimate the mixture parameters and select the number of clusters effectively.
+We generated 100 data sets using different parameters and number of clusters, in order to investigate the method on a wide range of data.
+Applying our methods on these data sets, we found that it was able to identify the right number of clusters in 96\% of the cases
+as shown in table~\ref{tab1}.
+For the 4\% wrongly modeled data sets, we can notice that they were fitted with a smaller number of components.
+It is noteworthy that in each of these four cases the probabilities for the right number of components were quite close to the ones chosen.
+\begin{table}[ht!]
+\begin{center}
+\caption{Summary of the results for the 100 generated data sets. $\hat{M}$ denotes the obtained number of clusters. \label{tab1}}
+\tiny
+\begin{tabular}{|c| c| c| c| c| c| c| c|}
+  \hline
+Number of clusters $M$ & Number of datasets & $\hat{M}=2$ & $\hat{M}=3$ & $\hat{M}=4$  & $\hat{M}=5$ & $\hat{M}=6$ & $\hat{M}=7$ \\
+\hline
+$M$=2 &$25$ &$100\%$ &$0\%$ &$0\%$ &$0\%$ &$0\%$&$0\%$\\
+$M$=3 &$20$&$0\%$ &$100\%$ &$0\%$ &$0\%$ &$0\%$&$0\%$\\
+$M$=4 &$15$ &$0\%$ &$6.67\%$ &$92.23\%$ &$0\%$ &$0\%$&$0\%$\\
+$M$=5 &$15$ &$0\%$ &$0\%$ &$0\%$ &$100\%$ &$0\%$&$0\%$\\
+$M$=6 &$15$ &$0\%$ &$0\%$ &$6.67\%$ &$6.67\%$ &$86.66\%$&$0\%$\\
+$M$=7 &$10$ &$0\%$ &$0\%$ &$0\%$&$0\%$ &$10\%$&$90\%$\\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+We choose four data sets for more in details inspection.
+The real and estimated parameters for these data sets are given in table~\ref{tab2}, and the real and estimated histograms are drawn in Fig.~\ref{fig:3}.
+According to these results it is clear that our algorithm has very good learning capabilities.
+\begin{table}[ht!]
+\begin{center}
+\caption{Parameters of four different generated data sets. $N$
+represents the number of elements in each data set. $m_j$, $s_j$, and $p_j$ are the real parameters. $\hat{m}_j$,
+$\hat{s}_j$, and $\hat{p}_j$ are the estimated
+parameters. \label{tab2}}
+\tiny
+\begin{tabular}{|c| c| c| c| c| c| c| c| }
+  \hline
+&$j$ &$m_j$ &$s_j$&$p_j$ &$\hat{m}_j$&$\hat{s}_j$&$\hat{p_j}$\\
+\hline
+Data 1 {(\textbf{\emph{N}}=3365)} &$1$ &$2.00$ &$10.00$ &$0.60$ &$1.94$ &$12.31$&$0.57$\\
+&$2$ &$5.00$ &$19.00$ &$0.40$ &$4.90$ &$17.71$&$0.43$\\
+\hline
+Data 2 {(\textbf{\emph{N}}=3647)} &$1$ &$1.00$ &$12.00$ &$0.35$ &$0.90$ &$15.11$&$0.34$\\
+ &$2$ &$3.50$ &$22.00$ &$0.35$ &$3.35$ &$26.00$&$0.35$\\
+ &$3$ &$6.00$ &$13.00$ &$0.30$ &$5.90$ &$16.57$&$0.31$\\
+ \hline
+Data 3 {(\textbf{\emph{N}}=3703)} &$1$ &$1.00$ &$15.00$ &$0.10$ &$1.17$ &$18.90$&$0.11$\\
+ &$2$ &$3.00$ &$14.00$ &$0.30$ &$3.01$ &$12.70$&$0.28$\\
+ &$3$ &$5.00$ &$19.00$ &$0.20$ &$4.85$ &$18.79$&$0.20$\\
+ &$4$ &$6.50$ &$17.00$ &$0.40$ &$6.51$ &$23.40$&$0.41$\\
+  \hline
+Data 4 {(\textbf{\emph{N}}=3706)} &$1$ &$1.00$ &$15.00$ &$0.10$ &$1.11$ &$19.22$&$0.12$\\
+ &$2$ &$2.00$ &$25.00$ &$0.20$ &$2.03$ &$23.91$&$0.19$\\
+ &$3$ &$4.00$ &$14.00$ &$0.30$ &$3.82$ &$15.83$&$0.28$\\
+ &$4$ &$5.00$ &$19.00$ &$0.20$ &$5.14$ &$19.05$&$0.21$\\
+ &$5$ &$6.50$ &$17.00$ &$0.20$ &$6.53$ &$16.69$&$0.20$\\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+\begin{figure}[!h]
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[height=5.5cm]{Firstdataset.ps} & \includegraphics[height=5.5cm]{Seconddataset.ps}\\
+(a)&(b)\\
+\includegraphics[height=5.5cm]{Thirddataset.ps} & \includegraphics[height=5.5cm]{Fourthdataset.ps}\\
+(c)&(d)\\
+\end{tabular}
+\end{center}
+\caption{Real and estimated histograms for four generated data
+sets. (a) a 2 components mixture,
+(b) a 3 components mixture, (c) a 4 components mixture, (d) a 5 components mixture.}\label{fig:3}
+\end{figure}
+\subsection{Real Data Sets}
+We devote this section for real data modeling and analysis.
+We apply our algorithm on four standard widely used data sets: enzyme, acidity, galaxy, and stamp \footnote{http://www.maths.uq.edu.au/$\sim$gjm/DATA/mmdata.html}.
+The first data describes an enzymatic activity in the blood among a group of 245 unrelated individuals,
+and the second one is an acidity index measured in a sample of 155 lakes in the northeastern United States.
+The third one consists of the velocities of 82 distant galaxies, diverging from our own galaxy,
+as for the last data set it consists of thickness of 485 postage stamps produced in Mexico.
+The enzyme data set was analyzed in several research papers such as in \cite{Bechtel1993} where it was modeled by two skewed distributions,
+and in \cite{Green1997} where the use of three to five Gaussian components was favored.
+For the acidity data and Galaxy data sets, three to five components were generally identified \cite{Green1997}.
+The 1872 Hidalgo postage stamps of Mexico data set was introduced in \cite{Izenman1988} and has been used in several research papers
+(see, for instance, \cite{Basford1997,Yang2002}) which identified seven and three components Gaussian model with equal and unequal variances, respectively.
+Using these four datasets we compared our model to the one in \cite{Green1997}.
+In all the runs the number of components has never exceeded fifteen. Estimated posterior probabilities of the number of components given the data for the four data are given in table~\ref{tab3}.
+\begin{table}[ht!]
+\begin{center}
+\caption{Estimated posterior probabilities of the number of components given the data for the four data sets, with percentage of accepted Split-Combine, and Birth-Death moves.\label{tab3}}
+\tiny
+\begin{tabular}{|c| c| c| c| c| }
+  \hline
+Data set&$N$ &$p(k|\mathcal{X})$ & Proportion (\%) of Split &  Proportion (\%) of Birth\\
+&&&-Combine moves accepted&-Death moves accepted\\
+\hline
+Enzyme &$245$ & $p(1|\mathcal{X})=0.0000$ $p(2|\mathcal{X})=0.1712$ $p(3|\mathcal{X})=0.4152$ $p(4|\mathcal{X})=0.3782$ &6.68\%&3.02\% \\
+&& $p(5|\mathcal{X})=0.0341$ $\sum_{{k}\geq{6}}^{\sigma}p(k|\mathcal{X})=0.0013$ &&\\
+\hline
+Acidity &$155$ & $p(1|\mathcal{X})=0.0000$ $p(2|\mathcal{X})=0.4307$ $p(3|\mathcal{X})=0.3354$ $p(4|\mathcal{X})=0.1942$ &10.17\%&7.52\% \\
+&& $p(5|\mathcal{X})=0.0231$$p(6|\mathcal{X})=0.0154$ $\sum_{{k}\geq{7}}^{\sigma}p(k|\mathcal{X})=0.0012$&&\\
+ \hline
+Galaxy &$82$ &$p(1|\mathcal{X})=0.0000$ $p(2|\mathcal{X})=0.0010$ $p(3|\mathcal{X})=0.0210$ $p(4|\mathcal{X})=0.2031$ && \\
+&& $p(5|\mathcal{X})=0.3671$$p(6|\mathcal{X})=0.0798$ $p(7|\mathcal{X})=0.3167$ $p(8|\mathcal{X})=0.0094$ & 9.32\%& 16.71\%\\
+&& $\sum_{{k}\geq{9}}^{\sigma}p(k)=0.0019$&&\\
+  \hline
+Stamp &$485$& $p(1|\mathcal{X})=0.0000$ $p(2|\mathcal{X})=0.0000$ $p(3|\mathcal{X})=0.0001$ $p(4|\mathcal{X})=0.5612$ && \\
+&& $p(5|\mathcal{X})=0.3574$$p(6|\mathcal{X})=0.0231$ $p(7|\mathcal{X})=0.0556$ $p(8|\mathcal{X})=0.0012$ &4.87\%&2.16\%\\
+&& $\sum_{{k}\geq{9}}^{\sigma}p(k|\mathcal{X})=0.0014$ &&\\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+For the enzyme data our algorithm favors 3-5 components with maximum posterior probability for three components, same as the GMM, this is due to the fact that the enzyme data are not skewed (see Fig.~\ref{fig:4}) .
+\begin{figure}[!h]
+\begin{center}
+\begin{tabular}{c c}
+\includegraphics[height=5.5cm]{enzymebeta.ps}&\includegraphics[height=5.5cm]{enzymegaussian.ps}\\
+(a)&(b)
+\end{tabular}
+\end{center}
+\caption{Enzyme data modeling when considering the mixtures with the highest probabilities. (a) Beta mixture models, (b) Gaussian mixture models.\label{fig:4}}
+\end{figure}
+For the acidity data set a mixture of two components was chosen as shown in Fig.~\ref{fig:5}. For the galaxy and stamp data sets the data are highly
+skewed and spread which force the algorithm to use a higher number of components,
+for this reason our algorithm supports the use of five components for both data sets (See Figs.~\ref{fig:6} and ~\ref{fig:7}).
+In each case, we can relate the number of components to the skewness to the data.
+Also note that the general Beta can model skewed data which is not the case for the Gaussian,
+and this advantage is demonstrated for the acidity and galaxy datasets where our algorithm favors the use of two and five components, respectively,
+compared to three and six for the GMM (See table~\ref{tab44}). According to the experiments presented here it is clear that the general Beta mixture model
+outperforms the Gaussian one, by representing the data
+effectively with less number of components. This result was already expected due to the fact that the general Beta mixture model is more flexible which
+helps it to represent highly spread and hard to model data.
+\begin{figure}[!h]
+\begin{center}
+\begin{tabular}{c c}
+\includegraphics[height=5.5cm]{aciditybeta.ps}&\includegraphics[height=5.5cm]{aciditygaussian.ps}\\
+(a)&(b)
+\end{tabular}
+\end{center}
+\caption{Acidity data modeling when considering the mixtures with the highest probabilities. (a) Beta mixture models, (b) Gaussian mixture models.}\label{fig:5}
+\end{figure}
+\begin{figure}[!h]
+\begin{center}
+\begin{tabular}{c c}
+\includegraphics[height=5.5cm]{galaxybeta.ps}&\includegraphics[height=5.5cm]{galaxygaussian.ps}\\
+(a)&(b)
+\end{tabular}
+\end{center}
+\caption{Galaxy data modeling when considering the mixtures with the highest probabilities. (a) Beta mixture models, (b) Gaussian mixture models.}\label{fig:6}
+\end{figure}
+\begin{figure}[!h]
+\begin{center}
+\begin{tabular}{c c}
+\includegraphics[height=5.5cm]{stampbeta.ps}&\includegraphics[height=5.5cm]{stampgaussian.ps}\\
+(a)&(b)
+\end{tabular}
+\end{center}
+\caption{Stamp data modeling when considering the mixtures with the highest probabilities. (a) Beta mixture models, (b) Gaussian mixture models.}\label{fig:7}
+\end{figure}
+\begin{table}[ht!]
+\begin{center}
+\caption{Parameters of the mixture models representing the different tested real data sets. $j$ component number. $m_j$, $s_j$, and $p_j$ are the real parameters. $\hat{m}_j$,
+$\hat{s}_j$, and $\hat{p}^{\beta}_j$ are the Beta mixture estimated parameters.  $\hat{\mu}_j$,
+$\hat{\sigma}^{2}_j$, and $\hat{p}^{g}_j$ are the Gaussian mixture estimated parameters\label{tab44}}
+\tiny
+\begin{tabular}{|c| c| c| c| c| c| c| c| }
+  \hline
+&$j$ &$\hat{m}_j$&$\hat{s}_j$&$\hat{p}^{\beta}_j$&$\hat{\mu}_j$&$\hat{\sigma}^{2}_j$&$\hat{p}^{g}_j$\\
+\hline
+&$1$ &$0.1960$ &$64.1054$ &$0.6450$ &$0.1962$ &$0.0078$&$0.6431$\\
+Enzyme&$2$ &$1.1008$ &$42.9680$ &$0.2630$ &$1.1006$ &$0.0448$&$0.2637$\\
+&$3$ &$1.9492$ &$13.4360$ &$0.0920$ &$1.9492$ &$0.1271$&$0.0932$\\
+\hline
+&$1$ &$4.3615$ &$23.7136$ &$0.3500$ &$4.1865$ &$0.0691$&$0.4240$\\
+Acidity &$2$ &$6.3149$ &$11.8544$ &$0.3854$ &$5.0168$ &$0.0868$&$0.2086$\\
+ &$3$ & & & &$6.3926$ &$0.1593$&$0.3674$\\
+ \hline
+ &$1$ &$9.7101$ &$69.0788$ &$0.0854$ &$9.7101$ &$0.1931$&$0.0988$\\
+ &$2$ &$16.1737$ &$106.9899$ &$0.0320$ &$17.5649$ &$1.5392$&$0.1006$\\
+Galaxy &$3$ &$20.0898$ &$109.0967$ &$0.5366$ &$19.9782$ &$0.3540$&$0.3416$\\
+ &$4$ &$24.1064$ &$54.3933$ &$0.3095$ &$22.7039$ &$0.4731$&$0.2692$\\
+ &$5$ &$32.9518$ &$28.1897$ &$0.0366$ &$25.1517$ &$1.2112$&$0.1655$\\
+ &$6$ &$$ &$$ &$$ &$33.0427$ &$1.0256$&$0.0243$\\
+  \hline
+ &$1$ &$0.0705$ &$103.0930$ &$0.2202$ &$0.0710$ &$0.2320\times10^{-4}$&$0.2133$\\
+ &$2$ &$0.0803$ &$129.4502$ &$0.4270$ &$0.0789$ &$0.2392\times10^{-4}$&$0.4152$\\
+Stamp &$3$ &$0.0971$ &$57.5257$ &$0.2094$ &$0.0907$ &$0.2709\times10^{-4}$&$0.1015$\\
+ &$4$ &$0.1140$ &$28.4719$ &$0.1168$ &$0.1016$ &$0.3080\times10^{-4}$&$0.1666$\\
+ &$5$ &$0.1284$ &$580.7500$ &$0.0265$ &$0.1157$ &$0.7166\times10^{-4}$&$0.1035$\\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+\subsection{Texture Images Classification and Retrieval}
+\subsubsection{Approach}
+An interesting difficult problem in image processing is texture analysis.
+Indeed, texture provides important characteristics for surface and object identification (depth and orientation, for instance) in many types of images (satellite, medical, etc.)
+and plays an important role in several applications such as content-based image categorization, browsing and retrieval \cite{Ma1996}.
+Methods for texture analysis can be grouped into four major categories:
+statistical, geometrical, model based and signal processing approaches \cite{Jain1998}.
+An efficient technique for analyzing image textures is the multichannel decomposition approach,
+using the assumption that the energy distribution in the frequency domain identifies texture,
+based on Gabor filters \cite{Bovik1990,Dunn1994,Dunn1995,Simona2002}, wavelet transforms \cite{Chang1993,Laine1993,Unser1995,Wouwer1999} and steerable pyramids \cite{Freeman1991,Simoncelli1995,Wu2003}.
+A detailed survey and intersting discussions can be found in \cite{Randen1999}, also.
+The texture can then be modeled by the marginal densities of the coefficients of the resulted filtered subband images which allows a more compact
+representation than histograms which necessitate many parameters (hundreds).
+This approach is also justified by some psychological researches on human texture perception which have shown that textures producing
+similar marginal densities are very difficult to discriminate \cite{Do2002}.
+It is noteworthy that the sub-band marginal densities are generally non-Gaussian especially for natural images texture \cite{Simoncelli2000}.
+In this section we propose an
+approach for texture images classification and retrieval based on our finite general Beta mixture model. In our classification framework, an image texture
+is first decomposed into sub-bands using steerable filters \cite{Freeman1991,Simoncelli1995}.
+Figure~\ref{fig:47} shows a texture image and its multiscale version in a
+pyramid hierarchy. The histograms of the resulted filtered images are show in Fig.~\ref{fig:48} which shows clearly that the Gaussian assumption
+would be inappropriate.
+\begin{figure}[!h]
+\begin{center}
+\begin{tabular}{c c}
+\includegraphics[height=3.5cm]{Fig82.ps}&\includegraphics[height=3.5cm]{Fig55a.ps}\\
+(a)&(b)
+\end{tabular}
+\end{center}
+\caption{Original image and its steerable pyramid decomposition. (a) Original image from Bark group in Vistex, (b) Sub-images output using five level steerable pyramid.}\label{fig:47}
+\end{figure}
+\begin{figure}[!h]
+\begin{tabular}{ccccccc}
+\includegraphics[height=2cm,,width=2cm]{Fig44a.ps}&
+\includegraphics[height=2cm,,width=2cm]{Fig44b.ps}&
+\includegraphics[height=2cm,,width=2cm]{Fig44c.ps}&
+\includegraphics[height=2cm,,width=2cm]{Fig44d.ps}&
+\includegraphics[height=2cm,,width=2cm]{Fig44e.ps}&
+\includegraphics[height=2cm,,width=2cm]{Fig44f.ps}&
+\includegraphics[height=2cm,,width=2cm]{Fig44g.ps}\\
+\includegraphics[height=2cm,,width=2cm]{Fig44h.ps}&
+\includegraphics[height=2cm,,width=2cm]{Fig44l.ps}&
+\includegraphics[height=2cm,,width=2cm]{Fig44m.ps}&
+\includegraphics[height=2cm,,width=2cm]{Fig44n.ps}&
+\includegraphics[height=2cm,,width=2cm]{Fig44o.ps}&
+\includegraphics[height=2cm,,width=2cm]{Fig44p.ps}&
+\includegraphics[height=2cm,,width=2cm]{Fig44q.ps}
+\end{tabular}
+\caption{Histograms of the 14 sub-images of the steerable pyramid.}
+\label{fig:48}
+\end{figure}
+Then, each sub-band's marginal density is approximated by a finite general Beta mixture model using our Bayesian learning algorithm (See Fig.~\ref{fig:49}). As
+a result each texture image will be represented by a set of finite general Beta mixture models which can be viewed as the signatures of the image.
+\begin{figure}[!h]
+\begin{center}
+\begin{tabular}{ccc}
+\includegraphics[height=4.5cm]{texture.ps}
+\end{tabular}
+\caption{A sub-image histogram fitted by a Beta mixture model.} \label{fig:49}
+\end{center}
+\end{figure}
+Finally the Earth Mover's Distance (EMD) \cite{Rubner2000} is used to measure the distribution similarity between a set of components
+representing an input image texture (ie. test image) and sets of components
+representing texture classes (i.e training images). In our case, EMD can be viewed as the minimum cost of
+changing one mixture into another, when the cost of moving
+probability mass from components in the first mixture to
+components in the second mixture is calculated using Kullback-Leibler (KL) divergence given by:
+\begin{equation}
+D(f_i||g_j)=\int f_i(x) \log(\frac{f_i(x)}{g_j(x)})dx
+\end{equation}
+Where $f_i$ is the component $i$ of the input sub-image mixture which we suppose that it has $m$ components with weights $p_{fi}$, and
+$g_j$ is the component $j$ of the class sub-image mixture which we suppose that it has $n$ components with weights $p_{gj}$. For two general Beta distributions $f_i$ and $g_j$ the KL divergence has a closed form expression
+and we can show that is given by (see Appendix~\ref{appendix6})
+\begin{eqnarray}\label{divergence}
+\nonumber D\big(f_i||g_j\big)&=&\log\bigg[\frac{\Gamma(\alpha_i+\beta_i)\Gamma(\alpha_j)\Gamma(\beta_j)}{(b-a)^{\alpha_i+\beta_i-\alpha_j-\beta_j}\Gamma(\alpha_j+\beta_j)\Gamma(\alpha_i)\Gamma(\beta_i)}\bigg]-(\beta_j-\beta_i+\alpha_j-\alpha_i)\log\big(b-a)
+   \\&+&(\alpha_j-\alpha_i+\beta_j-\beta_i)\Psi(\alpha_i+\beta_i)-(\alpha_j-\alpha_i)\Psi(\alpha_i)
+  -(\beta_j-\beta_i)\Psi(\beta_i)
+\end{eqnarray}
+Where $(\alpha_i,\beta_i)$ are the parameters of $f_i$,
+$(\alpha_j,\beta_j)$ are the parameters of $g_j$, and $\Psi$ is the digamma function. With the KL divergence in hand we have to start the minimization problem
+in which we need to get the $m\times n$ matrix $F$, where $f_{ij}$ is
+the amount of weight $p_{fi}$ matched to $p_{gj}$, that will minimize the
+following equation
+\begin{equation}
+EMD_{sub} = \sum_{i=1}^{m}\sum_{j=1}^{n}f_{ij} D(f_i||g_j)
+\end{equation}
+and subjected to the following constraints:(1) $f_{ij} \geq{0}$, where $1 \leq{i}\leq{m}$ and $1\leq{j}\leq{n}$,
+(2) $\sum_{i=1}^{m}f_{ij}= p_{gj}$, where  $1 \leq{j}\leq{n}$, (3) $\sum_{j=1}^{n}f_{ij}= p_{fi}$,
+where  $1\leq{i}\leq{m}$, (4) $\sum_{i=1}^{m}\sum_{j=1}^{n}f_{ij} = min(\sum_{i=1}^m p_{fi},\sum_{j=1}^n p_{gj})=1$. Note that when the image texture is decomposed of $L$ sub-bands, then the total EMD
+is the sum of that of each sub-band, $EMD = \sum_{l=1}^{L}EMD_{sub_l}$.
+By computing the EMD between the input texture image and each
+texture class, each image is affected to the class for which
+the EMD is the smallest.
+\subsubsection{Results}
+We performed our classifications experiments using the Vistex data set \footnote{MIT Vision and Modeling Group (http://vismod.www.media.mit.edu).}.
+Six homogeneous texture groups (Bark, Fabric, Food, Metal, Water, and Sand) were considered (See Fig~\ref{fig:2}).
+We used four $512\times512$ images from each of the Bark, Fabric, and Metal texture groups, and six $512\times512$ from each of the Food, Water,
+and Sand texture groups, then we divided each image into sixty four $64\times64$ subimages.
+Thus, we obtained a total of $256$ subimages for each class in the first three groups,
+and $384$ subimages for each class in the second three groups.
+We then applied our classification approach $10$ times, each time using $24$ subimages of each original texture image
+for training and the remaining $40$ for testing.
+This brought us to a total of $720$ images from all six groups as training samples for our algorithm,
+and $1200$ as testing samples.  Moreover,
+we applied our algorithm by using first three levels pyramid and second by using five levels pyramid.
+The classification results, when using both finite general Beta and Gaussian mixture models, are given in table~\ref{tab4}.
+From these results we can observe that
+our algorithm has a higher accuracy then the Gaussian which is a further endorsement of our model.
+In addition, and as expected, the five levels pyramid improves the performance over the three levels pyramids,
+yet this improvement is very small compared to the enormous difference in computational time.
+\begin{figure}[!ht]
+\begin{center}
+\begin{tabular}{ccc}
+\includegraphics[height=22mm, width=22mm]{fig9(a).PS}
+&
+\includegraphics[height=22mm, width=22mm]{fig9(b).PS}
+&
+\includegraphics[height=22mm, width=22mm]{fig9(c).PS}\\
+(a) & (b) & (c)
+\end{tabular}
+\begin{tabular}{ccc}
+\includegraphics[height=22mm, width=22mm]{fig9(d).PS}
+&\includegraphics[height=22mm, width=22mm]{fig9(e).PS}
+&\includegraphics[height=22mm, width=22mm]{fig9(f).PS}
+\\
+(d) & (e) & (f)
+\end{tabular}
+\caption{Sample images from each group. (a) Bark, (b) Fabric, (c)
+Food, (d) Metal, (e) Sand, (f) Water.} \label{fig:2}
+\end{center}
+\end{figure}
+\begin{table}[ht!]
+\begin{center}
+\caption{The Average classification accuracy (\%) of the two different methods.\label{tab4}}
+\small
+\begin{tabular}{|c c c|}
+  \hline
+Method &Using 3 levels pyramid&Using 5 levels pyramid\\\hline
+General Beta Mixture Models&92.50\% $\pm$ 1.41\%&93.58\% $\pm$ 1.33\%\\
+Gaussian Mixture Models&91.67\% $\pm$ 1.66\%&92.58\% $\pm$ 1.08\%\\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+\\We conducted another experiment designed to retrieve images similar to a given query.
+Our retrieval approach can be divided into two steps.
+First task, is the same as in the classification approach, since
+we have to choose the nearest texture group to the query.
+For the second step, we compared the input image (i.e, query) with the other images in the same group and retrieve the closest images to our query
+using the EMD.
+We applied our retrieval process twice former using three levels pyramid and latter using five levels pyramid. To measure the retrieval
+rates (precision and recall), each image was used as a query and the number of relevant images among those that were retrieved
+was noted. Table~\ref{tab5} presents the retrieval rates obtained in terms of precision when 64 images are retrieved each time in response to a query.
+Note that in this case the precision and recall are the same
+because for a given image we have
+at most 64 images which are similar to it.
+\begin{table}[ht!]
+\begin{center}
+\caption{Average precsion rate (\%) of the two different methods.\label{tab5}}
+\small
+\begin{tabular}{|c c c|}
+  \hline
+Method &Using 3 levels pyramid&Using 5 levels pyramid\\\hline
+General Beta Mixture Models&75.32\%&78.12\%\\
+Gaussian Mixture Models&71.56\%&73.32\%\\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+Figure~\ref{fig:500}(a) represents the average (averaged over all the
+queries) precision rate for different texture classes when we consider only the first 64 images retrieved.
+Figures~\ref{fig:500}(b) and \ref{fig:500}(c) show two graphs illustrating the overall precision and recall, respectively, of our retrieval method
+when varying the total number of images retrieved
+taken into consideration.
+\begin{figure}[!ht]
+\begin{center}
+\begin{tabular}{ccc}
+\includegraphics[height=55mm, width=55mm]{Precision-Recall.PS}
+&
+\includegraphics[height=55mm, width=55mm]{Precision.PS}
+&
+\includegraphics[height=55mm, width=55mm]{Recall.PS}\\
+(a)&(b)&(c)
+\end{tabular}
+\caption{Precision and recall. (a) Average precision when 64 retrieved images are considered for each class, (b) Average precision
+when varying the number of retrieved images, (c) Average recall when varying the number of retrieved images.} \label{fig:500}
+\end{center}
+\end{figure}
+\section{Conclusion}
+We presented a fully Bayesian analysis, coupled with MCMC techniques, of finite Beta mixtures with unknown number of components.
+The proposed algorithm automatically handles the problem of the specification of the number of clusters on the basis of the RJMCMC approach,
+which allows varying the dimension of the mixture, by constructing split and merge moves that rely on moment matching.
+The results from applying the proposed model to different applications have been presented and justify further the recent interest on the use of
+Bayesian machinery in image processing. The finite Beta mixture has many appealing advantages that make it useful for a variety of image processing
+applications which require the modeling of non Gaussian data.
+\section*{Appendix 1: Proof of Equation~\ref{merge3}}\label{appendix1}
+We can show that the new variance $v_{j*}$ for component $j*$ satisfies \cite{Green1997}
+\begin{equation}\label{newvariance}
+p_{j*}(m_{j*}^2+v_{j*})=p_{j_1}(m_{j_1}^2+v_{j_1})+p_{j_2}(m_{j_2}^2+v_{j_2})
+\end{equation}
+Besides, according to equation~\ref{eq2} we have
+\begin{equation*}
+\alpha_j=\frac{m_j-a}{b-a}s_j \quad \beta_j=s_j-\frac{m_j-a}{b-a}s_j=s_j(1-\frac{m_j-a}{b-a})=\frac{b-m_j}{b-a}s_j
+\end{equation*}
+Using the two previous equations, equation~\ref{variance}  becomes
+\begin{equation}\label{vvalue}
+v_j=(b-a)^2\frac{\alpha_j\beta_j}{(\alpha_j+\beta_j)^2(\alpha_j+\beta_j+1)}=(b-a)^2\frac{\alpha_j\beta_j}{s_j^2(s_j+1)}=\frac{(m_j-a)(b-m_j)}{s_j+1}
+\end{equation}
+substituting the previous equation into equation~\ref{newvariance}, we obtain
+\begin{equation*}
+p_{j*}\bigg(m_{j*}^2+\frac{(m_{j*}-a)(b-m_{j*})}{s_{j*}+1}\bigg)=p_{j_1}\bigg(m_{j_1}^2+\frac{(m_{j_1}-a)(b-m_{j_1})}{s_{j_1}+1}\bigg)+p_{j_2}\bigg(m_{j_2}^2+\frac{(m_{j_2}-a)(b-m_{j_2})}{s_{j_2}+1}\bigg)
+\end{equation*}
+Thus,
+$
+\frac{(m_{j*}-a)(b-m_{j*})}{s_{j*}+1}=\frac{p_{j_1}\bigg(m_{j_1}^2+\frac{(m_{j_1}-a)(b-m_{j_1})}{s_{j_1}+1}\bigg)+p_{j_2}\bigg(m_{j_2}^2+\frac{(m_{j_2}-a)(b-m_{j_2})}{s_{j_2}+1}\bigg)}{p_{j*}}-m_{j*}^2$, and
+\begin{equation*}
+s_{j*}=\frac{p_{j*}(m_{j*}-a)(b-m_{j*})}{p_{j_1}\bigg(m_{j_1}^2+\frac{(m_{j_1}-a)(b-m_{j_1})}{s_{j_1}+1}\bigg)+p_{j_2}\bigg(m_{j_2}^2+\frac{(m_{j_2}-a)(b-m_{j_2})}{s_{j_2}+1}\bigg)-p_{j*}m_{j*}^2}-1
+\end{equation*}
+\section*{Appendix 2: Proof of Equation~\ref{split4}}\label{appendix2}
+When we split a component $j*$ to define two new components $j_1$ and $j_2$ having weights and parameters $(p_{j_1},m_{j_1},s_{j_1})$ and $(p_{j_2},m_{j_2},s_{j_2})$, respectively, we can set the following \cite{Green1997}
+\begin{equation}\label{manip1}
+v_{j_1}=u_3(1-u_2^2)v_{j*}\frac{p_{j*}}{p_{j_1}}
+\end{equation}
+\begin{equation}\label{manip2}
+v_{j_2}=(1-u_3)(1-u_2^2)v_{j*}\frac{p_{j*}}{p_{j_2}}
+\end{equation}
+By substituting equation~\ref{vvalue} into equation~\ref{manip1}, we obtain
+$
+\frac{(m_{j_1}-a)(b-m_{j_1})}{s_{j_1}+1}=u_3(1-u_2^2)\frac{(m_{j*}-a)(b-m_{j*})}{s_{j*}+1}\frac{p_{j*}}{p_{j_1}}
+$, thus
+\begin{equation*}
+s_{j_1}=\frac{(m_{j_1}-a)(b-m_{j_1})}{u_3(1-u_2^2)\frac{(m_{j*}-a)(b-m_{j*})}{s_{j*}+1}\frac{p_{j*}}{p_{j_1}}}-1
+\end{equation*}
+By substituting equation~\ref{vvalue} into equation~\ref{manip2}, we obtain
+$
+\frac{(m_{j_2}-a)(b-m_{j_2})}{s_{j_2}+1}=(1-u_3)(1-u_2^2)\frac{(m_{j*}-a)(b-m_{j*})}{s_{j*}+1}\frac{p_{j*}}{p_{j_1}}$, thus
+\begin{equation*}
+s_{j_2}=\frac{(m_{j_2}-a)(b-m_{j_2})}{(1-u_3)(1-u_2^2)\frac{(m_{j*}-a)(b-m_{j*})}{s_{j*}+1}\frac{p_{j*}}{p_{j_1}}}-1
+\end{equation*}
+\section*{Appendix 3:}\label{appendix3}
+\begin{eqnarray}
+&&\frac{p(Z,P,M+1,\xi,\vartheta,\varpi,\varepsilon,\zeta|\mathcal{X})}{p(Z,P,M,\xi,\vartheta,\varpi,\varepsilon,\zeta|\mathcal{X})}=\\\nonumber&&\text{(likelihood ratio)}\frac{(M+1)!p(M+1)p(P|M+1,\delta)p(Z|P,M+1)p(\xi|M+1,\eta)}{M!p(M)p(P|M,\delta)p(Z|P,M)p(\xi|M,\eta)} \\\nonumber&\times& p(\varepsilon)p(\zeta|\varphi,\varrho)p(\vartheta|\lambda,\mu)p(\varpi|\phi)
+\end{eqnarray}
+where ``likelihood'' ratio is the ratio of the likelihood using the new parameter set, corresponding to $M+1$ components,
+to that for the old one corresponding to $M$ components:
+\begin{equation}
+\text{likelihood ratio}=\frac{\prod_{i=1,Z_i=j_1}^N p(x_i|\Theta)\prod_{i=1,Z_i=j_2}^N p(x_i|\Theta)}{\prod_{i=1,Z_i=j*}^N p(x_i|\Theta)}
+\end{equation}
+\begin{eqnarray}
+\nonumber \frac{p(P|M+1,\delta)}{p(P|M,\delta)}&=&\frac{\frac{\Gamma(\sum_{j=1}^{M+1}\delta_j)}{\prod_{j=1}^{M+1}\Gamma(\delta_j)}\prod_{j=1}^{M+1}p_j^{\delta_j-1}}{\frac{\Gamma(\sum_{j=1}^M\delta_j)}{\prod_{j=1}^{M}\Gamma(\delta_j)}\prod_{j=1}^{M}p_j^{\delta_j-1}}
+=\frac{\frac{\Gamma(\sum_{j=1}^{M-1}\delta_j+\delta_{j_1}+\delta_{j_2})}{\prod_{j=1}^{M-1}\Gamma(\delta_j)\Gamma(\delta_{j_1})\Gamma(\delta_{j_2})}\prod_{j=1}^{M-1}p_j^{\delta_j-1}p_{j_1}^{\delta_{j_1}-1}p_{j_2}^{\delta_{j_1}-1}}{\frac{\Gamma(\sum_{j=1}^{M-1}\delta_j+\delta_{j*})}{\prod_{j=1}^{M-1}\Gamma(\delta_j)\Gamma(\delta_{j*})}\prod_{j=1}^{M-1}p_j^{\delta_j-1}p_{j*}^{\delta_{j*}-1}}\\\nonumber
+&=&\frac{\frac{\Gamma(\sum_{j=1}^{M-1}\delta_j+\delta_{j_1}+\delta_{j_2})}{\Gamma(\delta_{j_1})\Gamma(\delta_{j_2})}p_{j_1}^{\delta_{j_1}-1}p_{j_2}^{\delta_{j_1}-1}}{\frac{\Gamma(\sum_{j=1}^{M-1}\delta_j+\delta_{j*})}{\Gamma(\delta_{j*})}p_{j*}^{\delta_{j*}-1}}\\&=&
+\frac{\Gamma(\sum_{j=1}^{M-1}\delta_j+\delta_{j_1}+\delta_{j_2})\Gamma(\delta_{j*})p_{j_1}^{\delta_{j_1}-1}p_{j_2}^{\delta_{j_1}-1}}{\Gamma(\delta_{j_1})\Gamma(\delta_{j_2})\Gamma(\sum_{j=1}^{M-1}\delta_j+\delta_{j*})p_{j*}^{\delta_{j*}-1}}
+\end{eqnarray}
+\begin{equation}
+\frac{p(Z|P,M+1)}{p(Z|P,M)}=\frac{p_{j_{1}}^{{n_{j_{1}}}}p_{j_{2}}^{{n_{j_{2}}}}\prod_{j=1}^{M-1} p_j^{n_j}}{p_{j*}^{{n_{j*}}}\prod_{j=1}^{M-1} p_j^{n_j}}=\frac{p_{j_{1}}^{{n_{j_{1}}}}p_{j_{2}}^{{n_{j_{2}}}}}{p_{j*}^{{n_{j*}}}}
+\end{equation}
+where $n_{j_{1}}$ and $n_{j_{2}}$ are the numbers of observations to be assigned to components $j_1$ and $j_2$.
+\begin{eqnarray}
+&&\frac{p(\xi|M+1,\eta)}{p(\xi|M,\eta)}\\\nonumber&=&\frac{\varpi^{\vartheta}\Gamma(\zeta) \exp\bigg(-\varpi\big(
+\frac{s_{j_1}+s_{j_2}}{s_{j_1}s_{j_2}}-\frac{1}{s_{j*}}\big)\bigg)\bigg(\frac{({m}_{j_1}-a)({m}_{j_2}-a)}{{m}_{j*}-a}\bigg)^{\frac{\zeta(\varepsilon-a)}{b-a}-1}\bigg(\frac{(b-{m}_{j_1})(b-{m}_{j_2})}{b-{m}_{j*}}\bigg)^{\zeta(1-\frac{\varepsilon-a}{b-a})-1}}{\big(\frac{s_{j_1}s_{j_2}}{s_{j*}}\big)^{\vartheta+1}\Gamma(\vartheta)(b-a)^{(\zeta-1)}\bigg[\Gamma\big(\frac{\zeta(\varepsilon-a)}{b-a}-1\big)\Gamma\big(\zeta(1-\frac{\varepsilon-a}{b-a})\big)\bigg]}
+\end{eqnarray}
+and where the term $M!$ arises due to the exchangeability of the priors of the $\xi$ parameters.
+Indeed, it is known that label-switching is of important concern, and numerous papers have discussed this subject.
+In our case we have adopted a simple approach that has been found effective in practice and according to our experimental results.
+Indeed, we impose an identifiability constraint on the parameter space which is $m_1 \leq m_2 \leq \ldots \leq m_M$.
+It is noteworthy that using this constraint results in $M!$ ways of labeling the mixture components.
+\section*{Appendix 4:}\label{appendix5}
+According to equation~\ref{acceptanceproba}, we have the following in the case of the birth of an empty component, where now $(p_{j*},m_{j*},s_{j*})$ play the role of $u$:
+\begin{equation}
+A=\frac{p(Z,P,M+1,\xi,\vartheta,\varpi,\varepsilon,\zeta|\mathcal{X})b_{M+1}}{p(Z,P,M,\xi,\vartheta,\varpi,\varepsilon,\zeta|\mathcal{X})a_{M}p(p_{j*})p(m_{j*})p(s_{j*})}\bigg|\frac{\partial\Delta_M'}{\partial(\Delta_M,u)}\bigg|
+\end{equation}
+$\frac{p(Z,P,M+1,\xi,\vartheta,\varpi,\varepsilon,\zeta|\mathcal{X})}{p(Z,P,M,\xi,\vartheta,\varpi,\varepsilon,\zeta|\mathcal{X})}$ is developed in Appendix~\ref{appendix3}. In the birth case, however, the likelihood ratio is 1 and we have also
+\begin{eqnarray} \frac{p(P|M+1,\delta)}{p(P|M,\delta)}&=&\frac{\frac{\Gamma(\sum_{j=1}^{M}\delta_j)\Gamma(\delta_{j*}+\sum_{j=1}^{M}\delta_j)}{\Gamma(\delta_{j*})\Gamma(\sum_{j=1}^{M}\delta_j)\prod_{j=1}^{M}\Gamma(\delta_j)}\prod_{j=1}^{M}(p_j(1-p_{j*}))^{\delta_j-1}p_{j*}^{\delta_{j*}-1}}{\frac{\Gamma(\sum_{j=1}^M\delta_j)}{\prod_{j=1}^{M}\Gamma(\delta_j)}\prod_{j=1}^{M}p_j^{\delta_j-1}}
+\\\nonumber&=&\frac{\Gamma(\delta_{j*}+\sum_{j=1}^{M}\delta_j)}{\Gamma(\delta_{j*})\Gamma(\sum_{j=1}^{M}\delta_j)}p_{j*}^{\delta_{j*}-1}(1-p_{j*})^{\sum_{j=1}^M\delta_j-M}\end{eqnarray}
+ \begin{equation}
+\frac{p(Z|P,M+1)}{p(Z|P,M)}=\frac{p_{j*}^0\prod_{j=1}^{M} (p_j(1-p_{j*}))^{n_j}}{\prod_{j=1}^{M} p_j^{n_j}}=(1-p_{j*})^{\sum_{j=1}^{M}n_j}=(1-p_{j*})^N
+\end{equation}
+Note also that our specific choice of generating $m_{j*}$ and $s_{j*}$, from the associated prior distributions
+given by equations~\ref{priorm} and \ref{priors}, respectively, simplify the calculations, since $\frac{p(\xi|M+1,\eta)}{p(\xi|M,\eta)q(u)}=\frac{1}{p(p_{j*})}$.
+Recall that the Jacobian is  $(1-p_{j*})^M$, thus
+\begin{equation}
+A=\frac{p(M+1)}{p(M)}\frac{\Gamma(\delta_{j*}+\sum_{j=1}^{M}\delta_j)}{\Gamma(\delta_{j*})\Gamma(\sum_{j=1}^{M}\delta_j)}p_{j*}^{\delta_{j*}-1}(1-p_{j*})^{N+\sum_{j=1}^M\delta_j-M}(M+1)\frac{b_{M+1}}{a_M(M_0+1)}\frac{1}{p(p_{j*})}(1-p_{j*})^M
+\end{equation}
+where $M_0$ is the number of empty components before the birth and $p(p_{j*})$ is a Beta distribution with parameters $(\delta_{j*},\sum_{j=1}^M \delta_j)$.
+\section*{Appendix 5: Proof of Equation~\ref{divergence}}\label{appendix6}
+if a $2$-parameter density $p$ belongs to the exponential family,
+then we can write it as the following \cite{Brown1986}
+\begin{equation}\label{expogeneral}
+p(x|\theta)=H(x)\exp\big(G(\theta)^{tr}T(x)+\Phi(\theta)\big)
+\end{equation}
+where $G(\theta)=(G_1(\theta),G_{2}(\theta))$, $T(x)=(T_1(x),T_2(x))$ and $tr$ denotes the transpose. The K-L divergence between two exponential
+distributions is given by \cite{Brown1986}
+ \begin{equation}\label{div}
+ D\big(p(x|\theta)\|p'(x|\theta')\big)=\Phi(\theta)-\Phi(\theta')+[G(\theta)-G(\theta')]^{tr}E_{\theta}[T(x)]
+ \end{equation}
+where $E_{\theta}$ is the expectation with respect to $p(x|\theta)$.
+Moreover, we have the following \cite{Brown1986}: $E_{\theta}[T(x)]=-\Phi'(\theta)$.
+The general Beta distribution can be
+written as an exponential density. In fact, we can easily show that
+\begin{eqnarray}\label{expo}
+\nonumber &&p(x|\alpha,\beta)=\frac{\Gamma(\alpha+\beta)}{(b-a)^{\alpha+\beta-1}\Gamma(\alpha)\Gamma(\beta)}(x-a)^{\alpha-1}(b-x)^{\beta-1}
+=\exp\bigg[\log \big(\Gamma(\alpha+\beta)\big)\\\nonumber&-&(\alpha+\beta-1)\log(b-a)-\log\big(\Gamma(\alpha)\big)-\log\big(\Gamma(\beta)\big)+
+(\alpha-1)\log(x-a)+(\beta-1)\log(b-x)\bigg]
+\end{eqnarray}
+Then by letting:
+$
+\Phi(\alpha,\beta)=\log \big(\Gamma(\alpha+\beta)\big)-\log\big(\Gamma(\alpha)\big)-\log\big(\Gamma(\beta)\big)-(\alpha+\beta)\log\big(b-a)
+$, $G_1(\alpha,\beta)=\alpha$, $G_{2}(\alpha,\beta)=\beta$, $T_1(x)=\log(x-a)$, $T_2(x)=\log(b-x)$, and
+$H(x)=\exp\bigg(-\log(x-a)-\log(b-x)+\log(b-a)\bigg)$,
+we obtain $E_{\theta}[\log(x-a)]=-\Psi(\alpha+\beta)+\Psi(\alpha)+\log\big(b-a)$,
+$E_{\theta}[\log(b-x)]=-\Psi(\alpha+\beta)+\Psi(\beta)+\log\big(b-a)$,
+ \begin{eqnarray}\label{divbeta}
+\nonumber &&D\big(p(x|\theta)\|p'(x|\theta')\big)=\log \big(\Gamma(\alpha+\beta)\big)-\log \big(\Gamma(\alpha'+\beta')\big)+\log\big(\Gamma(\alpha')\big)-\log\big(\Gamma(\alpha)\big)
+ \\\nonumber&+&\log\big(\Gamma(\beta')\big)-\log\big(\Gamma(\beta)\big)-(\alpha+\beta-\alpha'-\beta')\log(b-a)
+ \\\nonumber&+&(\alpha-\alpha')[\Psi(\alpha+\beta)-\Psi(\alpha)-\log\big(b-a)]
+  +(\beta-\beta')[\Psi(\alpha+\beta)-\Psi(\beta)-\log\big(b-a)]
+  \\\nonumber&=&\log\bigg[\frac{\Gamma(\alpha+\beta)\Gamma(\alpha')\Gamma(\beta')}{(b-a)^{\alpha+\beta-\alpha'-\beta'}\Gamma(\alpha'+\beta')\Gamma(\alpha)\Gamma(\beta)}\bigg]
+   \\\nonumber&+&(\alpha'-\alpha)[\Psi(\alpha+\beta)-\Psi(\alpha)-\log\big(b-a)]
+  +(\beta'-\beta)[\Psi(\alpha+\beta)-\Psi(\beta)-\log\big(b-a)]
+ \end{eqnarray}
+\section*{Acknowledgment}
+The completion of this research was made possible thanks to the
+Natural Sciences and Engineering Research Council of Canada
+(NSERC) and a NATEQ Nouveaux Chercheurs Grant.
+\bibliographystyle{unsrt}
+% argument is your BibTeX string definitions and bibliography database(s)
+\bibliography{finalbib}
+%\addcontentsline{toc}{chapter}{Bibliography}
+\end{document}

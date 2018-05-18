@@ -1,0 +1,25 @@
+@INPROCEEDINGS{Fu1805:Asymmetric,
+AUTHOR="Shuai Fu and Nizar Bouguila",
+TITLE="Asymmetric Gaussian Mixtures with Reversible Jump {MCMC}",
+BOOKTITLE="2018 IEEE 30th Canadian Conference on Electrical and Computer Engineering
+(CCECE) (CCECE 2018)",
+ADDRESS="Quebec City, Canada",
+DAYS=13,
+MONTH=may,
+YEAR=2018,
+KEYWORDS="Asymmetric Gaussian Mixture; Metropolis-Hastings; RJMCMC",
+ABSTRACT="We propose a fully Bayesian learning approach using reversible jump Markov
+chain Monte Carlo (RJMCMC) for asymmetric Gaussian mixtures (AGM). Compared
+to classic Gaussian mixture model, AGM doesn't imply that target data is
+symmetric which brings flexibility and better fitting results. This paper
+also introduces a RJMCMC learning implementation based on
+Metropolis-Hastings (MH) within Gibbs sampling method. As an improvement of
+traditional sampling-based MCMC learning, RJMCMC has no assumption
+concerning the number of components and, therefore, the AGM model itself
+could be transferred between iterations. For better evaluating models with
+different mixture components number, the model selection is achieved by
+calculating integrated likelihood using Laplace approximation to figure out
+the best-fit components number. We selected both synthetic and a
+challenging spam filtering datasets to show the merits of the proposed
+model."
+}

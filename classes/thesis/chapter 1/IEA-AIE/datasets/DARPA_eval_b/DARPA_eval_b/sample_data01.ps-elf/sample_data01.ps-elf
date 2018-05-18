@@ -1,0 +1,439 @@
+Fri Jan 23 16:55:58 EST 1998
+ F S      UID   PID  PPID  C PRI NI     ADDR     SZ    WCHAN    STIME TTY      TIME CMD
+19 T     root     0     0  0   0 SY f02176f0      0            Jan 21 ?        0:02 sched
+ 8 S     root     1     0  0  41 20 ff1c6cd8    384 ff1c6ea8   Jan 21 ?        0:21 /etc/init -
+19 S     root     2     0  0   0 SY ff1c6678      0 f022acb4   Jan 21 ?        0:00 pageout
+19 S     root     3     0  1   0 SY ff1c6018      0 f022eecc   Jan 21 ?       32:19 fsflush
+ 8 S     root   259   256  0  40 20 ff1c19a0    347 ff1c1b70   Jan 21 ?        0:01 /usr/lib/saf/ttymon
+ 8 S     root   120     1  0  77 20 ff1c1340    406 ff3a3f26   Jan 21 ?        0:01 /usr/lib/nfs/statd
+ 8 S     root   256     1  0  40 20 ff1c0ce0    328 ff1bec94   Jan 21 ?        0:00 /usr/lib/saf/sac -t 300
+ 8 S     root    96     1  0  51 20 ff330980    419 ff05685e   Jan 21 ?        0:01 /usr/sbin/rpcbind
+ 8 S     root    98     1  0  99 20 ff330320    385 ff05676e   Jan 21 ?        0:00 /usr/sbin/keyserv
+ 8 S     root   146     1  0  40 20 ff32fcc0    347 ff3a3436   Jan 21 ?        0:03 /usr/sbin/syslogd
+ 8 S     root   117     1  0  40 20 ff32f660    430 ff3a3d1e   Jan 21 ?        0:14 /usr/sbin/inetd -s
+ 8 S     root   104     1  0  40 20 ff32f000    536 ff056566   Jan 21 ?        0:01 /usr/sbin/rpc.nisd
+ 8 S     root   108     1  0  89 20 ff394988    422 ff0563ae   Jan 21 ?        0:00 /usr/sbin/kerbd
+ 8 S     root   122     1  0  59 20 ff394328    383 ff3a3eae   Jan 21 ?        0:01 /usr/lib/nfs/lockd
+ 8 S     root   142     1  0  59 20 ff393cc8    453 ff3a37f6   Jan 21 ?        0:01 /usr/lib/autofs/automountd
+ 8 S     root   180   172  0  47 20 ff393668    344 ff3a30c6   Jan 21 ?        0:00 lpNet
+ 8 S     root   162     1  0  99 20 ff393008    399 ff3931d8   Jan 21 ?        0:49 /usr/sbin/nscd
+ 8 S     root   156     1  0  41 20 ff405990    341 ff1beed4   Jan 21 ?        0:09 /usr/sbin/cron
+ 8 S     root   172     1  0  48 20 ff405330    633 ff3a309e   Jan 21 ?        0:01 /usr/lib/lpsched
+ 8 S     root   181     1  0  61 20 ff404670    432 ff40b04e   Jan 21 ?        0:10 /usr/lib/sendmail -bd -q1h
+ 8 S     root   200     1  0  41 20 ff44e998    502 ff44f89e   Jan 21 ?        0:02 /usr/sbin/vold
+ 8 S     root   191     1  0  41 20 ff44e338    190 ff3a3076   Jan 21 ?        0:12 /usr/lib/utmpd
+ 8 S     root  5346  5344  3  45 20 ff649320    244 ff6494f0 16:55:35 console  0:01 /usr/bin/csh ./reset
+ 8 S     root  5288     1  1  49 20 ff44d678    365 ff44d6e8 14:46:00 console  0:02 /usr/bin/login
+ 8 S     root  5340  5288  0  51 20 ff624340     54 ff6243b0 16:55:23 console  0:00 -sh
+ 8 S     root  5344  5340  1  51 20 ff623020    433 ff6231f0 16:55:26 console  0:01 tcsh
+ 8 O     root  5395  5346  6  99 20 ff679328    191          16:55:58 console  0:01 ps -elf
+ 8 S     root  3491   117  0  49 20 ff648000    668 ff44f43e   Jan 22 ?        0:04 rpc.ttdbserverd
+ 8 S     root  5389     1  1  39 20 ff649980    332 ff037b3a 16:55:52 ?        0:00 /usr/sbin/auditd
+Fri Jan 23 16:57:00 EST 1998
+ F S      UID   PID  PPID  C PRI NI     ADDR     SZ    WCHAN    STIME TTY      TIME CMD
+19 T     root     0     0  0   0 SY f02176f0      0            Jan 21 ?        0:02 sched
+ 8 S     root     1     0  0  41 20 ff1c6cd8    384 ff1c6ea8   Jan 21 ?        0:21 /etc/init -
+19 S     root     2     0  0   0 SY ff1c6678      0 f022acb4   Jan 21 ?        0:00 pageout
+19 S     root     3     0  1   0 SY ff1c6018      0 f022eecc   Jan 21 ?       32:20 fsflush
+ 8 S     root   259   256  0  40 20 ff1c19a0    347 ff1c1b70   Jan 21 ?        0:01 /usr/lib/saf/ttymon
+ 8 S     root   120     1  0  77 20 ff1c1340    406 ff3a3f26   Jan 21 ?        0:01 /usr/lib/nfs/statd
+ 8 S     root   256     1  0  40 20 ff1c0ce0    328 ff1bec94   Jan 21 ?        0:00 /usr/lib/saf/sac -t 300
+ 8 S     root    96     1  0  51 20 ff330980    419 ff05685e   Jan 21 ?        0:01 /usr/sbin/rpcbind
+ 8 S     root    98     1  0  99 20 ff330320    385 ff05676e   Jan 21 ?        0:00 /usr/sbin/keyserv
+ 8 S     root   146     1  0  40 20 ff32fcc0    347 ff3a3436   Jan 21 ?        0:03 /usr/sbin/syslogd
+ 8 S     root   117     1  0  54 20 ff32f660    430 ff3a3d1e   Jan 21 ?        0:14 /usr/sbin/inetd -s
+ 8 S     root   104     1  0  40 20 ff32f000    536 ff056566   Jan 21 ?        0:01 /usr/sbin/rpc.nisd
+ 8 S     root   108     1  0  89 20 ff394988    422 ff0563ae   Jan 21 ?        0:00 /usr/sbin/kerbd
+ 8 S     root   122     1  0  59 20 ff394328    383 ff3a3eae   Jan 21 ?        0:01 /usr/lib/nfs/lockd
+ 8 S     root   142     1  0  59 20 ff393cc8    453 ff3a37f6   Jan 21 ?        0:01 /usr/lib/autofs/automountd
+ 8 S     root   180   172  0  47 20 ff393668    344 ff3a30c6   Jan 21 ?        0:00 lpNet
+ 8 S     root   162     1  1  99 20 ff393008    399 ff3931d8   Jan 21 ?        0:49 /usr/sbin/nscd
+ 8 S     root   156     1  0  41 20 ff405990    341 ff1beed4   Jan 21 ?        0:09 /usr/sbin/cron
+ 8 S     root   172     1  0  48 20 ff405330    633 ff3a309e   Jan 21 ?        0:01 /usr/lib/lpsched
+ 8 S     root   181     1  0  61 20 ff404670    432 ff40b04e   Jan 21 ?        0:10 /usr/lib/sendmail -bd -q1h
+ 8 S      ftp  5400   117  3  39 20 ff3f3670    374 ff63734e 16:56:51 ?        0:01 in.ftpd
+ 8 S     root   200     1  0  41 20 ff44e998    502 ff44f89e   Jan 21 ?        0:02 /usr/sbin/vold
+ 8 S     root   191     1  0  41 20 ff44e338    190 ff3a3076   Jan 21 ?        0:12 /usr/lib/utmpd
+ 8 S     root  5346  5344  0  40 20 ff649320    244 ff6494f0 16:55:35 console  0:01 /usr/bin/csh ./reset
+ 8 S     root  5288     1  0  49 20 ff44d678    365 ff44d6e8 14:46:00 console  0:02 /usr/bin/login
+ 8 S     root  5340  5288  0  51 20 ff624340     54 ff6243b0 16:55:23 console  0:00 -sh
+ 8 S     root  5344  5340  0  51 20 ff623020    433 ff6231f0 16:55:26 console  0:01 tcsh
+ 8 R    white  5410  5401  3  74 20 ff623680    343          16:57:00 pts/0    0:01 mail -h
+ 8 S     root  5399  5397  3  49 20 ff679988    365 ff6799f8 16:56:49 pts/0    0:01 login -p -d /dev/pts/0 -h attacker
+ 8 O     root  5412  5346  5  69 20 ff679328    191          16:57:00 console  0:01 ps -elf
+ 8 S    white  5401  5399  2  41 20 ff404cd0    238 ff404ea0 16:56:54 pts/0    0:01 -csh
+ 8 S     root  3491   117  0  49 20 ff648000    668 ff44f43e   Jan 22 ?        0:04 rpc.ttdbserverd
+ 8 S     root  5389     1  3  39 20 ff649980    332 ff037b3a 16:55:52 ?        0:01 /usr/sbin/auditd
+ 8 S     root  5397   117  2  99 20 ff696338    343 ff44fa56 16:56:48 ?        0:01 in.telnetd
+ 8 S     root  5411   117  3  57 20 ff648660    343 ff67f9e6 16:57:00 ?        0:01 in.telnetd
+Fri Jan 23 16:58:07 EST 1998
+ F S      UID   PID  PPID  C PRI NI     ADDR     SZ    WCHAN    STIME TTY      TIME CMD
+19 T     root     0     0  0   0 SY f02176f0      0            Jan 21 ?        0:02 sched
+ 8 S     root     1     0  1  50 20 ff1c6cd8    384 ff1c6ea8   Jan 21 ?        0:22 /etc/init -
+19 S     root     2     0  0   0 SY ff1c6678      0 f022acb4   Jan 21 ?        0:00 pageout
+19 S     root     3     0  1   0 SY ff1c6018      0 f022eecc   Jan 21 ?       32:21 fsflush
+ 8 S     root   259   256  0  40 20 ff1c19a0    347 ff1c1b70   Jan 21 ?        0:01 /usr/lib/saf/ttymon
+ 8 S     root   120     1  0  77 20 ff1c1340    406 ff3a3f26   Jan 21 ?        0:01 /usr/lib/nfs/statd
+ 8 S     root   256     1  0  40 20 ff1c0ce0    328 ff1bec94   Jan 21 ?        0:00 /usr/lib/saf/sac -t 300
+ 8 S     root    96     1  0  51 20 ff330980    419 ff05685e   Jan 21 ?        0:01 /usr/sbin/rpcbind
+ 8 S     root    98     1  0  99 20 ff330320    385 ff05676e   Jan 21 ?        0:00 /usr/sbin/keyserv
+ 8 S     root   146     1  0  41 20 ff32fcc0    347 ff3a3436   Jan 21 ?        0:03 /usr/sbin/syslogd
+ 8 S     root   117     1  1  40 20 ff32f660    430 ff3a3d1e   Jan 21 ?        0:15 /usr/sbin/inetd -s
+ 8 S     root   104     1  0  40 20 ff32f000    536 ff056566   Jan 21 ?        0:01 /usr/sbin/rpc.nisd
+ 8 S     root   108     1  0  89 20 ff394988    422 ff0563ae   Jan 21 ?        0:00 /usr/sbin/kerbd
+ 8 S     root   122     1  0  59 20 ff394328    383 ff3a3eae   Jan 21 ?        0:01 /usr/lib/nfs/lockd
+ 8 S     root   142     1  0  59 20 ff393cc8    453 ff3a37f6   Jan 21 ?        0:01 /usr/lib/autofs/automountd
+ 8 S     root   180   172  0  47 20 ff393668    344 ff3a30c6   Jan 21 ?        0:00 lpNet
+ 8 S     root   162     1  1  99 20 ff393008    399 ff3931d8   Jan 21 ?        0:49 /usr/sbin/nscd
+ 8 S     root   156     1  0  41 20 ff405990    341 ff1beed4   Jan 21 ?        0:09 /usr/sbin/cron
+ 8 S     root   172     1  0  48 20 ff405330    633 ff3a309e   Jan 21 ?        0:01 /usr/lib/lpsched
+ 8 S  meggett  5466  5456  6  41 20 ff648cc0   1001 ff67f91e 16:57:39 pts/3    0:03 emacs -nw grumpy
+ 8 S     root   181     1  1  46 20 ff404670    432 ff40b04e   Jan 21 ?        0:10 /usr/lib/sendmail -bd -q1h
+ 8 S     root   200     1  0  41 20 ff44e998    502 ff44f89e   Jan 21 ?        0:02 /usr/sbin/vold
+ 8 S     root   191     1  0  41 20 ff44e338    190 ff44e508   Jan 21 ?        0:12 /usr/lib/utmpd
+ 8 S     root  5346  5344  0  51 20 ff649320    244 ff6494f0 16:55:35 console  0:01 /usr/bin/csh ./reset
+ 8 S     root  5288     1  0  49 20 ff44d678    365 ff44d6e8 14:46:00 console  0:02 /usr/bin/login
+ 8 S     root  5340  5288  0  51 20 ff624340     54 ff6243b0 16:55:23 console  0:00 -sh
+ 8 S     root  5442   117  1  68 20 ff695678    343 ff67fd2e 16:57:20 ?        0:01 in.telnetd
+ 8 S  meggett  5456  5454  1  41 20 ff36a9a0    238 ff36ab70 16:57:31 pts/3    0:01 -csh
+ 8 S     root  5452   117  1  41 20 ff404010    314 ff39d23e 16:57:25 ?        0:01 in.comsat
+ 8 S     root  5344  5340  0  51 20 ff623020    433 ff6231f0 16:55:26 console  0:01 tcsh
+ 8 S    white  5410  5401  1  46 20 ff623680    343 ff67ce06 16:57:00 pts/0    0:01 mail -h
+ 8 S     root  5399  5397  0  49 20 ff679988    365 ff6799f8 16:56:49 pts/0    0:01 login -p -d /dev/pts/0 -h attacker
+ 8 S     root  5417  5411  0  78 20 ff44d018    365 ff44d088 16:57:04 pts/1    0:01 login -p -d /dev/pts/1 -h locke
+ 8 O     root  5498  5346  6  49 20 ff679328    191          16:58:07 console  0:01 ps -elf
+ 8 R  clooney  5422  5417  1  55 20 ff678008    238          16:57:11 pts/1    0:01 -csh
+ 8 S    white  5401  5399  0  41 20 ff404cd0    238 ff404ea0 16:56:54 pts/0    0:01 -csh
+ 8 S     root  3491   117  0  49 20 ff648000    668 ff44f43e   Jan 22 ?        0:04 rpc.ttdbserverd
+ 8 S     root  5389     1  4  39 20 ff649980    332 ff037b3a 16:55:52 ?        0:03 /usr/sbin/auditd
+ 8 S     root  5397   117  0  99 20 ff696338    343 ff44fa56 16:56:48 ?        0:01 in.telnetd
+ 8 S     root  5411   117  0  57 20 ff648660    343 ff67f9e6 16:57:00 ?        0:01 in.telnetd
+ 8 S     root  5454  5442  1  99 20 ff678668    365 ff6786d8 16:57:25 pts/3    0:01 login -p -d /dev/pts/3 -h locke
+Fri Jan 23 16:59:10 EST 1998
+ F S      UID   PID  PPID  C PRI NI     ADDR     SZ    WCHAN    STIME TTY      TIME CMD
+19 T     root     0     0  0   0 SY f02176f0      0            Jan 21 ?        0:02 sched
+ 8 S     root     1     0  1  51 20 ff1c6cd8    384 ff1c6ea8   Jan 21 ?        0:22 /etc/init -
+19 S     root     2     0  0   0 SY ff1c6678      0 f022acb4   Jan 21 ?        0:00 pageout
+19 S     root     3     0  2   0 SY ff1c6018      0 f022eecc   Jan 21 ?       32:22 fsflush
+ 8 S     root   259   256  0  40 20 ff1c19a0    347 ff1c1b70   Jan 21 ?        0:01 /usr/lib/saf/ttymon
+ 8 S     root   120     1  0  77 20 ff1c1340    406 ff3a3f26   Jan 21 ?        0:01 /usr/lib/nfs/statd
+ 8 S     root   256     1  0  40 20 ff1c0ce0    328 ff1bec94   Jan 21 ?        0:00 /usr/lib/saf/sac -t 300
+ 8 S     root    96     1  0  51 20 ff330980    419 ff05685e   Jan 21 ?        0:01 /usr/sbin/rpcbind
+ 8 S     root    98     1  0  99 20 ff330320    385 ff05676e   Jan 21 ?        0:00 /usr/sbin/keyserv
+ 8 S     root   146     1  0  41 20 ff32fcc0    347 ff3a3436   Jan 21 ?        0:03 /usr/sbin/syslogd
+ 8 S     root   117     1  1  41 20 ff32f660    430 ff3a3d1e   Jan 21 ?        0:15 /usr/sbin/inetd -s
+ 8 S     root   104     1  0  40 20 ff32f000    536 ff056566   Jan 21 ?        0:01 /usr/sbin/rpc.nisd
+ 8 S     root   108     1  0  89 20 ff394988    422 ff0563ae   Jan 21 ?        0:00 /usr/sbin/kerbd
+ 8 S     root   122     1  0  59 20 ff394328    383 ff3a3eae   Jan 21 ?        0:01 /usr/lib/nfs/lockd
+ 8 S     root   142     1  0  59 20 ff393cc8    453 ff3a37f6   Jan 21 ?        0:01 /usr/lib/autofs/automountd
+ 8 S     root   180   172  0  47 20 ff393668    344 ff3a30c6   Jan 21 ?        0:00 lpNet
+ 8 S     root   162     1  1  99 20 ff393008    399 ff3931d8   Jan 21 ?        0:49 /usr/sbin/nscd
+ 8 S     root   156     1  0  41 20 ff405990    341 ff1beed4   Jan 21 ?        0:09 /usr/sbin/cron
+ 8 S     root   172     1  0  48 20 ff405330    633 ff3a309e   Jan 21 ?        0:01 /usr/lib/lpsched
+ 8 S      ftp  5533   117  4  71 20 ff648cc0    374 ff627156 16:58:58 ?        0:01 in.ftpd
+ 8 S     root   181     1  1  45 20 ff404670    432 ff40b04e   Jan 21 ?        0:10 /usr/lib/sendmail -bd -q1h
+ 8 S     root   200     1  0  41 20 ff44e998    502 ff44f89e   Jan 21 ?        0:02 /usr/sbin/vold
+ 8 S     root   191     1  0  41 20 ff44e338    190 ff3a3076   Jan 21 ?        0:12 /usr/lib/utmpd
+ 8 S     root  5346  5344  0  41 20 ff649320    244 ff6494f0 16:55:35 console  0:01 /usr/bin/csh ./reset
+ 8 S     root  5288     1  0  49 20 ff44d678    365 ff44d6e8 14:46:00 console  0:02 /usr/bin/login
+ 8 S     root  5340  5288  0  51 20 ff624340     54 ff6243b0 16:55:23 console  0:00 -sh
+ 8 S     root  5452   117  0  41 20 ff404010    314 ff39d23e 16:57:25 ?        0:01 in.comsat
+ 8 S     root  5344  5340  0  51 20 ff623020    433 ff6231f0 16:55:26 console  0:01 tcsh
+ 8 O     root  5543  5346  6  79 20 ff679328    191          16:59:10 console  0:01 ps -elf
+ 8 S     root  3491   117  0  49 20 ff648000    668 ff44f43e   Jan 22 ?        0:04 rpc.ttdbserverd
+ 8 S     root  5389     1  3  39 20 ff649980    332 ff037b3a 16:55:52 ?        0:05 /usr/sbin/auditd
+Fri Jan 23 17:00:12 EST 1998
+ F S      UID   PID  PPID  C PRI NI     ADDR     SZ    WCHAN    STIME TTY      TIME CMD
+19 T     root     0     0  0   0 SY f02176f0      0            Jan 21 ?        0:02 sched
+ 8 S     root     1     0  1  41 20 ff1c6cd8    384 ff1c6ea8   Jan 21 ?        0:22 /etc/init -
+19 S     root     2     0  0   0 SY ff1c6678      0 f022acb4   Jan 21 ?        0:00 pageout
+19 S     root     3     0  1   0 SY ff1c6018      0 f022eecc   Jan 21 ?       32:23 fsflush
+ 8 S     root   259   256  0  40 20 ff1c19a0    347 ff1c1b70   Jan 21 ?        0:01 /usr/lib/saf/ttymon
+ 8 S     root   120     1  0  77 20 ff1c1340    406 ff3a3f26   Jan 21 ?        0:01 /usr/lib/nfs/statd
+ 8 S     root   256     1  0  40 20 ff1c0ce0    328 ff1bec94   Jan 21 ?        0:00 /usr/lib/saf/sac -t 300
+ 8 S     root    96     1  0  51 20 ff330980    419 ff05685e   Jan 21 ?        0:01 /usr/sbin/rpcbind
+ 8 S     root    98     1  0  99 20 ff330320    385 ff05676e   Jan 21 ?        0:00 /usr/sbin/keyserv
+ 8 S     root   146     1  0  41 20 ff32fcc0    347 ff3a3436   Jan 21 ?        0:03 /usr/sbin/syslogd
+ 8 S     root   117     1  0  51 20 ff32f660    430 ff3a3d1e   Jan 21 ?        0:15 /usr/sbin/inetd -s
+ 8 S     root   104     1  0  40 20 ff32f000    536 ff056566   Jan 21 ?        0:01 /usr/sbin/rpc.nisd
+ 8 S     root   108     1  0  89 20 ff394988    422 ff0563ae   Jan 21 ?        0:00 /usr/sbin/kerbd
+ 8 S     root   122     1  0  59 20 ff394328    383 ff3a3eae   Jan 21 ?        0:01 /usr/lib/nfs/lockd
+ 8 S     root   142     1  0  59 20 ff393cc8    453 ff3a37f6   Jan 21 ?        0:01 /usr/lib/autofs/automountd
+ 8 S     root   180   172  0  47 20 ff393668    344 ff3a30c6   Jan 21 ?        0:00 lpNet
+ 8 S     root   162     1  1  99 20 ff393008    399 ff3931d8   Jan 21 ?        0:50 /usr/sbin/nscd
+ 8 S     root   156     1  0  41 20 ff405990    341 ff1beed4   Jan 21 ?        0:09 /usr/sbin/cron
+ 8 S     root   172     1  0  48 20 ff405330    633 ff3a309e   Jan 21 ?        0:01 /usr/lib/lpsched
+ 8 S     root  5567  5566  2  41 20 ff648cc0     54 ff67c54e 16:59:47 pts/1    0:01 sh
+ 8 S     root   181     1  0  45 20 ff404670    432 ff40b04e   Jan 21 ?        0:11 /usr/lib/sendmail -bd -q1h
+ 8 S     root   200     1  0  41 20 ff44e998    502 ff44f89e   Jan 21 ?        0:02 /usr/sbin/vold
+ 8 S     root   191     1  0  41 20 ff44e338    190 ff3a3076   Jan 21 ?        0:12 /usr/lib/utmpd
+ 8 S     root  5346  5344  0  41 20 ff649320    244 ff6494f0 16:55:35 console  0:01 /usr/bin/csh ./reset
+ 8 S     root  5288     1  0  49 20 ff44d678    365 ff44d6e8 14:46:00 console  0:02 /usr/bin/login
+ 8 S     root  5340  5288  0  51 20 ff624340     54 ff6243b0 16:55:23 console  0:00 -sh
+ 8 S     root  5569   117  2  49 20 ff695678    343 ff67f28e 17:00:00 ?        0:01 in.telnetd
+ 8 S     root  5579   117  3  49 20 ff36a9a0    343 ff44fa56 17:00:09 ?        0:01 in.telnetd
+ 8 S     root  5452   117  0  41 20 ff404010    314 ff39d23e 16:57:25 ?        0:01 in.comsat
+ 8 S     root  5344  5340  0  51 20 ff623020    433 ff6231f0 16:55:26 console  0:01 tcsh
+ 8 S patterso  5560  5559  1  57 20 ff623680    238 ff623850 16:59:42 pts/1    0:01 -csh
+ 8 S patterso  5566  5560  1  49 20 ff679988    238 ff679b58 16:59:46 pts/1    0:00 csh
+ 8 S     root  5557   117  1  98 20 ff44d018    343 ff44fe3e 16:59:37 ?        0:01 in.telnetd
+ 8 O     root  5584  5346  6  99 20 ff679328    191          17:00:12 console  0:01 ps -elf
+ 8 S     root  5582  5579  2  99 20 ff678008    347 ff6aeede 17:00:11 pts/2    0:01 login -p -d /dev/pts/2 -h attacker
+ 8 S     root  3491   117  0  49 20 ff648000    668 ff44f43e   Jan 22 ?        0:04 rpc.ttdbserverd
+ 8 S     root  5389     1  2  39 20 ff649980    332 ff037b3a 16:55:52 ?        0:06 /usr/sbin/auditd
+ 8 S     root  5573  5569  4  53 20 ff696338    358 ff696508 17:00:01 pts/0    0:01 login -p -d /dev/pts/0 -h attacker
+ 8 S     root  5559  5557  1  97 20 ff678668    365 ff6786d8 16:59:38 pts/1    0:01 login -p -d /dev/pts/1 -h attacker
+Fri Jan 23 17:01:15 EST 1998
+ F S      UID   PID  PPID  C PRI NI     ADDR     SZ    WCHAN    STIME TTY      TIME CMD
+19 T     root     0     0  0   0 SY f02176f0      0            Jan 21 ?        0:02 sched
+ 8 S     root     1     0  0  41 20 ff1c6cd8    384 ff1c6ea8   Jan 21 ?        0:22 /etc/init -
+19 S     root     2     0  0   0 SY ff1c6678      0 f022acb4   Jan 21 ?        0:00 pageout
+19 S     root     3     0  1   0 SY ff1c6018      0 f022eecc   Jan 21 ?       32:23 fsflush
+ 8 S     root   259   256  0  40 20 ff1c19a0    347 ff1c1b70   Jan 21 ?        0:01 /usr/lib/saf/ttymon
+ 8 S     root   120     1  0  77 20 ff1c1340    406 ff3a3f26   Jan 21 ?        0:01 /usr/lib/nfs/statd
+ 8 S     root   256     1  0  40 20 ff1c0ce0    328 ff1bec94   Jan 21 ?        0:00 /usr/lib/saf/sac -t 300
+ 8 S     root    96     1  0  51 20 ff330980    419 ff05685e   Jan 21 ?        0:01 /usr/sbin/rpcbind
+ 8 S     root    98     1  0  99 20 ff330320    385 ff05676e   Jan 21 ?        0:00 /usr/sbin/keyserv
+ 8 S     root   146     1  0  41 20 ff32fcc0    347 ff3a3436   Jan 21 ?        0:03 /usr/sbin/syslogd
+ 8 S     root   117     1  1  51 20 ff32f660    430 ff3a3d1e   Jan 21 ?        0:15 /usr/sbin/inetd -s
+ 8 S     root   104     1  0  40 20 ff32f000    536 ff056566   Jan 21 ?        0:01 /usr/sbin/rpc.nisd
+ 8 S     root   108     1  0  89 20 ff394988    422 ff0563ae   Jan 21 ?        0:00 /usr/sbin/kerbd
+ 8 S     root   122     1  0  59 20 ff394328    383 ff3a3eae   Jan 21 ?        0:01 /usr/lib/nfs/lockd
+ 8 S     root   142     1  0  59 20 ff393cc8    453 ff3a37f6   Jan 21 ?        0:01 /usr/lib/autofs/automountd
+ 8 S     root   180   172  0  47 20 ff393668    344 ff3a30c6   Jan 21 ?        0:00 lpNet
+ 8 S     root   162     1  1  99 20 ff393008    399 ff3931d8   Jan 21 ?        0:50 /usr/sbin/nscd
+ 8 S     root   156     1  0  41 20 ff405990    341 ff1beed4   Jan 21 ?        0:09 /usr/sbin/cron
+ 8 S     root   172     1  0  48 20 ff405330    633 ff3a309e   Jan 21 ?        0:01 /usr/lib/lpsched
+ 8 S     root  5612   117  1  59 20 ff648cc0    343 ff67fd2e 17:00:50 ?        0:01 in.telnetd
+ 8 S     root   181     1  0  47 20 ff404670    432 ff40b04e   Jan 21 ?        0:11 /usr/lib/sendmail -bd -q1h
+ 8 S     root   200     1  0  41 20 ff44e998    502 ff44f89e   Jan 21 ?        0:02 /usr/sbin/vold
+ 8 S     root   191     1  0  41 20 ff44e338    190 ff3a3076   Jan 21 ?        0:12 /usr/lib/utmpd
+ 8 S     root  5346  5344  0  41 20 ff649320    244 ff6494f0 16:55:35 console  0:01 /usr/bin/csh ./reset
+ 8 S     root  5288     1  0  49 20 ff44d678    365 ff44d6e8 14:46:00 console  0:02 /usr/bin/login
+ 8 S     root  5340  5288  0  51 20 ff624340     54 ff6243b0 16:55:23 console  0:00 -sh
+ 8 S  bullard  5593  5582  0  41 20 ff695678    237 ff695848 17:00:24 pts/2    0:01 -csh
+ 8 S     root  5579   117  0  49 20 ff36a9a0    343 ff44fa56 17:00:09 ?        0:01 in.telnetd
+ 8 S     root  5452   117  0  41 20 ff404010    314 ff39d23e 16:57:25 ?        0:01 in.comsat
+ 8 S     root  5344  5340  0  51 20 ff623020    433 ff6231f0 16:55:26 console  0:01 tcsh
+ 8 S franklin  5616  5614  2  41 20 ff623680    238 ff623850 17:00:56 pts/3    0:01 -csh
+ 8 S     root  5614  5612  2  78 20 ff44dcd8    365 ff44dd48 17:00:51 pts/3    0:01 login -p -d /dev/pts/3 -h locke
+ 8 S franklin  5622  5616  1  41 20 ff44d018    343 ff69e746 17:01:02 pts/3    0:00 mail -h
+ 8 O     root  5627  5346  6  99 20 ff679328    191          17:01:15 console  0:01 ps -elf
+ 8 S     root  5582  5579  1  99 20 ff678008    365 ff678078 17:00:11 pts/2    0:01 login -p -d /dev/pts/2 -h attacker
+ 8 S     root  3491   117  0  49 20 ff648000    668 ff44f43e   Jan 22 ?        0:04 rpc.ttdbserverd
+ 8 S     root  5389     1  2  39 20 ff649980    332 ff037b3a 16:55:52 ?        0:07 /usr/sbin/auditd
+ 8 S  bullard  5598  5593  1  41 20 ff696338    347 ff6aeede 17:00:28 pts/2    0:01 vi happy
+Fri Jan 23 17:02:17 EST 1998
+ F S      UID   PID  PPID  C PRI NI     ADDR     SZ    WCHAN    STIME TTY      TIME CMD
+19 T     root     0     0  0   0 SY f02176f0      0            Jan 21 ?        0:02 sched
+ 8 S     root     1     0  1  51 20 ff1c6cd8    384 ff1c6ea8   Jan 21 ?        0:22 /etc/init -
+19 S     root     2     0  0   0 SY ff1c6678      0 f022acb4   Jan 21 ?        0:00 pageout
+19 S     root     3     0  2   0 SY ff1c6018      0 f022eecc   Jan 21 ?       32:24 fsflush
+ 8 S     root   259   256  0  40 20 ff1c19a0    347 ff1c1b70   Jan 21 ?        0:01 /usr/lib/saf/ttymon
+ 8 S     root   120     1  0  77 20 ff1c1340    406 ff3a3f26   Jan 21 ?        0:01 /usr/lib/nfs/statd
+ 8 S     root   256     1  0  40 20 ff1c0ce0    328 ff1bec94   Jan 21 ?        0:00 /usr/lib/saf/sac -t 300
+ 8 S     root    96     1  0  51 20 ff330980    419 ff05685e   Jan 21 ?        0:01 /usr/sbin/rpcbind
+ 8 S     root    98     1  0  99 20 ff330320    385 ff05676e   Jan 21 ?        0:00 /usr/sbin/keyserv
+ 8 S     root   146     1  0  41 20 ff32fcc0    347 ff3a3436   Jan 21 ?        0:03 /usr/sbin/syslogd
+ 8 S     root   117     1  1  41 20 ff32f660    430 ff3a3d1e   Jan 21 ?        0:15 /usr/sbin/inetd -s
+ 8 S     root   104     1  0  40 20 ff32f000    536 ff056566   Jan 21 ?        0:01 /usr/sbin/rpc.nisd
+ 8 S     root   108     1  0  89 20 ff394988    422 ff0563ae   Jan 21 ?        0:00 /usr/sbin/kerbd
+ 8 S     root   122     1  0  59 20 ff394328    383 ff3a3eae   Jan 21 ?        0:01 /usr/lib/nfs/lockd
+ 8 S     root   142     1  0  59 20 ff393cc8    453 ff3a37f6   Jan 21 ?        0:01 /usr/lib/autofs/automountd
+ 8 S     root   180   172  0  47 20 ff393668    344 ff3a30c6   Jan 21 ?        0:00 lpNet
+ 8 S     root   162     1  0  99 20 ff393008    399 ff3931d8   Jan 21 ?        0:50 /usr/sbin/nscd
+ 8 S     root   156     1  0  41 20 ff405990    341 ff1beed4   Jan 21 ?        0:09 /usr/sbin/cron
+ 8 S     root   172     1  0  48 20 ff405330    633 ff3a309e   Jan 21 ?        0:01 /usr/lib/lpsched
+ 8 S     root   181     1  0  47 20 ff404670    432 ff40b04e   Jan 21 ?        0:11 /usr/lib/sendmail -bd -q1h
+ 8 S     root   200     1  0  41 20 ff44e998    502 ff44f89e   Jan 21 ?        0:02 /usr/sbin/vold
+ 8 S     root   191     1  0  40 20 ff44e338    190 ff44e508   Jan 21 ?        0:13 /usr/lib/utmpd
+ 8 S     root  5346  5344  0  50 20 ff649320    244 ff6494f0 16:55:35 console  0:01 /usr/bin/csh ./reset
+ 8 S     root  5288     1  0  49 20 ff44d678    365 ff44d6e8 14:46:00 console  0:02 /usr/bin/login
+ 8 S     root  5340  5288  0  51 20 ff624340     54 ff6243b0 16:55:23 console  0:00 -sh
+ 8 S     root  5452   117  0  41 20 ff404010    314 ff39d23e 16:57:25 ?        0:01 in.comsat
+ 8 S     root  5344  5340  0  51 20 ff623020    433 ff6231f0 16:55:26 console  0:01 tcsh
+ 8 O     root  5673  5346  6  99 20 ff679328    191          17:02:17 console  0:01 ps -elf
+ 8 S     root  3491   117  0  49 20 ff648000    668 ff44f43e   Jan 22 ?        0:04 rpc.ttdbserverd
+ 8 S     root  5389     1  2  39 20 ff649980    332 ff037b3a 16:55:52 ?        0:08 /usr/sbin/auditd
+Fri Jan 23 17:03:20 EST 1998
+ F S      UID   PID  PPID  C PRI NI     ADDR     SZ    WCHAN    STIME TTY      TIME CMD
+19 T     root     0     0  0   0 SY f02176f0      0            Jan 21 ?        0:02 sched
+ 8 S     root     1     0  1  41 20 ff1c6cd8    384 ff1c6ea8   Jan 21 ?        0:22 /etc/init -
+19 S     root     2     0  0   0 SY ff1c6678      0 f022acb4   Jan 21 ?        0:00 pageout
+19 S     root     3     0  2   0 SY ff1c6018      0 f022eecc   Jan 21 ?       32:25 fsflush
+ 8 S     root   259   256  0  40 20 ff1c19a0    347 ff1c1b70   Jan 21 ?        0:01 /usr/lib/saf/ttymon
+ 8 S     root   120     1  0  77 20 ff1c1340    406 ff3a3f26   Jan 21 ?        0:01 /usr/lib/nfs/statd
+ 8 S     root   256     1  0  40 20 ff1c0ce0    328 ff1bec94   Jan 21 ?        0:00 /usr/lib/saf/sac -t 300
+ 8 S     root    96     1  0  51 20 ff330980    419 ff05685e   Jan 21 ?        0:01 /usr/sbin/rpcbind
+ 8 S     root    98     1  0  99 20 ff330320    385 ff05676e   Jan 21 ?        0:00 /usr/sbin/keyserv
+ 8 S     root   146     1  0  41 20 ff32fcc0    347 ff3a3436   Jan 21 ?        0:03 /usr/sbin/syslogd
+ 8 S     root   117     1  0  51 20 ff32f660    430 ff3a3d1e   Jan 21 ?        0:16 /usr/sbin/inetd -s
+ 8 S     root   104     1  0  40 20 ff32f000    536 ff056566   Jan 21 ?        0:01 /usr/sbin/rpc.nisd
+ 8 S     root   108     1  0  89 20 ff394988    422 ff0563ae   Jan 21 ?        0:00 /usr/sbin/kerbd
+ 8 S     root   122     1  0  59 20 ff394328    383 ff3a3eae   Jan 21 ?        0:01 /usr/lib/nfs/lockd
+ 8 S     root   142     1  0  59 20 ff393cc8    453 ff3a37f6   Jan 21 ?        0:01 /usr/lib/autofs/automountd
+ 8 S     root   180   172  0  47 20 ff393668    344 ff3a30c6   Jan 21 ?        0:00 lpNet
+ 8 S     root   162     1  0  99 20 ff393008    399 ff3931d8   Jan 21 ?        0:50 /usr/sbin/nscd
+ 8 S     root   156     1  0  41 20 ff405990    341 ff1beed4   Jan 21 ?        0:09 /usr/sbin/cron
+ 8 S     root   172     1  0  48 20 ff405330    633 ff3a309e   Jan 21 ?        0:01 /usr/lib/lpsched
+ 8 S     root  5681  5679  3  87 20 ff648cc0    367 ff648d30 17:02:40 pts/0    0:02 login -p -d /dev/pts/0 -h attacker
+ 8 S     root   181     1  0  45 20 ff404670    432 ff40b04e   Jan 21 ?        0:11 /usr/lib/sendmail -bd -q1h
+ 8 S     root   200     1  0  41 20 ff44e998    502 ff44f89e   Jan 21 ?        0:02 /usr/sbin/vold
+ 8 S     root   191     1  0  41 20 ff44e338    190 ff3a3076   Jan 21 ?        0:13 /usr/lib/utmpd
+ 8 S     root  5346  5344  0  51 20 ff649320    244 ff6494f0 16:55:35 console  0:02 /usr/bin/csh ./reset
+ 8 S     root  5288     1  0  49 20 ff44d678    365 ff44d6e8 14:46:00 console  0:02 /usr/bin/login
+ 8 S     root  5340  5288  0  51 20 ff624340     54 ff6243b0 16:55:23 console  0:00 -sh
+ 8 S  clooney  5710  5691  2  47 20 ff648660    343 ff62743e 17:03:09 pts/1    0:01 mail -h
+ 8 S     root  5694   117  1  99 20 ff36a9a0    343 ff67f1ee 17:02:58 ?        0:01 in.telnetd
+ 8 S  clooney  5685  5684  1  58 20 ff404010    238 ff4041e0 17:02:46 pts/1    0:01 -csh
+ 8 S     root  5344  5340  0  51 20 ff623020    433 ff6231f0 16:55:26 console  0:01 tcsh
+ 8 S     root  5684  5682  1  49 20 ff623680    365 ff6236f0 17:02:41 pts/1    0:01 login -p -d /dev/pts/1 -h locke
+ 8 S     root  5716  5711  4  41 20 ff369680     54 ff69ee0e 17:03:12 pts/2    0:01 sh
+ 8 S     root  5718   117  3  59 20 ff369ce0    343 ff44fe3e 17:03:17 ?        0:01 in.telnetd
+ 8 S bancroft  5717  5712  3  47 20 ff679988    343 ff675d06 17:03:15 pts/0    0:01 mail -h
+ 8 S     root  5722  5718  3  99 20 ff696998    347 ff675356 17:03:19 pts/3    0:01 login -p -d /dev/pts/3 -h attacker
+ 8 S     root  5682   117  1  79 20 ff44dcd8    343 ff67ffae 17:02:40 ?        0:01 in.telnetd
+ 8 S     root  5696  5694  2  78 20 ff44d018    365 ff44d088 17:02:59 pts/2    0:01 login -p -d /dev/pts/2 -h attacker
+ 8 O     root  5724  5346  6  79 20 ff679328    191          17:03:20 console  0:01 ps -elf
+ 8 S bancroft  5712  5681  3  48 20 ff678008    238 ff6781d8 17:03:10 pts/0    0:01 -csh
+ 8 S  clooney  5691  5685  1  41 20 ff404cd0    238 ff404ea0 17:02:50 pts/1    0:01 csh
+ 8 S     root  3491   117  0  49 20 ff648000    668 ff44f43e   Jan 22 ?        0:04 rpc.ttdbserverd
+ 8 S     root  5389     1  3  39 20 ff649980    332 ff037b3a 16:55:52 ?        0:10 /usr/sbin/auditd
+ 8 S     root  5679   117  1  59 20 ff696338    343 ff67fbee 17:02:38 ?        0:01 in.telnetd
+ 8 S patterso  5702  5696  3  46 20 ff36a340    238 ff36a510 17:03:04 pts/2    0:01 -csh
+ 8 S     root  5705   117  1  41 20 ff369020    314 ff39d23e 17:03:05 ?        0:01 in.comsat
+ 8 S patterso  5711  5702  2  46 20 ff678668    238 ff678838 17:03:10 pts/2    0:00 csh
+Fri Jan 23 17:04:22 EST 1998
+ F S      UID   PID  PPID  C PRI NI     ADDR     SZ    WCHAN    STIME TTY      TIME CMD
+19 T     root     0     0  0   0 SY f02176f0      0            Jan 21 ?        0:02 sched
+ 8 S     root     1     0  0  51 20 ff1c6cd8    384 ff1c6ea8   Jan 21 ?        0:23 /etc/init -
+19 S     root     2     0  0   0 SY ff1c6678      0 f022acb4   Jan 21 ?        0:00 pageout
+19 S     root     3     0  2   0 SY ff1c6018      0 ff317328   Jan 21 ?       32:26 fsflush
+ 8 S     root   259   256  0  40 20 ff1c19a0    347 ff1c1b70   Jan 21 ?        0:01 /usr/lib/saf/ttymon
+ 8 S     root   120     1  0  77 20 ff1c1340    406 ff3a3f26   Jan 21 ?        0:01 /usr/lib/nfs/statd
+ 8 S     root   256     1  0  40 20 ff1c0ce0    328 ff1bec94   Jan 21 ?        0:00 /usr/lib/saf/sac -t 300
+ 8 S     root    96     1  0  51 20 ff330980    419 ff05685e   Jan 21 ?        0:01 /usr/sbin/rpcbind
+ 8 S     root    98     1  0  99 20 ff330320    385 ff05676e   Jan 21 ?        0:00 /usr/sbin/keyserv
+ 8 S     root   146     1  0  41 20 ff32fcc0    347 ff3a3436   Jan 21 ?        0:03 /usr/sbin/syslogd
+ 8 S     root   117     1  0  51 20 ff32f660    430 ff3a3d1e   Jan 21 ?        0:16 /usr/sbin/inetd -s
+ 8 S     root   104     1  0  40 20 ff32f000    536 ff056566   Jan 21 ?        0:01 /usr/sbin/rpc.nisd
+ 8 S     root   108     1  0  89 20 ff394988    422 ff0563ae   Jan 21 ?        0:00 /usr/sbin/kerbd
+ 8 S     root   122     1  0  59 20 ff394328    383 ff3a3eae   Jan 21 ?        0:01 /usr/lib/nfs/lockd
+ 8 S     root   142     1  0  59 20 ff393cc8    453 ff3a37f6   Jan 21 ?        0:01 /usr/lib/autofs/automountd
+ 8 S     root   180   172  0  47 20 ff393668    344 ff3a30c6   Jan 21 ?        0:00 lpNet
+ 8 S     root   162     1  0  99 20 ff393008    399 ff3931d8   Jan 21 ?        0:50 /usr/sbin/nscd
+ 8 S     root   156     1  0  41 20 ff405990    341 ff1beed4   Jan 21 ?        0:09 /usr/sbin/cron
+ 8 S     root   172     1  0  48 20 ff405330    633 ff3a309e   Jan 21 ?        0:01 /usr/lib/lpsched
+ 8 S     root   181     1  0  45 20 ff404670    432 ff40b04e   Jan 21 ?        0:11 /usr/lib/sendmail -bd -q1h
+ 8 S     root   200     1  0  41 20 ff44e998    502 ff44f89e   Jan 21 ?        0:02 /usr/sbin/vold
+ 8 S     root   191     1  0  41 20 ff44e338    190 ff44e508   Jan 21 ?        0:13 /usr/lib/utmpd
+ 8 S     root  5346  5344  0  41 20 ff649320    244 ff6494f0 16:55:35 console  0:02 /usr/bin/csh ./reset
+ 8 S     root  5288     1  0  49 20 ff44d678    365 ff44d6e8 14:46:00 console  0:02 /usr/bin/login
+ 8 S     root  5340  5288  0  51 20 ff624340     54 ff6243b0 16:55:23 console  0:00 -sh
+ 8 S     root  5733   117  0  89 20 ff648660    343 ff67fbee 17:03:30 ?        0:01 in.telnetd
+ 8 S     root  5344  5340  0  51 20 ff623020    433 ff6231f0 16:55:26 console  0:01 tcsh
+ 8 S  clooney  5741  5738  2  71 20 ff623680    238 ff675926 17:03:37 pts/0    0:01 -csh
+ 8 S     root  5776   117  3  48 20 ff695678    343 ff67f3a6 17:04:21 ?        0:01 in.telnetd
+ 8 O     root  5779  5346  6  99 20 ff679328    191          17:04:22 console  0:01 ps -elf
+ 8 S     root  5738  5733  1  49 20 ff404cd0    365 ff404d40 17:03:32 pts/0    0:01 login -p -d /dev/pts/0 -h locke
+ 8 S     root  3491   117  0  49 20 ff648000    668 ff44f43e   Jan 22 ?        0:04 rpc.ttdbserverd
+ 8 S     root  5389     1  2  39 20 ff649980    332 ff037b3a 16:55:52 ?        0:11 /usr/sbin/auditd
+ 8 S     root  5705   117  0  41 20 ff369020    314 ff39d23e 17:03:05 ?        0:01 in.comsat
+Fri Jan 23 17:05:27 EST 1998
+ F S      UID   PID  PPID  C PRI NI     ADDR     SZ    WCHAN    STIME TTY      TIME CMD
+19 T     root     0     0  0   0 SY f02176f0      0            Jan 21 ?        0:02 sched
+ 8 S     root     1     0  0  41 20 ff1c6cd8    384 ff1c6ea8   Jan 21 ?        0:23 /etc/init -
+19 S     root     2     0  0   0 SY ff1c6678      0 f022acb4   Jan 21 ?        0:00 pageout
+19 S     root     3     0  1   0 SY ff1c6018      0 f022eecc   Jan 21 ?       32:27 fsflush
+ 8 S     root   259   256  0  40 20 ff1c19a0    347 ff1c1b70   Jan 21 ?        0:01 /usr/lib/saf/ttymon
+ 8 S     root   120     1  0  77 20 ff1c1340    406 ff3a3f26   Jan 21 ?        0:01 /usr/lib/nfs/statd
+ 8 S     root   256     1  0  40 20 ff1c0ce0    328 ff1bec94   Jan 21 ?        0:00 /usr/lib/saf/sac -t 300
+ 8 S     root    96     1  0  51 20 ff330980    419 ff05685e   Jan 21 ?        0:01 /usr/sbin/rpcbind
+ 8 S     root    98     1  0  99 20 ff330320    385 ff05676e   Jan 21 ?        0:00 /usr/sbin/keyserv
+ 8 S     root   146     1  0  40 20 ff32fcc0    347 ff3a3436   Jan 21 ?        0:03 /usr/sbin/syslogd
+ 8 S     root   117     1  0  51 20 ff32f660    430 ff3a3d1e   Jan 21 ?        0:16 /usr/sbin/inetd -s
+ 8 S     root   104     1  0  40 20 ff32f000    536 ff056566   Jan 21 ?        0:01 /usr/sbin/rpc.nisd
+ 8 S     root   108     1  0  89 20 ff394988    422 ff0563ae   Jan 21 ?        0:00 /usr/sbin/kerbd
+ 8 S     root   122     1  0  59 20 ff394328    383 ff3a3eae   Jan 21 ?        0:01 /usr/lib/nfs/lockd
+ 8 S     root   142     1  0  59 20 ff393cc8    453 ff3a37f6   Jan 21 ?        0:01 /usr/lib/autofs/automountd
+ 8 S     root   180   172  0  47 20 ff393668    344 ff3a30c6   Jan 21 ?        0:00 lpNet
+ 8 S     root   162     1  0  99 20 ff393008    399 ff3931d8   Jan 21 ?        0:50 /usr/sbin/nscd
+ 8 S     root   156     1  0  41 20 ff405990    341 ff1beed4   Jan 21 ?        0:09 /usr/sbin/cron
+ 8 S     root   172     1  0  48 20 ff405330    633 ff3a309e   Jan 21 ?        0:01 /usr/lib/lpsched
+ 8 S     root   181     1  0  45 20 ff404670    432 ff40b04e   Jan 21 ?        0:11 /usr/lib/sendmail -bd -q1h
+ 8 S     root   200     1  0  41 20 ff44e998    502 ff44f89e   Jan 21 ?        0:02 /usr/sbin/vold
+ 8 S     root   191     1  0  41 20 ff44e338    190 ff3a3076   Jan 21 ?        0:13 /usr/lib/utmpd
+ 8 S     root  5346  5344  0  51 20 ff649320    244 ff6494f0 16:55:35 console  0:02 /usr/bin/csh ./reset
+ 8 S     root  5288     1  0  49 20 ff44d678    365 ff44d6e8 14:46:00 console  0:02 /usr/bin/login
+ 8 S     root  5340  5288  0  51 20 ff624340     54 ff6243b0 16:55:23 console  0:00 -sh
+ 8 S    white  5808  5807  2  41 20 ff404010    238 ff6aecee 17:05:13 pts/0    0:01 -csh
+ 8 S     root  5344  5340  0  51 20 ff623020    433 ff6231f0 16:55:26 console  0:01 tcsh
+ 8 S     root  5807  5805  2  99 20 ff695678    365 ff6956e8 17:05:09 pts/0    0:01 login -p -d /dev/pts/0 -h attacker
+ 8 O     root  5816  5346  6  99 20 ff679328    191          17:05:27 console  0:01 ps -elf
+ 8 S     root  3491   117  0  49 20 ff648000    668 ff44f43e   Jan 22 ?        0:04 rpc.ttdbserverd
+ 8 S     root  5389     1  1  39 20 ff649980    332 ff037b3a 16:55:52 ?        0:13 /usr/sbin/auditd
+ 8 S     root  5805   117  1  89 20 ff369020    343 ff67f5fe 17:05:07 ?        0:01 in.telnetd
+Fri Jan 23 17:06:28 EST 1998
+ F S      UID   PID  PPID  C PRI NI     ADDR     SZ    WCHAN    STIME TTY      TIME CMD
+19 T     root     0     0  0   0 SY f02176f0      0            Jan 21 ?        0:02 sched
+ 8 S     root     1     0  0  51 20 ff1c6cd8    384 ff1c6ea8   Jan 21 ?        0:23 /etc/init -
+19 S     root     2     0  0   0 SY ff1c6678      0 f022acb4   Jan 21 ?        0:00 pageout
+19 S     root     3     0  1   0 SY ff1c6018      0 f022eecc   Jan 21 ?       32:27 fsflush
+ 8 S     root   259   256  0  40 20 ff1c19a0    347 ff1c1b70   Jan 21 ?        0:01 /usr/lib/saf/ttymon
+ 8 S     root   120     1  0  77 20 ff1c1340    406 ff3a3f26   Jan 21 ?        0:01 /usr/lib/nfs/statd
+ 8 S     root   256     1  0  40 20 ff1c0ce0    328 ff1bec94   Jan 21 ?        0:00 /usr/lib/saf/sac -t 300
+ 8 S     root    96     1  0  51 20 ff330980    419 ff05685e   Jan 21 ?        0:01 /usr/sbin/rpcbind
+ 8 S     root    98     1  0  99 20 ff330320    385 ff05676e   Jan 21 ?        0:00 /usr/sbin/keyserv
+ 8 S     root   146     1  0  40 20 ff32fcc0    347 ff3a3436   Jan 21 ?        0:03 /usr/sbin/syslogd
+ 8 S     root   117     1  0  41 20 ff32f660    430 ff3a3d1e   Jan 21 ?        0:16 /usr/sbin/inetd -s
+ 8 S     root   104     1  0  40 20 ff32f000    536 ff056566   Jan 21 ?        0:01 /usr/sbin/rpc.nisd
+ 8 S     root   108     1  0  89 20 ff394988    422 ff0563ae   Jan 21 ?        0:00 /usr/sbin/kerbd
+ 8 S     root   122     1  0  59 20 ff394328    383 ff3a3eae   Jan 21 ?        0:01 /usr/lib/nfs/lockd
+ 8 S     root   142     1  0  59 20 ff393cc8    453 ff3a37f6   Jan 21 ?        0:01 /usr/lib/autofs/automountd
+ 8 S     root   180   172  0  47 20 ff393668    344 ff3a30c6   Jan 21 ?        0:00 lpNet
+ 8 S     root   162     1  0  99 20 ff393008    399 ff3931d8   Jan 21 ?        0:50 /usr/sbin/nscd
+ 8 S     root   156     1  0  41 20 ff405990    341 ff1beed4   Jan 21 ?        0:09 /usr/sbin/cron
+ 8 S     root   172     1  0  48 20 ff405330    633 ff3a309e   Jan 21 ?        0:01 /usr/lib/lpsched
+ 8 S     root  5823   117  0  41 20 ff648cc0    314 ff39d23e 17:05:32 ?        0:01 in.comsat
+ 8 S     root   181     1  0  45 20 ff404670    432 ff40b04e   Jan 21 ?        0:11 /usr/lib/sendmail -bd -q1h
+ 8 S     root   200     1  0  41 20 ff44e998    502 ff44f89e   Jan 21 ?        0:02 /usr/sbin/vold
+ 8 S     root   191     1  0  41 20 ff44e338    190 ff3a3076   Jan 21 ?        0:13 /usr/lib/utmpd
+ 8 S     root  5346  5344  0  51 20 ff649320    244 ff6494f0 16:55:35 console  0:02 /usr/bin/csh ./reset
+ 8 S     root  5288     1  0  49 20 ff44d678    365 ff44d6e8 14:46:00 console  0:02 /usr/bin/login
+ 8 S     root  5340  5288  0  51 20 ff624340     54 ff6243b0 16:55:23 console  0:00 -sh
+ 8 S     root  5344  5340  0  51 20 ff623020    433 ff6231f0 16:55:26 console  0:01 tcsh
+ 8 O     root  5832  5346  6  99 20 ff679328    191          17:06:29 console  0:01 ps -elf
+ 8 S     root  3491   117  0  49 20 ff648000    668 ff44f43e   Jan 22 ?        0:04 rpc.ttdbserverd
+ 8 S     root  5389     1  1  39 20 ff649980    332 ff037b3a 16:55:52 ?        0:13 /usr/sbin/auditd
+Fri Jan 23 17:07:30 EST 1998
+ F S      UID   PID  PPID  C PRI NI     ADDR     SZ    WCHAN    STIME TTY      TIME CMD
+19 T     root     0     0  0   0 SY f02176f0      0            Jan 21 ?        0:02 sched
+ 8 S     root     1     0  0  51 20 ff1c6cd8    384 ff1c6ea8   Jan 21 ?        0:23 /etc/init -
+19 S     root     2     0  0   0 SY ff1c6678      0 f022acb4   Jan 21 ?        0:00 pageout
+19 S     root     3     0  1   0 SY ff1c6018      0 f022eecc   Jan 21 ?       32:28 fsflush
+ 8 S     root   259   256  0  40 20 ff1c19a0    347 ff1c1b70   Jan 21 ?        0:01 /usr/lib/saf/ttymon
+ 8 S     root   120     1  0  77 20 ff1c1340    406 ff3a3f26   Jan 21 ?        0:01 /usr/lib/nfs/statd
+ 8 S     root   256     1  0  40 20 ff1c0ce0    328 ff1bec94   Jan 21 ?        0:00 /usr/lib/saf/sac -t 300
+ 8 S     root    96     1  0  51 20 ff330980    419 ff05685e   Jan 21 ?        0:01 /usr/sbin/rpcbind
+ 8 S     root    98     1  0  99 20 ff330320    385 ff05676e   Jan 21 ?        0:00 /usr/sbin/keyserv
+ 8 S     root   146     1  0  40 20 ff32fcc0    347 ff3a3436   Jan 21 ?        0:03 /usr/sbin/syslogd
+ 8 S     root   117     1  0  41 20 ff32f660    430 ff3a3d1e   Jan 21 ?        0:16 /usr/sbin/inetd -s
+ 8 S     root   104     1  0  40 20 ff32f000    536 ff056566   Jan 21 ?        0:01 /usr/sbin/rpc.nisd
+ 8 S     root   108     1  0  89 20 ff394988    422 ff0563ae   Jan 21 ?        0:00 /usr/sbin/kerbd
+ 8 S     root   122     1  0  59 20 ff394328    383 ff3a3eae   Jan 21 ?        0:01 /usr/lib/nfs/lockd
+ 8 S     root   142     1  0  59 20 ff393cc8    453 ff3a37f6   Jan 21 ?        0:01 /usr/lib/autofs/automountd
+ 8 S     root   180   172  0  47 20 ff393668    344 ff3a30c6   Jan 21 ?        0:00 lpNet
+ 8 S     root   162     1  0  99 20 ff393008    399 ff3931d8   Jan 21 ?        0:50 /usr/sbin/nscd
+ 8 S     root   156     1  0  41 20 ff405990    341 ff1beed4   Jan 21 ?        0:09 /usr/sbin/cron
+ 8 S     root   172     1  0  48 20 ff405330    633 ff3a309e   Jan 21 ?        0:01 /usr/lib/lpsched
+ 8 S     root  5823   117  0  41 20 ff648cc0    314 ff39d23e 17:05:32 ?        0:01 in.comsat
+ 8 S     root   181     1  0  45 20 ff404670    432 ff40b04e   Jan 21 ?        0:11 /usr/lib/sendmail -bd -q1h
+ 8 S     root   200     1  0  41 20 ff44e998    502 ff44f89e   Jan 21 ?        0:02 /usr/sbin/vold
+ 8 S     root   191     1  0  41 20 ff44e338    190 ff3a3076   Jan 21 ?        0:13 /usr/lib/utmpd
+ 8 S     root  5346  5344  0  41 20 ff649320    244 ff6494f0 16:55:35 console  0:02 /usr/bin/csh ./reset
+ 8 S     root  5288     1  0  49 20 ff44d678    365 ff44d6e8 14:46:00 console  0:02 /usr/bin/login
+ 8 S     root  5340  5288  0  51 20 ff624340     54 ff6243b0 16:55:23 console  0:00 -sh
+ 8 S     root  5344  5340  0  51 20 ff623020    433 ff6231f0 16:55:26 console  0:01 tcsh
+ 8 O     root  5835  5346  6  89 20 ff679328    191          17:07:30 console  0:01 ps -elf
+ 8 S     root  3491   117  0  49 20 ff648000    668 ff44f43e   Jan 22 ?        0:04 rpc.ttdbserverd
+ 8 S     root  5389     1  0  39 20 ff649980    332 ff037b3a 16:55:52 ?        0:13 /usr/sbin/auditd

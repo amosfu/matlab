@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- saved from url=(0259)https://a.lw.skype.com/Login/silent/MsaCallback?site_name=lw.skype.com&response_type=postmessage&client_id=580081&redirect_uri=https%3a%2f%2foutlook.live.com%2fowa%2f&state=silentloginsdk_1502893157392&partner=999&session_id=7B9fBy7XE6u3KAyP3Eru&wa=wsignin1.0 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+
+    <title>Skype</title>
+
+    <script src="./HashFragment.js.download"></script>
+
+    <script type="text/javascript">
+        var message = "";
+        (function () {
+            var target = "https://outlook.live.com/owa/",
+                messageObject = {"skypetoken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEyIn0.eyJpYXQiOjE1MDI4OTMxNTcsImV4cCI6MTUwMjk3OTU1Nywic2t5cGVpZCI6ImxpdmU6ZnMxOTg0XzEiLCJzY3AiOjk1OCwiY3NpIjoiMyIsImNpZCI6IjRjNTZlOTg2NzkzYjRiNmMiLCJhYXQiOjE1MDA0Mzg3MDN9.VzmGrZlXA8c9GdbIBXTGBy9pFVAtOLa06dF1zfBBkdm9MKBB57tEMU9FmhkTn35lLT43HxTqA6Y043ooHZ10phwmA4-C-lZRtM2UJZi4w20-VYF7kp5B0cXymJMbmBQa4Abl_8jIF9Q8vkuhKNmsXG3dCrTo1am0EkD2vee55vZu2V4rS8MQ50jHuwKpkJJj2P-QUWrmDMU_q8gV","expires_in":"86400","skypeid":"live:fs1984_1","state":"silentloginsdk_1502893157392"};
+
+            window.hashFragment.parseHashParams();
+            var error = window.hashFragment.getHashParam("error");
+            var errorDescription = window.hashFragment.getHashParam("error_description");
+
+            if (!!error && error.length) {
+                messageObject.error = error;
+                messageObject.error_description = errorDescription;
+            }
+            
+            var message = JSON.stringify(messageObject);
+
+            if (!!window.opener) {                              // Send postMessage from a Popup and close window
+                window.opener.postMessage(message, target);
+                window.close();
+            } else if (!!window.parent) {                       // Send postMessage from an Iframe
+                window.parent.postMessage(message, target);
+            }
+        }());
+    </script>
+</head>
+<body>
+
+</body></html>

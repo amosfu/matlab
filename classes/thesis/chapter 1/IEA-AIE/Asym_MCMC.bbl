@@ -1,0 +1,204 @@
+\begin{thebibliography}{10}
+
+\bibitem{Bouguila2005}
+Bouguila, N., Ziou, D.:
+\newblock Mml-based approach for finite dirichlet mixture estimation and
+  selection.
+\newblock In Perner, P., Imiya, A., eds.: Machine Learning and Data Mining in
+  Pattern Recognition, 4th International Conference, {MLDM} 2005, Leipzig,
+  Germany, July 9-11, 2005, Proceedings. Volume 3587 of Lecture Notes in
+  Computer Science., Springer (2005)  42--51
+
+\bibitem{Bouguila2007}
+Bouguila, N., Ziou, D., Hammoud, R.I.:
+\newblock A bayesian non-gaussian mixture analysis: Application to eye
+  modeling.
+\newblock In: 2007 {IEEE} Computer Society Conference on Computer Vision and
+  Pattern Recognition {(CVPR} 2007), 18-23 June 2007, Minneapolis, Minnesota,
+  {USA}. (2007)
+
+\bibitem{Sefidpour2012}
+Sefidpour, A., Bouguila, N.:
+\newblock Spatial color image segmentation based on finite non-gaussian mixture
+  models.
+\newblock Expert Syst. Appl. \textbf{39}(10) (2012)  8993--9001
+
+\bibitem{Bouguila2009a}
+Bouguila, N., Amayri, O.:
+\newblock A discrete mixture-based kernel for svms: Application to spam and
+  image categorization.
+\newblock Inf. Process. Manage. \textbf{45}(6) (2009)  631--642
+
+\bibitem{McLachlan2000}
+McLachlan, G.J., Peel, D.:
+\newblock Finite mixture models.
+\newblock Wiley (2000)
+
+\bibitem{Bouguila2006}
+Bouguila, N., Ziou, D., Monga, E.:
+\newblock Practical bayesian estimation of a finite beta mixture through gibbs
+  sampling and its applications.
+\newblock Statistics and Computing \textbf{16}(2) (2006)  215--225
+
+\bibitem{Elguebaly2010}
+Elguebaly, T., Bouguila, N.:
+\newblock Bayesian learning of generalized gaussian mixture models on
+  biomedical images.
+\newblock In: Artificial Neural Networks in Pattern Recognition, 4th {IAPR}
+  {TC3} Workshop, {ANNPR} 2010, Cairo, Egypt, April 11-13, 2010. Proceedings.
+  (2010)  207--218
+
+\bibitem{Elguebaly2014}
+Elguebaly, T., Bouguila, N.:
+\newblock Background subtraction using finite mixtures of asymmetric gaussian
+  distributions and shadow detection.
+\newblock Mach. Vis. Appl. \textbf{25}(5) (2014)  1145--1162
+
+\bibitem{Bouguila2012a}
+Bouguila, N., Almakadmeh, K., Boutemedjet, S.:
+\newblock A finite mixture model for simultaneous high-dimensional clustering,
+  localized feature selection and outlier rejection.
+\newblock Expert Syst. Appl. \textbf{39}(7) (2012)  6641--6656
+
+\bibitem{Boutemedjet2010}
+Boutemedjet, S., Ziou, D., Bouguila, N.:
+\newblock Model-based subspace clustering of non-gaussian data.
+\newblock Neurocomputing \textbf{73}(10-12) (2010)  1730--1739
+
+\bibitem{Dempster1977}
+Dempster, A.P., Laird, N.M., Rubin, D.B.:
+\newblock Maximum likelihood from incomplete data via the em algorithm.
+\newblock Journal of the royal statistical society. Series B (methodological)
+  (1977)  1--38
+
+\bibitem{Bouguila2005a}
+Bouguila, N., Ziou, D.:
+\newblock On fitting finite dirichlet mixture using {ECM} and {MML}.
+\newblock In Wang, P., Singh, M., Apt{\'{e}}, C., Perner, P., eds.: Pattern
+  Recognition and Data Mining, Third International Conference on Advances in
+  Pattern Recognition, {ICAPR} 2005, Bath, UK, August 22-25, 2005, Proceedings,
+  Part {I}. Volume 3686 of Lecture Notes in Computer Science., Springer (2005)
+  172--182
+
+\bibitem{Bouguila2009}
+Bouguila, N., Ziou, D., Hammoud, R.I.:
+\newblock On bayesian analysis of a finite generalized dirichlet mixture via a
+  metropolis-within-gibbs sampling.
+\newblock Pattern Anal. Appl. \textbf{12}(2) (2009)  151--166
+
+\bibitem{Bouguila2012}
+Bouguila, N., Elguebaly, T.:
+\newblock A fully bayesian model based on reversible jump {MCMC} and finite
+  beta mixtures for clustering.
+\newblock Expert Syst. Appl. \textbf{39}(5) (2012)  5946--5959
+
+\bibitem{Hastings1970}
+Hastings, W.K.:
+\newblock Monte carlo sampling methods using markov chains and their
+  applications.
+\newblock Biometrika \textbf{57}(1) (1970)  97--109
+
+\bibitem{Bouguila2011}
+Bouguila, N.:
+\newblock Bayesian hybrid generative discriminative learning based on finite
+  liouville mixture models.
+\newblock Pattern Recognition \textbf{44}(6) (2011)  1183--1200
+
+\bibitem{Bourouis2014}
+Bourouis, S., Mashrgy, M.A., Bouguila, N.:
+\newblock Bayesian learning of finite generalized inverted dirichlet mixtures:
+  Application to object classification and forgery detection.
+\newblock Expert Syst. Appl. \textbf{41}(5) (2014)  2329--2336
+
+\bibitem{Elguebaly2011}
+Elguebaly, T., Bouguila, N.:
+\newblock Bayesian learning of finite generalized gaussian mixture models on
+  images.
+\newblock Signal Processing \textbf{91}(4) (2011)  801--820
+
+\bibitem{Bouguila2004}
+Bouguila, N., Ziou, D.:
+\newblock A powreful finite mixture model based on the generalized dirichlet
+  distribution: Unsupervised learning and applications.
+\newblock In: 17th International Conference on Pattern Recognition, {ICPR}
+  2004, Cambridge, UK, August 23-26, 2004., {IEEE} Computer Society (2004)
+  280--283
+
+\bibitem{Bouguila2004a}
+Bouguila, N., Ziou, D.:
+\newblock Dirichlet-based probability model applied to human skin detection
+  [image skin detection].
+\newblock In: 2004 {IEEE} International Conference on Acoustics, Speech, and
+  Signal Processing, {ICASSP} 2004, Montreal, Quebec, Canada, May 17-21, 2004,
+  {IEEE} (2004)  521--524
+
+\bibitem{Luengo2013}
+Luengo, D., Martino, L.:
+\newblock Fully adaptive gaussian mixture metropolis-hastings algorithm.
+\newblock In: {IEEE} International Conference on Acoustics, Speech and Signal
+  Processing, {ICASSP} 2013, Vancouver, BC, Canada, May 26-31, 2013, {IEEE}
+  (2013)  6148--6152
+
+\bibitem{Tavallaee2009}
+Tavallaee, M., Bagheri, E., Lu, W., Ghorbani, A.A.:
+\newblock A detailed analysis of the {KDD} {CUP} 99 data set.
+\newblock In: 2009 {IEEE} Symposium on Computational Intelligence for Security
+  and Defense Applications, {CISDA} 2009, Ottawa, Canada, July 8-10, 2009,
+  {IEEE} (2009)  1--6
+
+\bibitem{Stephens2000}
+Stephens, M.:
+\newblock Bayesian analysis of mixture models with an unknown number of
+  components-an alternative to reversible jump methods.
+\newblock Annals of statistics (2000)  40--74
+
+\bibitem{Puttini2003}
+Puttini, R.S., Marrakchi, Z., M{\'e}, L.:
+\newblock A bayesian classification model for real-time intrusion detection.
+\newblock In: AIP Conference Proceedings. Volume 659., AIP (2003)  150--162
+
+\bibitem{Zhong2007}
+Zhong, S., Khoshgoftaar, T.M., Seliya, N.:
+\newblock Clustering-based network intrusion detection.
+\newblock International Journal of reliability, Quality and safety Engineering
+  \textbf{14}(02) (2007)  169--187
+
+\bibitem{Fan2011}
+Fan, W., Bouguila, N., Ziou, D.:
+\newblock Unsupervised anomaly intrusion detection via localized bayesian
+  feature selection.
+\newblock In Cook, D.J., Pei, J., Wang, W., Za{\"{\i}}ane, O.R., Wu, X., eds.:
+  11th {IEEE} International Conference on Data Mining, {ICDM} 2011, Vancouver,
+  BC, Canada, December 11-14, 2011, {IEEE} Computer Society (2011)  1032--1037
+
+\bibitem{Hartigan1979}
+Hartigan, J.A., Wong, M.A.:
+\newblock Algorithm as 136: A k-means clustering algorithm.
+\newblock Journal of the Royal Statistical Society. Series C (Applied
+  Statistics) \textbf{28}(1) (1979)  100--108
+
+\bibitem{Bouguila2007a}
+Bouguila, N.:
+\newblock Spatial color image databases summarization.
+\newblock In: Proceedings of the {IEEE} International Conference on Acoustics,
+  Speech, and Signal Processing, {ICASSP} 2007, Honolulu, Hawaii, USA, April
+  15-20, 2007, {IEEE} (2007)  953--956
+
+\bibitem{Bouguila2004b}
+Bouguila, N., Ziou, D.:
+\newblock Improving content based image retrieval systems using finite
+  multinomial dirichlet mixture.
+\newblock In: Machine Learning for Signal Processing, 2004. Proceedings of the
+  2004 14th IEEE Signal Processing Society Workshop, IEEE (2004)  23--32
+
+\bibitem{Boutemedjet2007}
+Boutemedjet, S., Ziou, D., Bouguila, N.:
+\newblock Unsupervised feature selection for accurate recommendation of
+  high-dimensional image data.
+\newblock In Platt, J.C., Koller, D., Singer, Y., Roweis, S.T., eds.: Advances
+  in Neural Information Processing Systems 20, Proceedings of the Twenty-First
+  Annual Conference on Neural Information Processing Systems, Vancouver,
+  British Columbia, Canada, December 3-6, 2007, Curran Associates, Inc. (2007)
+  177--184
+
+\end{thebibliography}

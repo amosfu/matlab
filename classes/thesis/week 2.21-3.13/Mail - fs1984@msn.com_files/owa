@@ -1,0 +1,142 @@
+document.write("<!--*\n");
+document.write("var aolAdId=\"9391089|25967776\";\n");
+document.write("var aolSize=\"160|600\";\n");
+document.write("var aolFormat=\"HTML\";\n");
+document.write("var aolAppNexus=\"AST\";\n");
+document.write("var aolGUID=\"1502900973|106406479292012477\";\n");
+document.write("*-->\n");
+var anPG = "WAB2CAEN".toUpperCase();
+var apntag = apntag || {};
+apntag.anq = apntag.anq || [];
+(function() {
+	var d = document,
+		e = d.createElement('script'),
+		p = d.getElementsByTagName('head')[0];
+	e.type = 'text/javascript';
+	e.async = true;
+	e.src = '//acdn.adnxs.com/ast/ast.js';
+	p.insertBefore(e, p.firstChild);
+})();
+apntag.anq.push(function() {
+	var anMKT = "ca".toUpperCase();
+	var escValue=escape('pg:' + anPG + ';p:;r:');
+	apntag.setPageOpts({
+		member: 280,
+		user: {
+			externalUid: '2b080b94e9f163f7059f0150edf16057',
+			dnt: ''
+		},
+		keywords: {
+	        pagetype: '',
+            optout: '',
+            provider_id: '',
+            rid: ''
+        }
+	});
+	apntag.defineTag({
+		invCode: anPG,
+		sizes: [
+			[160,600]
+		],
+		targetId: anPG,
+		allowSmallerSizes: false,
+		rendererOptions: {
+			"playOnMouseover": false,
+			"audioOnMouseover": false,
+			"playVideoVisibleThreshold": 50,
+			"nonViewableBehavior": "pause",
+			"playerTechnology": ["flash", "html5"],
+			"adText": "Ad",
+			"showMute": true,
+			"showVolume": true,
+			"showProgressBar": false,
+			"allowFullscreen": true,
+			"vpaidTimeout": 5000,
+			"terminateUnresponsiveVPAIDCreative": false,
+			"enableInlineVideoForIos": true,
+			"aspectRatio": "16:9",
+			"delayExpandUntilVPAIDInit": true,
+			"delayExpandUntilVPAIDImpression": false,
+			"disableTopBar": false,
+			"postShow": {
+				"type": "image",
+				"clickUrl": "http://www.msn.com/en-ca/entertainment/celebrity/reality-stars-plastic-surgery-before-and-after/ss-AAnjCFn",
+				"url": "http://img-s-msn-com.akamaized.net/tenant/amp/entityid/BBzvfrg.img"
+			},
+			"fallback": {
+				"type": "image",
+				"clickUrl": "http://www.msn.com/en-ca/lifestyle/style/100-times-celebrities-wore-the-worlds-most-uncomfortable-looking-outfits/ss-BBvraok",
+				"url": "http://img-s-msn-com.akamaized.net/tenant/amp/entityid/BBzvn02.img"
+			},
+			"skippable": {
+				"videoThreshold": 1,
+				"videoOffset": 5,
+				"skipLocation": "top-left",
+				"skipText": "Video can be skipped in %%TIME%% seconds",
+				"skipButtonText": "SKIP"
+			}
+		},
+		extInvCode: anMKT,
+		externalImpId: '1502900973|106406479292012477',
+		trafficSourceCode: escValue,
+		nobidIfUnsold: true
+	});
+	apntag.onEvent('adAvailable', anPG, function(adObj) {
+		try {
+			parent.adsANOnL(window, adObj, '');
+		} catch (e) {}
+	});
+	apntag.onEvent('adNoBid', anPG, function(adObj) {
+		try {
+			parent.adsANOnL(window, adObj, 'noad');
+		} catch (e) {}
+	});
+	apntag.onEvent('adRequestFailure', anPG, function(adError) {
+		try {
+			parent.adsANOnL(window, adError, 'error');
+		} catch (e) {}
+	});
+	apntag.setEndpoint('m.adnxs.com');
+	apntag.loadTags();
+});
+document.write("<div id=\"" + anPG + "\"></div>\n");
+apntag.anq.push(function() {
+	apntag.showTag(anPG);
+});
+
+
+
+
+document.write("<!--*\n");
+document.write("var moatClientLevel1=5113\n");
+document.write("var moatClientLevel2=264961\n");
+document.write("var moatClientLevel3=0\n");
+document.write("var moatClientLevel4=3769894\n");
+document.write("var zMoatMaster=7637808\n");
+document.write("var zMoatFlight=9391089\n");
+document.write("var zMoatBanner=25967776\n");
+document.write("var zURL=https\n");
+document.write("var zMoatPlacementId=3769894\n");
+document.write("var zMoatPlacementExtId=93487202\n");
+document.write("var zMoatAdId=9391089\n");
+document.write("var zMoatCreative=0\n");
+document.write("var zMoatBannerID=4\n");
+document.write("var zMoatCustomVisp=0\n");
+document.write("var zMoatCustomVist=0\n");
+document.write("var zMoatIsAdvisGoal=0\n");
+document.write("var zMoatEventUrl=\n");
+document.write("var zMoatSize=154\n");
+document.write("var zMoatSubNetID=1\n");
+document.write("var zMoatisSelected=0\n");
+document.write("var zMoatadServer=ol.at.atwola.com\n");
+document.write("var zMoatadVisServer=\n");
+document.write("var zMoatSamplingRate=23\n");
+document.write("var zMoatliveTestCookie=\n");
+document.write("var zMoatRefSeqId=9eBAQECC6FA\n");
+document.write("var zMoatImpRefTs=1502900973\n");
+document.write("var zMoatAlias=wab2caen\n");
+document.write("var zMoatWebsiteID=264961\n");
+document.write("var zMoatVert=\n");
+document.write("var zMoatBannerInfo=482177740\n");
+document.write("*-->\n");
+document.write("<scr"+"ipt src=\""+(window.location.protocol=='https:' ? "https://aka-cdn.adtechus.com" : "http://aka-cdn-ns.adtechus.com")+"/media/moat/adtechbrands092348fjlsmdhlwsl239fh3df/moatad.js#moatClientLevel1=5113&moatClientLevel2=264961&moatClientLevel3=0&moatClientLevel4=3769894&zMoatMaster=7637808&zMoatFlight=9391089&zMoatBanner=25967776&zURL=https&zMoatPlacementId=3769894&zMoatAdId=9391089&zMoatCreative=0&zMoatBannerID=4&zMoatCustomVisp=0&zMoatCustomVist=0&zMoatIsAdvisGoal=0&zMoatEventUrl=&zMoatSize=154&zMoatSubNetID=1&zMoatisSelected=0&zMoatadServer=ol.at.atwola.com&zMoatadVisServer=&zMoatSamplingRate=23&zMoatliveTestCookie=&zMoatRefSeqId=9eBAQECC6FA&zMoatImpRefTs=1502900973&zMoatAlias=wab2caen&zMoatVert=&zMoatBannerInfo=482177740\" type=\"text/javascript\"></scr"+"ipt>");

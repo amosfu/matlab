@@ -1,0 +1,2890 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.12)  21 NOV 2017 15:03
+entering extended mode
+**./template-num.tex
+(template-num.tex
+LaTeX2e <2017-04-15>
+Babel <3.15> and hyphenation patterns for 75 language(s) loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\elsevier\elsart.cls"
+Document Class: elsart 2007/08/16, 2.20: Elsevier
+\@frontmatterwidth=\dimen102
+\@bls=\dimen103
+\eqntopsep=\skip41
+\eqnarraycolsep=\dimen104
+\labelwidthi=\dimen105
+\labelwidthii=\dimen106
+\labelwidthiii=\dimen107
+\labelwidthiv=\dimen108
+\@maxlistdepth=\count79
+\eqnbaselineskip=\skip42
+\eqnlineskip=\skip43
+\mathindent=\dimen109
+\rulepreskip=\dimen110
+\rulepostskip=\dimen111
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\latexsym.sty"
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+\c@thm=\count85
+\c@alg=\count86
+\c@algorithm=\count87
+\c@note=\count88
+\c@summ=\count89
+\c@case=\count90
+\@tempcntc=\count91
+\c@figure=\count92
+\c@table=\count93
+\t@glob@notes=\toks14
+\t@loc@notes=\toks15
+\note@cnt=\count94
+\corauth@text=\toks16
+\email@text=\toks17
+\url@text=\toks18
+\c@corauth=\count95
+\c@author=\count96
+\n@author=\count97
+\c@collab=\count98
+\n@collab=\count99
+\c@address=\count100
+\sv@mathsurround=\dimen112
+\sv@hyphenpenalty=\count101
+\prev@elem=\count102
+\cur@elem=\count103
+\fm@box=\box26
+\fm@size=\dimen113
+\t@abstract=\box27
+\t@keyword=\box28
+\t@xtheight=\dimen114
+\@logoheight=\dimen115
+\@pubyear=\count104
+\c@firstpage=\count105
+\c@lastpage=\count106
+\slashbox=\box29
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 1415.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 1415.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 1415.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 1415.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+\Slashbox=\box30
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 1416.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 1416.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
+Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
+File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen116
+\Gin@req@width=\dimen117
+)
+\epsfxsize=\dimen118
+\epsfysize=\dimen119
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks20
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks21
+\ex@=\dimen120
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen121
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+LaTeX Info: Redefining \operatorname on input line 43.
+)
+\inf@bad=\count107
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count108
+\leftroot@=\count109
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count110
+\DOTSCASE@=\count111
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box31
+\strutbox@=\box32
+\big@size=\dimen122
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count112
+\c@MaxMatrixCols=\count113
+\dotsspace@=\muskip10
+\c@parentequation=\count114
+\dspbrk@lvl=\count115
+\tag@help=\toks22
+\row@=\count116
+\column@=\count117
+\maxfields@=\count118
+\andhelp@=\toks23
+\eqnshift@=\dimen123
+\alignsep@=\dimen124
+\tagshift@=\dimen125
+\tagwidth@=\dimen126
+\totwidth@=\dimen127
+\lineht@=\dimen128
+\@envbody=\toks24
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+
+LaTeX Warning: Unused global option(s):
+    [journal].
+
+No file template-num.aux.
+\openout1 = `template-num.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count119
+\scratchdimen=\dimen129
+\scratchbox=\box33
+\nofMPsegments=\count120
+\nofMParguments=\count121
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count122
+\MPscratchDim=\dimen130
+\MPnumerator=\count123
+\makeMPintoPDFobject=\count124
+\everyMPtoPDFconversion=\toks27
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 40.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 40.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+LaTeX Warning: Reference `cor1' on page 1 undefined on input line 44.
+
+\c@sv@footnote=\count125
+
+LaTeX Warning: Citation `Jain1999' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `McLachlan2000' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `Robert2007' on page 1 undefined on input line 62.
+
+
+LaTeX Warning: Citation `Palacios2006' on page 1 undefined on input line 62.
+
+
+LaTeX Warning: Citation `Meignen2006' on page 1 undefined on input line 62.
+
+
+LaTeX Warning: Citation `Field1994' on page 1 undefined on input line 62.
+
+
+LaTeX Warning: Citation `Huang1999' on page 1 undefined on input line 62.
+
+
+LaTeX Warning: Citation `Simoncelli2003' on page 1 undefined on input line 62.
+
+
+LaTeX Warning: Citation `Laptev2009' on page 1 undefined on input line 62.
+
+
+LaTeX Warning: Citation `Miller1972' on page 1 undefined on input line 62.
+
+
+LaTeX Warning: Citation `Farvardin1984' on page 1 undefined on input line 62.
+
+
+LaTeX Warning: Citation `Gao1995' on page 1 undefined on input line 62.
+
+
+LaTeX Warning: Citation `Guebaly2011' on page 1 undefined on input line 62.
+
+
+LaTeX Warning: Citation `Mauer1979' on page 1 undefined on input line 62.
+
+
+LaTeX Warning: Citation `Mallat1989' on page 1 undefined on input line 62.
+
+
+LaTeX Warning: Citation `Do2002' on page 1 undefined on input line 62.
+
+
+LaTeX Warning: Citation `Allili2008' on page 1 undefined on input line 62.
+
+
+LaTeX Warning: Citation `Hebert1995' on page 1 undefined on input line 63.
+
+
+LaTeX Warning: Citation `McLachlan2000' on page 1 undefined on input line 63.
+
+
+LaTeX Warning: Citation `Madigan1994' on page 1 undefined on input line 63.
+
+
+LaTeX Warning: Citation `Draper1995' on page 1 undefined on input line 63.
+
+
+LaTeX Warning: Citation `Rue1995' on page 1 undefined on input line 63.
+
+
+LaTeX Warning: Citation `Ghosh2006' on page 1 undefined on input line 63.
+
+
+LaTeX Warning: Citation `Robert2007' on page 1 undefined on input line 63.
+
+
+LaTeX Warning: Citation `Hebert1992' on page 1 undefined on input line 63.
+
+
+LaTeX Warning: Citation `Godsill1997' on page 1 undefined on input line 63.
+
+
+LaTeX Warning: Citation `Guebaly2011' on page 1 undefined on input line 63.
+
+
+LaTeX Warning: Citation `DBLP:conf/annpr/ElguebalyB10' on page 1 undefined on i
+nput line 63.
+
+
+LaTeX Warning: Citation `McLachlan2000' on page 1 undefined on input line 63.
+
+
+LaTeX Warning: Citation `Stoica2004' on page 1 undefined on input line 63.
+
+
+LaTeX Warning: Citation `BouguilaPAMI2007' on page 1 undefined on input line 63
+.
+
+
+LaTeX Warning: Citation `Edward2000' on page 1 undefined on input line 64.
+
+
+LaTeX Warning: Citation `Ferguson1973' on page 1 undefined on input line 64.
+
+
+LaTeX Warning: Citation `West1995' on page 1 undefined on input line 64.
+
+
+LaTeX Warning: Citation `Neal2000' on page 1 undefined on input line 64.
+
+
+LaTeX Warning: Citation `Hoff2006' on page 1 undefined on input line 64.
+
+
+LaTeX Warning: Citation `Edward2000' on page 1 undefined on input line 64.
+
+
+LaTeX Warning: Citation `Neal2000' on page 1 undefined on input line 64.
+
+
+LaTeX Warning: Citation `Regazzini2002' on page 1 undefined on input line 64.
+
+
+LaTeX Warning: Citation `Guglielmi2002' on page 1 undefined on input line 64.
+
+
+LaTeX Warning: Citation `Rodriguez2008' on page 1 undefined on input line 64.
+
+
+LaTeX Warning: Citation `BouguilaMLSP2008' on page 1 undefined on input line 64
+.
+
+
+LaTeX Warning: Citation `BouguilaIEEETNN2010' on page 1 undefined on input line
+ 64.
+
+
+LaTeX Warning: Citation `DBLP:conf/iciar/ElguebalyB11' on page 1 undefined on i
+nput line 64.
+
+
+LaTeX Warning: Citation `Gelfand2002' on page 1 undefined on input line 64.
+
+
+LaTeX Warning: Citation `Ghosh2003' on page 1 undefined on input line 64.
+
+
+LaTeX Warning: Citation `Allili2010' on page 1 undefined on input line 64.
+
+
+LaTeX Warning: Citation `Khardon1997' on page 1 undefined on input line 65.
+
+
+LaTeX Warning: Citation `Cardie2000' on page 1 undefined on input line 65.
+
+
+LaTeX Warning: Citation `Watanabe1985' on page 1 undefined on input line 65.
+
+
+LaTeX Warning: Citation `Wei2007' on page 1 undefined on input line 65.
+
+
+LaTeX Warning: Citation `Law2004' on page 1 undefined on input line 65.
+
+
+LaTeX Warning: Citation `Boutmedjet2009' on page 1 undefined on input line 65.
+
+
+LaTeX Warning: Citation `Li2009' on page 1 undefined on input line 65.
+
+
+LaTeX Warning: Citation `Allili2010' on page 1 undefined on input line 65.
+
+
+LaTeX Warning: Citation `Guebaly2011' on page 1 undefined on input line 65.
+
+
+LaTeX Warning: Citation `DBLP:journals/pr/Bouguila11' on page 1 undefined on in
+put line 65.
+
+
+LaTeX Warning: Citation `DBLP:journals/eswa/SefidpourB12' on page 1 undefined o
+n input line 65.
+
+
+LaTeX Warning: Citation `DBLP:journals/eswa/BouguilaE12' on page 1 undefined on
+ input line 65.
+
+
+LaTeX Warning: Citation `Guebaly2011' on page 1 undefined on input line 65.
+
+
+LaTeX Warning: Citation `DBLP:journals/pr/Bouguila11' on page 1 undefined on in
+put line 65.
+
+
+LaTeX Warning: Citation `DBLP:journals/eswa/SefidpourB12' on page 1 undefined o
+n input line 65.
+
+
+LaTeX Warning: Citation `DBLP:journals/eswa/BouguilaE12' on page 1 undefined on
+ input line 65.
+
+[1{C:/Users/Amos/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Underfull \vbox (badness 1558) has occurred while \output is active []
+
+ [2]
+[3]
+
+LaTeX Warning: Citation `Zhang1990' on page 4 undefined on input line 74.
+
+
+Overfull \hbox (14.38106pt too wide) detected at line 78
+\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ([]\OMS/cmsy/m/n/12 j[]\OML/cmm/m/it/12 ; [];
+ []\OT1/cmr/m/n/12 ) = [] \OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X
+[]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 []; []; []\OT1/cmr/m/n/12 ) = [] [] [] 
+[] \OMS/cmsy/m/n/12   \OML/cmm/m/it/12 A\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 []\O
+T1/cmr/m/n/12 )[][][][][]
+ []
+
+[4]
+
+LaTeX Warning: Citation `Ruderman1994' on page 5 undefined on input line 85.
+
+
+LaTeX Warning: Citation `Zhang1990' on page 5 undefined on input line 88.
+
+
+LaTeX Warning: Reference `mixture' on page 5 undefined on input line 88.
+
+
+LaTeX Warning: Reference `mixture' on page 5 undefined on input line 89.
+
+
+LaTeX Warning: Citation `Tsotsos1995' on page 5 undefined on input line 89.
+
+
+LaTeX Warning: Citation `Vidal2003' on page 5 undefined on input line 89.
+
+
+LaTeX Warning: Citation `Zhang2006' on page 5 undefined on input line 89.
+
+
+LaTeX Warning: Citation `Bosch2007' on page 5 undefined on input line 89.
+
+
+LaTeX Warning: Citation `Laptev2009' on page 5 undefined on input line 89.
+
+
+LaTeX Warning: Citation `Papageorgiou1998' on page 5 undefined on input line 89
+.
+
+
+LaTeX Warning: Citation `Levi2004' on page 5 undefined on input line 89.
+
+
+LaTeX Warning: Citation `Wei2007' on page 5 undefined on input line 89.
+
+
+LaTeX Warning: Citation `Baggenstoss1999' on page 5 undefined on input line 89.
+
+
+
+LaTeX Warning: Citation `Baggenstoss2000' on page 5 undefined on input line 89.
+
+
+
+LaTeX Warning: Citation `Li2009' on page 5 undefined on input line 89.
+
+
+LaTeX Warning: Reference `mixture' on page 5 undefined on input line 93.
+
+[5]
+
+LaTeX Warning: Citation `Ghosh2006' on page 6 undefined on input line 95.
+
+
+LaTeX Warning: Citation `Robert2007' on page 6 undefined on input line 95.
+
+
+LaTeX Warning: Citation `Ghosh2006' on page 6 undefined on input line 101.
+
+
+LaTeX Warning: Citation `Robert2007' on page 6 undefined on input line 101.
+
+[6] [7]
+
+LaTeX Warning: Reference `finaljoint' on page 8 undefined on input line 142.
+
+
+Overfull \hbox (35.59998pt too wide) detected at line 146
+\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ([]\OMS/cmsy/m/n/12 j []\OT1/cmr/m/n/12 ) \OM
+S/cmsy/m/n/12 / \OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ([]\OMS/cmsy/m/n/12 j\OML/cmm
+/m/it/12  ; "[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OMS/cmsy/m/
+n/12 Xj[]\OML/cmm/m/it/12 ; []; Z; z\OT1/cmr/m/n/12 ) \OML/cmm/m/it/12 p\OT1/cm
+r/m/n/12 ([]\OMS/cmsy/m/n/12 j []\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 / \OML/cmm/
+m/it/12 p\OT1/cmr/m/n/12 ([]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12  ; "[]\OT1/cmr/m
+/n/12 )\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 Xj[]\OML/cmm/m/it/12
+ ; []; Z; z\OT1/cmr/m/n/12 )
+ []
+
+
+LaTeX Warning: Reference `finaljoint' on page 8 undefined on input line 152.
+
+
+LaTeX Warning: Reference `44' on page 8 undefined on input line 152.
+
+
+LaTeX Warning: Reference `priorpriorprior11' on page 8 undefined on input line 
+152.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 154.
+
+
+Overfull \hbox (78.28522pt too wide) detected at line 156
+\OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95  \OMS/cmsy/m/n/10.
+95 j []\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 / \OML/cmm/m/it/10.95 p\OT1/cmr
+/m/n/10.95 (\OML/cmm/m/it/10.95  \OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 ; [
+]\OT1/cmr/m/n/10.95 ) [] \OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 ([]\OMS/cmsy/m
+/n/10.95 j\OML/cmm/m/it/10.95  ; "[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 p\O
+T1/cmr/m/n/10.95 ([]\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95  ; "[]\OT1/cmr/m/n
+/10.95 ) \OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 "[]\OMS/c
+msy/m/n/10.95 j []\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 / \OML/cmm/m/it/10.9
+5 p\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 "[]\OMS/cmsy/m/n/10.95 j\OML/cmm/m/i
+t/10.95 '; %\OT1/cmr/m/n/10.95 ) [] \OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 ([]
+\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95  ; "[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/i
+t/10.95 p\OT1/cmr/m/n/10.95 ([]\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95  ; "[]\
+OT1/cmr/m/n/10.95 )
+ []
+
+LaTeX Font Info:    Calculating math sizes for size <> on input line 156.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
+(Font)              size <5> substituted on input line 156.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
+(Font)              size <5> substituted on input line 156.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
+(Font)              size <5> substituted on input line 156.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
+(Font)              size <5> substituted on input line 156.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
+(Font)              size <5> substituted on input line 156.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
+(Font)              size <5> substituted on input line 156.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
+(Font)              size <5> substituted on input line 156.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
+(Font)              size <5> substituted on input line 156.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
+(Font)              size <5> substituted on input line 156.
+
+
+LaTeX Font Warning: Font shape `U/lasy/m/n' in size <> not available
+(Font)              size <5> substituted on input line 156.
+
+
+LaTeX Font Warning: Font shape `U/lasy/m/n' in size <0.7> not available
+(Font)              size <5> substituted on input line 156.
+
+
+LaTeX Font Warning: Font shape `U/lasy/m/n' in size <0.5> not available
+(Font)              size <5> substituted on input line 156.
+
+
+Underfull \vbox (badness 6741) has occurred while \output is active []
+
+ [8]
+
+LaTeX Warning: Reference `finaljoint' on page 9 undefined on input line 162.
+
+
+Overfull \hbox (20.09433pt too wide) detected at line 166
+\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ([]\OMS/cmsy/m/n/12 j []\OT1/cmr/m/n/12 ) \OM
+S/cmsy/m/n/12 / \OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ([]\OMS/cmsy/m/n/12 j\OML/cmm
+/m/it/12 ; \OT1/cmr/m/n/12 )\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/
+12 Xj[]\OML/cmm/m/it/12 ; []; Z; z\OT1/cmr/m/n/12 ) \OML/cmm/m/it/12 p\OT1/cmr/
+m/n/12 ([]\OMS/cmsy/m/n/12 j []\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 / \OML/cmm/m/
+it/12 p\OT1/cmr/m/n/12 ([]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ; \OT1/cmr/m/n/1
+2 )\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 Xj[]\OML/cmm/m/it/12 ; [
+]; Z; z\OT1/cmr/m/n/12 )
+ []
+
+
+LaTeX Warning: Reference `finaljoint' on page 9 undefined on input line 174.
+
+
+LaTeX Warning: Reference `55' on page 9 undefined on input line 174.
+
+
+LaTeX Warning: Reference `priorprior1' on page 9 undefined on input line 174.
+
+
+Overfull \hbox (62.58144pt too wide) detected at line 177
+\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 \OMS/cmsy/m/n/12 j []\OT1/
+cmr/m/n/12 ) \OMS/cmsy/m/n/12 / \OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/i
+t/12 \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 #; $\OT1/cmr/m/n/12 ) [] \OML/cmm/m/it
+/12 p\OT1/cmr/m/n/12 ([]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 
+)\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ([]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ; \O
+T1/cmr/m/n/12 ) \OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 \OMS/cmsy/
+m/n/12 j []\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 / \OML/cmm/m/it/12 p\OT1/cmr/m/n/
+12 (\OML/cmm/m/it/12 \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ; !\OT1/cmr/m/n/12 ) 
+[] \OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ([]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ; 
+\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ([]\OMS/cmsy/m/n/12 j\OML/cm
+m/m/it/12 ; \OT1/cmr/m/n/12 )
+ []
+
+
+LaTeX Warning: Reference `finaljoint' on page 9 undefined on input line 183.
+
+
+Overfull \hbox (22.06094pt too wide) detected at line 187
+\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ([]\OMS/cmsy/m/n/12 j []\OT1/cmr/m/n/12 ) \OM
+S/cmsy/m/n/12 / \OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ([]\OMS/cmsy/m/n/12 j\OML/cmm
+/m/it/12 ; &\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/
+12 Xj[]\OML/cmm/m/it/12 ; []; Z; z\OT1/cmr/m/n/12 ) \OML/cmm/m/it/12 p\OT1/cmr/
+m/n/12 ([]\OMS/cmsy/m/n/12 j []\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 / \OML/cmm/m/
+it/12 p\OT1/cmr/m/n/12 ([]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ; &\OT1/cmr/m/n/1
+2 )\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 Xj[]\OML/cmm/m/it/12 ; [
+]; Z; z\OT1/cmr/m/n/12 )
+ []
+
+[9]
+
+LaTeX Warning: Reference `finaljoint' on page 10 undefined on input line 195.
+
+
+LaTeX Warning: Reference `66' on page 10 undefined on input line 195.
+
+
+LaTeX Warning: Reference `priorprior1111' on page 10 undefined on input line 19
+5.
+
+
+Overfull \hbox (66.01466pt too wide) detected at line 198
+\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 \OMS/cmsy/m/n/12 j []\OT1/
+cmr/m/n/12 ) \OMS/cmsy/m/n/12 / \OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/i
+t/12 \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 ) [] \OML/cmm/m/it
+/12 p\OT1/cmr/m/n/12 ([]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ; &\OT1/cmr/m/n/12 
+)\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ([]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ; &\O
+T1/cmr/m/n/12 ) \OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 &\OMS/cmsy/
+m/n/12 j []\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 / \OML/cmm/m/it/12 p\OT1/cmr/m/n/
+12 (\OML/cmm/m/it/12 &\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 ) 
+[] \OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ([]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ; &
+\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ([]\OMS/cmsy/m/n/12 j\OML/cm
+m/m/it/12 ; &\OT1/cmr/m/n/12 )
+ []
+
+
+LaTeX Warning: Reference `finaljoint' on page 10 undefined on input line 210.
+
+
+LaTeX Warning: Reference `rhoprior' on page 10 undefined on input line 210.
+
+
+LaTeX Warning: Reference `zlike' on page 10 undefined on input line 210.
+
+
+LaTeX Warning: Citation `McLachlan2000' on page 10 undefined on input line 221.
+
+
+
+LaTeX Warning: Citation `BouguilaPAMI2007' on page 10 undefined on input line 2
+21.
+
+
+LaTeX Warning: Citation `Edward2000' on page 10 undefined on input line 221.
+
+
+LaTeX Warning: Citation `Neal2000' on page 10 undefined on input line 221.
+
+
+LaTeX Warning: Citation `Edward2000' on page 10 undefined on input line 221.
+
+
+LaTeX Warning: Citation `Ghosh2003' on page 10 undefined on input line 221.
+
+
+LaTeX Warning: Citation `BouguilaIEEETNN2010' on page 10 undefined on input lin
+e 221.
+
+
+LaTeX Warning: Reference `finaljoint' on page 10 undefined on input line 222.
+
+[10]
+
+LaTeX Warning: Reference `finaljoint' on page 11 undefined on input line 226.
+
+
+LaTeX Warning: Citation `Neal2000' on page 11 undefined on input line 242.
+
+
+LaTeX Warning: Citation `Edward2000' on page 11 undefined on input line 242.
+
+
+LaTeX Warning: Citation `Baluja1997' on page 11 undefined on input line 250.
+
+
+LaTeX Warning: Reference `priorinf' on page 11 undefined on input line 250.
+
+
+LaTeX Warning: Citation `Neal2000' on page 11 undefined on input line 252.
+
+
+LaTeX Warning: Citation `Edward2000' on page 11 undefined on input line 252.
+
+[11]
+Overfull \hbox (19.06978pt too wide) in alignment at lines 253--259
+ [] [] [] [] 
+ []
+
+
+LaTeX Warning: Citation `Dunson2009' on page 12 undefined on input line 260.
+
+
+LaTeX Warning: Reference `priorinf' on page 12 undefined on input line 265.
+
+
+LaTeX Warning: Citation `Edward2000' on page 12 undefined on input line 265.
+
+
+LaTeX Warning: Citation `Ghosh2006' on page 12 undefined on input line 271.
+
+
+LaTeX Warning: Citation `Robert2007' on page 12 undefined on input line 271.
+
+
+LaTeX Warning: Citation `dis' on page 12 undefined on input line 271.
+
+
+LaTeX Warning: Reference `posteriorinf' on page 12 undefined on input line 273.
+
+
+
+LaTeX Warning: Reference `rhoposterior' on page 12 undefined on input line 279.
+
+
+
+LaTeX Warning: Reference `muposterior' on page 12 undefined on input line 280.
+
+
+LaTeX Warning: Reference `sigmaposterior' on page 12 undefined on input line 28
+1.
+
+
+LaTeX Warning: Reference `lambdaposterior' on page 12 undefined on input line 2
+81.
+
+[12]
+
+LaTeX Warning: Reference `posteriors11' on page 13 undefined on input line 282.
+
+
+
+LaTeX Warning: Reference `posteriors111' on page 13 undefined on input line 282
+.
+
+
+LaTeX Warning: Reference `posteriors1111' on page 13 undefined on input line 28
+2.
+
+
+LaTeX Warning: Reference `delta1posterior' on page 13 undefined on input line 2
+82.
+
+
+LaTeX Warning: Reference `posterioreta' on page 13 undefined on input line 282.
+
+
+
+LaTeX Warning: Reference `posteriors11' on page 13 undefined on input line 284.
+
+
+
+LaTeX Warning: Reference `posteriors111' on page 13 undefined on input line 284
+.
+
+
+LaTeX Warning: Reference `posteriors1111' on page 13 undefined on input line 28
+4.
+
+
+LaTeX Warning: Reference `delta1posterior' on page 13 undefined on input line 2
+84.
+
+
+LaTeX Warning: Reference `posterioreta' on page 13 undefined on input line 284.
+
+
+
+LaTeX Warning: Citation `Gilks1993' on page 13 undefined on input line 284.
+
+
+LaTeX Warning: Reference `posteriorinf' on page 13 undefined on input line 284.
+
+
+
+LaTeX Warning: Citation `Neal2000' on page 13 undefined on input line 284.
+
+
+LaTeX Warning: Citation `Rosenthal1995' on page 13 undefined on input line 284.
+
+
+
+LaTeX Warning: Citation `Mengersen1996' on page 13 undefined on input line 284.
+
+
+
+LaTeX Warning: Citation `RobertsO1999' on page 13 undefined on input line 284.
+
+
+LaTeX Warning: Citation `Raftery1992' on page 13 undefined on input line 284.
+
+
+LaTeX Warning: Citation `Lewis1996' on page 13 undefined on input line 284.
+
+
+LaTeX Warning: Citation `JainFinite' on page 13 undefined on input line 286.
+
+
+LaTeX Warning: Citation `Law2004' on page 13 undefined on input line 286.
+
+
+LaTeX Warning: Citation `Allili2008' on page 13 undefined on input line 286.
+
+
+LaTeX Warning: Citation `Allili2010' on page 13 undefined on input line 286.
+
+
+LaTeX Warning: Citation `Edward2000' on page 13 undefined on input line 286.
+
+
+LaTeX Warning: Citation `DBLP:conf/iciar/ElguebalyB11' on page 13 undefined on 
+input line 286.
+
+
+Overfull \hbox (11.29411pt too wide) in paragraph at lines 286--290
+\OT1/cmr/m/n/12 [0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cm
+r/m/n/12 4]\OML/cmm/m/it/12 ; [] \OMS/cmsy/m/n/12 2 \OT1/cmr/m/n/12 [0\OML/cmm
+/m/it/12 :\OT1/cmr/m/n/12 8\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1\OML/cmm/m/it/12
+ :\OT1/cmr/m/n/12 2]\OML/cmm/m/it/12 ; ' \OMS/cmsy/m/n/12 2 \OT1/cmr/m/n/12 [1\
+OML/cmm/m/it/12 :\OT1/cmr/m/n/12 8\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\OML/cmm/
+m/it/12 :\OT1/cmr/m/n/12 2]\OML/cmm/m/it/12 ; % \OMS/cmsy/m/n/12 2 \OT1/cmr/m/n
+/12 [0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 3\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\O
+ML/cmm/m/it/12 :\OT1/cmr/m/n/12 7]\OML/cmm/m/it/12 ; # \OMS/cmsy/m/n/12 2 \OT1/
+cmr/m/n/12 [1\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 8\OML/cmm/m/it/12 ; \OT1/cmr/m/n
+/12 2\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 2]\OML/cmm/m/it/12 ; $ \OMS/cmsy/m/n/12 
+2 \OT1/cmr/m/n/12 [0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 8\OML/cmm/m/it/12 ; \OT1/
+cmr/m/n/12 1\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 2]\OML/cmm/m/it/12 ;  \OMS/cmsy/
+m/n/12 2
+ []
+
+[13]
+
+LaTeX Warning: Citation `Cutzu2003' on page 14 undefined on input line 292.
+
+
+LaTeX Warning: Citation `Cutzu2005' on page 14 undefined on input line 292.
+
+
+LaTeX Warning: Citation `DBLP:journals/cg/WallravenFCRFS09' on page 14 undefine
+d on input line 292.
+
+
+LaTeX Warning: Citation `1530116' on page 14 undefined on input line 292.
+
+
+LaTeX Warning: Citation `Cutzu2003' on page 14 undefined on input line 292.
+
+
+LaTeX Warning: Citation `Cutzu2005' on page 14 undefined on input line 292.
+
+
+LaTeX Warning: Citation `1530116' on page 14 undefined on input line 292.
+
+
+LaTeX Warning: Citation `1334289' on page 14 undefined on input line 292.
+
+
+LaTeX Warning: Citation `629715' on page 14 undefined on input line 292.
+
+
+LaTeX Warning: Citation `Farid2005' on page 14 undefined on input line 292.
+
+
+LaTeX Warning: Citation `4284852' on page 14 undefined on input line 292.
+
+
+LaTeX Warning: Citation `Cutzu2003' on page 14 undefined on input line 292.
+
+
+LaTeX Warning: Citation `Cutzu2005' on page 14 undefined on input line 292.
+
+
+LaTeX Warning: Citation `Cutzu2003' on page 14 undefined on input line 293.
+
+
+LaTeX Warning: Citation `Cutzu2005' on page 14 undefined on input line 293.
+
+
+Overfull \hbox (13.20651pt too wide) in paragraph at lines 292--294
+\OT1/cmr/m/n/12 Color edges vs. in-ten-sity edges fea-ture is de-fined as $\OML
+/cmm/m/it/12 E[] \OT1/cmr/m/n/12 = []$
+ []
+
+[14]
+
+LaTeX Warning: Citation `Cutzu2003' on page 15 undefined on input line 295.
+
+
+LaTeX Warning: Citation `Cutzu2005' on page 15 undefined on input line 295.
+
+
+LaTeX Warning: Reference `paintphotimgaes' on page 15 undefined on input line 2
+95.
+
+
+LaTeX Warning: File `Paint1.ps' not found on input line 299.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.299 ...phics[height=20mm, width=20mm]{Paint1.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Paint2.ps' not found on input line 301.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.301 ...phics[height=20mm, width=20mm]{Paint2.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Paint3.ps' not found on input line 303.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.303 ...phics[height=20mm, width=20mm]{Paint3.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Paint4.ps' not found on input line 305.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.305 ...phics[height=20mm, width=20mm]{Paint4.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Paint5.ps' not found on input line 307.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.307 ...phics[height=20mm, width=20mm]{Paint5.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Paint6.ps' not found on input line 309.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.309 ...phics[height=20mm, width=20mm]{Paint6.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Phot1.ps' not found on input line 311.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.311 ...aphics[height=20mm, width=20mm]{Phot1.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Phot2.ps' not found on input line 313.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.313 ...aphics[height=20mm, width=20mm]{Phot2.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Phot3.ps' not found on input line 315.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.315 ...aphics[height=20mm, width=20mm]{Phot3.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Phot4.ps' not found on input line 317.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.317 ...aphics[height=20mm, width=20mm]{Phot4.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Phot5.ps' not found on input line 319.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.319 ...aphics[height=20mm, width=20mm]{Phot5.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Phot6.ps' not found on input line 321.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.321 ...aphics[height=20mm, width=20mm]{Phot6.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `Cutzu2003' on page 15 undefined on input line 326.
+
+
+LaTeX Warning: Citation `Cutzu2005' on page 15 undefined on input line 326.
+
+
+LaTeX Warning: Reference `algorithm' on page 15 undefined on input line 326.
+
+
+LaTeX Warning: Reference `tab1' on page 15 undefined on input line 326.
+
+
+LaTeX Warning: Citation `Cutzu2003' on page 15 undefined on input line 326.
+
+
+LaTeX Warning: Citation `Cutzu2005' on page 15 undefined on input line 326.
+
+
+LaTeX Warning: Citation `Cutzu2003' on page 15 undefined on input line 335.
+
+
+LaTeX Warning: Citation `Cutzu2005' on page 15 undefined on input line 335.
+
+
+LaTeX Warning: Citation `Cutzu2003' on page 15 undefined on input line 337.
+
+
+LaTeX Warning: Citation `Cutzu2005' on page 15 undefined on input line 337.
+
+
+LaTeX Warning: Citation `Cutzu2003' on page 15 undefined on input line 339.
+
+
+LaTeX Warning: Citation `Cutzu2005' on page 15 undefined on input line 339.
+
+
+LaTeX Warning: Citation `Cutzu2003' on page 15 undefined on input line 341.
+
+
+LaTeX Warning: Citation `Cutzu2005' on page 15 undefined on input line 341.
+
+
+LaTeX Warning: Citation `Wang1998' on page 15 undefined on input line 380.
+
+
+LaTeX Warning: Citation `Moscheni1998' on page 15 undefined on input line 380.
+
+
+LaTeX Warning: Citation `Allili2008' on page 15 undefined on input line 380.
+
+
+LaTeX Warning: Citation `Guebaly2011' on page 15 undefined on input line 380.
+
+
+LaTeX Warning: Citation `Allili2008' on page 15 undefined on input line 380.
+
+
+LaTeX Warning: Citation `Guebaly2011' on page 15 undefined on input line 380.
+
+
+LaTeX Warning: Citation `Hung2008' on page 15 undefined on input line 380.
+
+
+LaTeX Warning: Citation `Allili2010' on page 15 undefined on input line 380.
+
+
+LaTeX Warning: Citation `Konishi2000' on page 15 undefined on input line 381.
+
+
+LaTeX Warning: Citation `Elgammal2000' on page 15 undefined on input line 381.
+
+
+LaTeX Warning: Citation `Allili2007' on page 15 undefined on input line 381.
+
+
+LaTeX Warning: Citation `Martin2001' on page 15 undefined on input line 382.
+
+
+LaTeX Warning: Citation `Martin2001' on page 15 undefined on input line 382.
+
+
+Underfull \vbox (badness 3635) has occurred while \output is active []
+
+ [15]
+[16]
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 386.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 386.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 386.
+
+
+LaTeX Warning: Citation `Allili2007' on page 17 undefined on input line 386.
+
+
+LaTeX Warning: File `Image1.ps' not found on input line 389.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.389 ...phics[height=20mm, width=20mm]{Image1.ps}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image1MoG.ps' not found on input line 394.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.394 ...cs[height=20mm, width=20mm]{Image1MoG.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image1IMoG.ps' not found on input line 396.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.396 ...s[height=20mm, width=20mm]{Image1IMoG.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image1MoGG.ps' not found on input line 398.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.398 ...s[height=20mm, width=20mm]{Image1MoGG.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image1IMoGG.ps' not found on input line 400.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.400 ...[height=20mm, width=20mm]{Image1IMoGG.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image1MoGFS.ps' not found on input line 404.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.404 ...[height=20mm, width=20mm]{Image1MoGFS.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image1IMoGFS.ps' not found on input line 406.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.406 ...height=20mm, width=20mm]{Image1IMoGFS.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image1MoGGFS.ps' not found on input line 408.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.408 ...height=20mm, width=20mm]{Image1MoGGFS.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image1IMoGGFS.ps' not found on input line 410.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.410 ...eight=20mm, width=20mm]{Image1IMoGGFS.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image2.ps' not found on input line 419.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.419 ...phics[height=20mm, width=20mm]{Image2.ps}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image24.ps' not found on input line 424.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.424 ...hics[height=20mm, width=20mm]{Image24.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image25.ps' not found on input line 426.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.426 ...hics[height=20mm, width=20mm]{Image25.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image26.ps' not found on input line 428.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.428 ...hics[height=20mm, width=20mm]{Image26.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image23.ps' not found on input line 430.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.430 ...hics[height=20mm, width=20mm]{Image23.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image22.ps' not found on input line 434.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.434 ...hics[height=20mm, width=20mm]{Image22.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image21.ps' not found on input line 436.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.436 ...hics[height=20mm, width=20mm]{Image21.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image27.ps' not found on input line 438.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.438 ...hics[height=20mm, width=20mm]{Image27.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image28.ps' not found on input line 440.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.440 ...hics[height=20mm, width=20mm]{Image28.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image3.ps' not found on input line 450.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.450 ...phics[height=20mm, width=20mm]{Image3.ps}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image3MoG.ps' not found on input line 455.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.455 ...cs[height=20mm, width=20mm]{Image3MoG.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image3IMoG.ps' not found on input line 457.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.457 ...s[height=20mm, width=20mm]{Image3IMoG.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image3MoGG.ps' not found on input line 459.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.459 ...s[height=20mm, width=20mm]{Image3MoGG.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image3IMoGG.ps' not found on input line 461.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.461 ...[height=20mm, width=20mm]{Image3IMoGG.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image3MoGFS.ps' not found on input line 465.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.465 ...[height=20mm, width=20mm]{Image3MoGFS.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image3IMoGFS.ps' not found on input line 467.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.467 ...height=20mm, width=20mm]{Image3IMoGFS.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image3MoGGFS.ps' not found on input line 469.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.469 ...height=20mm, width=20mm]{Image3MoGGFS.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Image3IMoGGFS.ps' not found on input line 471.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.471 ...eight=20mm, width=20mm]{Image3IMoGGFS.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `image1' on page 17 undefined on input line 478.
+
+
+LaTeX Warning: Reference `image2' on page 17 undefined on input line 478.
+
+
+LaTeX Warning: Reference `image3' on page 17 undefined on input line 478.
+
+
+LaTeX Warning: Reference `tab2' on page 17 undefined on input line 478.
+
+
+LaTeX Warning: Citation `Allili2010' on page 17 undefined on input line 493.
+
+
+LaTeX Warning: Citation `Raja1998' on page 17 undefined on input line 495.
+
+
+LaTeX Warning: Citation `Allili2010' on page 17 undefined on input line 495.
+
+
+LaTeX Warning: Reference `video1' on page 17 undefined on input line 495.
+
+
+LaTeX Warning: Reference `video3' on page 17 undefined on input line 495.
+
+
+LaTeX Warning: Reference `tab3' on page 17 undefined on input line 495.
+
+
+LaTeX Warning: Reference `video1' on page 17 undefined on input line 495.
+
+
+LaTeX Warning: Reference `video3' on page 17 undefined on input line 495.
+
+
+LaTeX Warning: File `akiyoImage.ps' not found on input line 498.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.498 ...s[height=20mm, width=20mm]{akiyoImage.ps}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `akiyoMoG.ps' not found on input line 503.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.503 ...ics[height=20mm, width=20mm]{akiyoMoG.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `akiyoIMoG.ps' not found on input line 505.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.505 ...cs[height=20mm, width=20mm]{akiyoIMoG.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `akiyoMoGG.ps' not found on input line 507.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.507 ...cs[height=20mm, width=20mm]{akiyoMoGG.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `akiyoIMoGG.ps' not found on input line 509.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.509 ...s[height=20mm, width=20mm]{akiyoIMoGG.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `akiyoMoGFS.ps' not found on input line 513.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.513 ...s[height=20mm, width=20mm]{akiyoMoGFS.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `akiyoIMoGFS.ps' not found on input line 515.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.515 ...[height=20mm, width=20mm]{akiyoIMoGFS.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `akiyoMoGGFS.ps' not found on input line 517.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.517 ...[height=20mm, width=20mm]{akiyoMoGGFS.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `akiyoIMoGGFS.ps' not found on input line 519.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.519 ...height=20mm, width=20mm]{akiyoIMoGGFS.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `suzieImage.ps' not found on input line 528.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.528 ...s[height=20mm, width=20mm]{suzieImage.ps}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `suzieMoG.ps' not found on input line 533.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.533 ...ics[height=20mm, width=20mm]{suzieMoG.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `suzieIMoG.ps' not found on input line 535.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.535 ...cs[height=20mm, width=20mm]{suzieIMoG.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `suzieMoGG.ps' not found on input line 537.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.537 ...cs[height=20mm, width=20mm]{suzieMoGG.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `suzieIMoGG.ps' not found on input line 539.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.539 ...s[height=20mm, width=20mm]{suzieIMoGG.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `suzieMoGFS.ps' not found on input line 543.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.543 ...s[height=20mm, width=20mm]{suzieMoGFS.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `suzieIMoGFS.ps' not found on input line 545.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.545 ...[height=20mm, width=20mm]{suzieIMoGFS.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `suzieMoGGFS.ps' not found on input line 547.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.547 ...[height=20mm, width=20mm]{suzieMoGGFS.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `suzieIMoGGFS.ps' not found on input line 549.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.549 ...height=20mm, width=20mm]{suzieIMoGGFS.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
+[18]
+
+LaTeX Warning: Citation `Pantic2000' on page 19 undefined on input line 581.
+
+
+LaTeX Warning: Citation `Fasel2003' on page 19 undefined on input line 581.
+
+
+LaTeX Warning: Citation `Panticc2000' on page 19 undefined on input line 581.
+
+
+LaTeX Warning: Citation `Tian2001' on page 19 undefined on input line 581.
+
+
+LaTeX Warning: Citation `Pantic2000' on page 19 undefined on input line 581.
+
+
+LaTeX Warning: Citation `Lyons1999' on page 19 undefined on input line 581.
+
+
+LaTeX Warning: Citation `Lyons1999' on page 19 undefined on input line 581.
+
+
+LaTeX Warning: Citation `Donato1999' on page 19 undefined on input line 581.
+
+
+LaTeX Warning: Citation `Lyons1999' on page 19 undefined on input line 581.
+
+
+LaTeX Warning: Citation `Donato1999' on page 19 undefined on input line 581.
+
+
+LaTeX Warning: Citation `990519' on page 19 undefined on input line 581.
+
+
+LaTeX Warning: Citation `Prokoski2000' on page 19 undefined on input line 581.
+
+
+LaTeX Warning: Reference `expressions' on page 19 undefined on input line 581.
+
+
+LaTeX Warning: Citation `Prokoski2000' on page 19 undefined on input line 581.
+
+
+LaTeX Warning: Reference `expressionsidentification' on page 19 undefined on in
+put line 581.
+
+
+LaTeX Warning: Citation `Trujillo2005' on page 19 undefined on input line 581.
+
+
+LaTeX Warning: Citation `Olague2009' on page 19 undefined on input line 581.
+
+
+LaTeX Warning: Reference `expressionsidentification' on page 19 undefined on in
+put line 581.
+
+
+LaTeX Warning: Citation `Trujillo2005' on page 19 undefined on input line 581.
+
+
+LaTeX Warning: Reference `expressionsidentification' on page 19 undefined on in
+put line 581.
+
+
+LaTeX Warning: Citation `DBLP:journals/cviu/HernandezOHTR07' on page 19 undefin
+ed on input line 581.
+
+
+LaTeX Warning: Reference `expressions' on page 19 undefined on input line 582.
+
+
+LaTeX Warning: Reference `conf' on page 19 undefined on input line 582.
+
+
+LaTeX Warning: Reference `conf' on page 19 undefined on input line 582.
+
+
+LaTeX Warning: Reference `conf' on page 19 undefined on input line 582.
+
+
+LaTeX Warning: Reference `conf' on page 19 undefined on input line 582.
+
+
+LaTeX Warning: Reference `conf' on page 19 undefined on input line 582.
+
+
+LaTeX Warning: Reference `conf' on page 19 undefined on input line 582.
+
+
+LaTeX Warning: Reference `conf' on page 19 undefined on input line 582.
+
+
+LaTeX Warning: Reference `conf' on page 19 undefined on input line 582.
+
+
+LaTeX Warning: Citation `Strehl2002' on page 19 undefined on input line 583.
+
+[19] [20]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+
+LaTeX Warning: Reference `acc1' on page 22 undefined on input line 596.
+
+
+LaTeX Warning: File `Surprise1.ps' not found on input line 600.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.600 ...cs[height=20mm, width=20mm]{Surprise1.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Surprise2.ps' not found on input line 602.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.602 ...cs[height=20mm, width=20mm]{Surprise2.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Surprise3.ps' not found on input line 604.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.604 ...cs[height=20mm, width=20mm]{Surprise3.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Surprise4.ps' not found on input line 606.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.606 ...cs[height=20mm, width=20mm]{Surprise4.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Surprise5.ps' not found on input line 608.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.608 ...cs[height=20mm, width=20mm]{Surprise5.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Surprise6.ps' not found on input line 610.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.610 ...cs[height=20mm, width=20mm]{Surprise6.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Happy1.ps' not found on input line 612.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.612 ...phics[height=20mm, width=20mm]{Happy1.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Happy2.ps' not found on input line 614.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.614 ...phics[height=20mm, width=20mm]{Happy2.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Happy3.ps' not found on input line 616.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.616 ...phics[height=20mm, width=20mm]{Happy3.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Happy4.ps' not found on input line 618.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.618 ...phics[height=20mm, width=20mm]{Happy4.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Happy5.ps' not found on input line 620.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 ...phics[height=20mm, width=20mm]{Happy5.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Happy6.ps' not found on input line 622.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.622 ...phics[height=20mm, width=20mm]{Happy6.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Sad1.ps' not found on input line 624.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.624 ...raphics[height=20mm, width=20mm]{Sad1.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Sad2.ps' not found on input line 626.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.626 ...raphics[height=20mm, width=20mm]{Sad2.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Sad3.ps' not found on input line 628.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.628 ...raphics[height=20mm, width=20mm]{Sad3.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Sad4.ps' not found on input line 630.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.630 ...raphics[height=20mm, width=20mm]{Sad4.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Sad5.ps' not found on input line 632.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.632 ...raphics[height=20mm, width=20mm]{Sad5.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Sad6.ps' not found on input line 634.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.634 ...raphics[height=20mm, width=20mm]{Sad6.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Happy2new.ps' not found on input line 642.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.642 ...cs[height=20mm, width=20mm]{Happy2new.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Happy3.ps' not found on input line 644.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.644 ...phics[height=20mm, width=20mm]{Happy3.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Sad1.ps' not found on input line 646.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.646 ...raphics[height=20mm, width=20mm]{Sad1.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Sad3.ps' not found on input line 648.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.648 ...raphics[height=20mm, width=20mm]{Sad3.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Surprise2.ps' not found on input line 650.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.650 ...cs[height=20mm, width=20mm]{Surprise2.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Surprise5.ps' not found on input line 652.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.652 ...cs[height=20mm, width=20mm]{Surprise5.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Happy2thresholdnew.ps' not found on input line 654.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.654 ...=20mm, width=20mm]{Happy2thresholdnew.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Happy3thresholdnew.ps' not found on input line 656.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.656 ...=20mm, width=20mm]{Happy3thresholdnew.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Sad1thresholdnew.ps' not found on input line 658.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.658 ...ht=20mm, width=20mm]{Sad1thresholdnew.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Sad3thresholdnew.ps' not found on input line 660.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.660 ...ht=20mm, width=20mm]{Sad3thresholdnew.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Surprise2thresholdnew.ps' not found on input line 662.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.662 ...mm, width=20mm]{Surprise2thresholdnew.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Surprise5thresholdnew.ps' not found on input line 664.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.664 ...mm, width=20mm]{Surprise5thresholdnew.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Happy2locatedd.ps' not found on input line 666.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.666 ...ight=20mm, width=20mm]{Happy2locatedd.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Happy3locatedd.ps' not found on input line 668.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.668 ...ight=20mm, width=20mm]{Happy3locatedd.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Sad1locatedd.ps' not found on input line 670.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.670 ...height=20mm, width=20mm]{Sad1locatedd.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Sad3locatedd.ps' not found on input line 672.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.672 ...height=20mm, width=20mm]{Sad3locatedd.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Surprise2locatedd.ps' not found on input line 674.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.674 ...t=20mm, width=20mm]{Surprise2locatedd.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Surprise5locatedd.ps' not found on input line 676.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.676 ...t=20mm, width=20mm]{Surprise5locatedd.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Happy2pont.ps' not found on input line 678.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.678 ...s[height=20mm, width=20mm]{Happy2pont.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Happy3point.ps' not found on input line 680.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.680 ...[height=20mm, width=20mm]{Happy3point.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Sad1point.ps' not found on input line 682.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.682 ...cs[height=20mm, width=20mm]{Sad1point.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Sad3point.ps' not found on input line 684.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.684 ...cs[height=20mm, width=20mm]{Sad3point.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Surprise2point.ps' not found on input line 686.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.686 ...ight=20mm, width=20mm]{Surprise2point.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Surprise5point.ps' not found on input line 688.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.688 ...ight=20mm, width=20mm]{Surprise5point.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Happy2ROI.ps' not found on input line 690.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.690 ...cs[height=20mm, width=20mm]{Happy2ROI.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Happy3ROI.ps' not found on input line 692.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.692 ...cs[height=20mm, width=20mm]{Happy3ROI.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Sad1ROI.ps' not found on input line 694.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.694 ...hics[height=20mm, width=20mm]{Sad1ROI.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Sad3ROI.ps' not found on input line 696.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.696 ...hics[height=20mm, width=20mm]{Sad3ROI.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Surprise2ROI.ps' not found on input line 698.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.698 ...height=20mm, width=20mm]{Surprise2ROI.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Surprise5ROI.ps' not found on input line 700.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.700 ...height=20mm, width=20mm]{Surprise5ROI.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (2.55624pt too wide) in paragraph at lines 708--801
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[22] [23]
+No file template-num.bbl.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
+[25] (template-num.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 4.5pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3177 strings out of 493312
+ 39789 string characters out of 3138901
+ 114038 words of memory out of 3000000
+ 6583 multiletter control sequences out of 15000+200000
+ 19953 words of font info for 84 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,17n,26p,4563b,305s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on template-num.pdf (25 pages, 353385 bytes).
+PDF statistics:
+ 167 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

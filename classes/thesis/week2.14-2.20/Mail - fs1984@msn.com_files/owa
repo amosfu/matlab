@@ -1,0 +1,82 @@
+document.write("<!--*\n");
+document.write("var aolAdId=\"7637809|25836681\";\n");
+document.write("var aolSize=\"160|600\";\n");
+document.write("var aolFormat=\"HTML\";\n");
+document.write("var aolAppNexus=\"AST\";\n");
+document.write("var aolGUID=\"1489425972|23083155989811585\";\n");
+document.write("*-->\n");
+var anPG = "WAB2CAEN".toUpperCase();
+var apntag = apntag || {}; apntag.anq = apntag.anq || [];
+(function() {
+var anMKT = "ca".toUpperCase();
+var d = document, e = d.createElement('script'), p = d.getElementsByTagName('head')[0];
+e.type = 'text/javascript';  e.async = true;
+    e.src = '//acdn.adnxs.com/ast/ast.js';
+p.insertBefore(e, p.firstChild);
+})();
+apntag.anq.push(function() {
+var anMKT = "ca".toUpperCase();
+var escValue=escape('pg:' + anPG + ';p:;r:');
+apntag.setPageOpts({member:280, user:{externalUid:'04eb9eb5c0b767110de5949ec4b76495',dnt:''}});
+apntag.defineTag({invCode:anPG, sizes:[160,600], targetId:anPG, allowSmallerSizes:false, keywords: {pagetype:'', optout:'', provider_id:'', rid:''}, externalInvCode:anMKT, externalImpId:'1489425972|23083155989811585', trafficSourceCode:escValue,nobidIfUnsold:true});
+apntag.setEndpoint('m.adnxs.com');
+apntag.loadTags();
+});
+document.write("<div id=\"" + anPG + "\">\n");
+apntag.anq.push(function() {
+apntag.showTag(anPG);
+apntag.onEvent('adAvailable', anPG, function(adObj) {
+try {
+parent.adsANOnL(window,adObj,'');
+}
+catch(e){}
+});
+apntag.onEvent('adNoBid', anPG, function(adObj) {
+try {
+parent.adsANOnL(window,adObj,'noad');
+}
+catch(e){}
+});
+apntag.onEvent('adRequestFailure', anPG, function(adError){
+try {
+parent.adsANOnL(window,adError,'error');
+}
+catch(e){}
+});
+});
+
+
+
+
+document.write("<!--*\n");
+document.write("var moatClientLevel1=5113\n");
+document.write("var moatClientLevel2=264961\n");
+document.write("var moatClientLevel3=0\n");
+document.write("var moatClientLevel4=3769894\n");
+document.write("var zMoatMaster=7637808\n");
+document.write("var zMoatFlight=7637809\n");
+document.write("var zMoatBanner=25836681\n");
+document.write("var zURL=https\n");
+document.write("var zMoatPlacementId=3769894\n");
+document.write("var zMoatPlacementExtId=93487202\n");
+document.write("var zMoatAdId=7637809\n");
+document.write("var zMoatCreative=0\n");
+document.write("var zMoatBannerID=7\n");
+document.write("var zMoatCustomVisp=50\n");
+document.write("var zMoatCustomVist=1000\n");
+document.write("var zMoatIsAdvisGoal=0\n");
+document.write("var zMoatEventUrl=\n");
+document.write("var zMoatSize=154\n");
+document.write("var zMoatSubNetID=1\n");
+document.write("var zMoatisSelected=0\n");
+document.write("var zMoatadServer=ol.at.atwola.com\n");
+document.write("var zMoatadVisServer=\n");
+document.write("var zMoatSamplingRate=23\n");
+document.write("var zMoatliveTestCookie=\n");
+document.write("var zMoatRefSeqId=BGVERIgASBA\n");
+document.write("var zMoatImpRefTs=1489425972\n");
+document.write("var zMoatAlias=wab2caen\n");
+document.write("var zMoatWebsiteID=264961\n");
+document.write("var zMoatVert=\n");
+document.write("var zMoatBannerInfo=480828136\n");
+document.write("*-->\n");
