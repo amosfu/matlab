@@ -1,0 +1,14 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Asyn_DHEKE.aux
+The style file: IEEEtran.bst
+Database file #1: IEEEabrv.bib
+Database file #2: shuai.bib
+A bad cross reference---entry "Bouguila2007"
+refers to entry "DBLP:conf/cvpr/2007", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/cvpr/2007"
+-- IEEEtran.bst version 1.12 (2007/01/11) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in Li2007
+
+Done.
+(There was 1 error message)

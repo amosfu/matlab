@@ -1,0 +1,14 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: template.aux
+The style file: spmpsci.bst
+Database file #1: shuai.bib
+Warning--entry type for "Cisco2017" isn't style-file defined
+--line 356 of file shuai.bib
+Warning--entry type for "Lab2018" isn't style-file defined
+--line 406 of file shuai.bib
+Warning--entry type for "Hopkins2018" isn't style-file defined
+--line 436 of file shuai.bib
+Too many commas in name 1 of "Mark Hopkins, Erik Reeber, George Forman, Jaap Suermondt" for entry Hopkins2018
+while executing---line 1462 of file spmpsci.bst
+Too many commas in name 1 of "Mark Hopkins, Erik Reeber, George Forman, Jaap Suermondt" for entry Hopkins2018
+while executing---line 1503 of file spmpsci.bst
+(There were 2 error messages)

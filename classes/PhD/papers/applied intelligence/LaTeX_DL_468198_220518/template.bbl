@@ -1,0 +1,223 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{Ashfaq2017}
+Ashfaq, R.A.R., Wang, X.Z., Huang, J.Z., Abbas, H., He, Y.L.: Fuzziness based
+  semi-supervised learning approach for intrusion detection system.
+\newblock Information Sciences \textbf{378}, 484 -- 497 (2017)
+
+\bibitem{Azam2015}
+Azam, M., Bouguila, N.: Unsupervised keyword spotting using bounded generalized
+  gaussian mixture model with {ICA}.
+\newblock In: 2015 {IEEE} Global Conference on Signal and Information
+  Processing, GlobalSIP 2015, Orlando, FL, USA, December 14-16, 2015, pp.
+  1150--1154. {IEEE} (2015)
+
+\bibitem{Bouguila2011}
+Bouguila, N.: Bayesian hybrid generative discriminative learning based on
+  finite liouville mixture models.
+\newblock Pattern Recognition \textbf{44}(6), 1183--1200 (2011)
+
+\bibitem{Bouguila2011a}
+Bouguila, N.: Count data modeling and classification using finite mixtures of
+  distributions.
+\newblock {IEEE} Trans. Neural Networks \textbf{22}(2), 186--198 (2011)
+
+\bibitem{Bouguila2012}
+Bouguila, N., Elguebaly, T.: A fully bayesian model based on reversible jump
+  {MCMC} and finite beta mixtures for clustering.
+\newblock Expert Syst. Appl. \textbf{39}(5), 5946--5959 (2012)
+
+\bibitem{Bouguila2004a}
+Bouguila, N., Ziou, D.: Dirichlet-based probability model applied to human skin
+  detection [image skin detection].
+\newblock In: 2004 {IEEE} International Conference on Acoustics, Speech, and
+  Signal Processing, {ICASSP} 2004, Montreal, Quebec, Canada, May 17-21, 2004,
+  pp. 521--524. {IEEE} (2004)
+
+\bibitem{Bouguila2004}
+Bouguila, N., Ziou, D.: A powreful finite mixture model based on the
+  generalized dirichlet distribution: Unsupervised learning and applications.
+\newblock In: 17th International Conference on Pattern Recognition, {ICPR}
+  2004, Cambridge, UK, August 23-26, 2004., pp. 280--283. {IEEE} Computer
+  Society (2004)
+
+\bibitem{Bouguila2011b}
+Bouguila, N., Ziou, D., Boutemedjet, S.: Simultaneous non-gaussian data
+  clustering, feature selection and outliers rejection.
+\newblock In: S.O. Kuznetsov, D.P. Mandal, M.K. Kundu, S.K. Pal (eds.) Pattern
+  Recognition and Machine Intelligence - 4th International Conference, PReMI
+  2011, Moscow, Russia, June 27 - July 1, 2011. Proceedings, \emph{Lecture
+  Notes in Computer Science}, vol. 6744, pp. 364--369. Springer (2011)
+
+\bibitem{Bouguila2009}
+Bouguila, N., Ziou, D., Hammoud, R.I.: On bayesian analysis of a finite
+  generalized dirichlet mixture via a metropolis-within-gibbs sampling.
+\newblock Pattern Anal. Appl. \textbf{12}(2), 151--166 (2009)
+
+\bibitem{Bouguila2006}
+Bouguila, N., Ziou, D., Monga, E.: Practical bayesian estimation of a finite
+  beta mixture through gibbs sampling and its applications.
+\newblock Statistics and Computing \textbf{16}(2), 215--225 (2006)
+
+\bibitem{Bourouis2014}
+Bourouis, S., Mashrgy, M.A., Bouguila, N.: Bayesian learning of finite
+  generalized inverted dirichlet mixtures: Application to object classification
+  and forgery detection.
+\newblock Expert Syst. Appl. \textbf{41}(5), 2329--2336 (2014)
+
+\bibitem{Boutemedjet2009}
+Boutemedjet, S., Bouguila, N., Ziou, D.: A hybrid feature extraction selection
+  approach for high-dimensional non-gaussian data clustering.
+\newblock {IEEE} Trans. Pattern Anal. Mach. Intell. \textbf{31}(8), 1429--1443
+  (2009)
+
+\bibitem{Buczak2016}
+Buczak, A.L., Guven, E.: A survey of data mining and machine learning methods
+  for cyber security intrusion detection.
+\newblock IEEE Communications Surveys Tutorials \textbf{18}(2), 1153--1176
+  (2016)
+
+\bibitem{Casella2004}
+Casella, G., Robert, C.P., Wells, M.T.: Mixture models, latent variables and
+  partitioned importance sampling.
+\newblock Statistical Methodology \textbf{1}(1-2), 1--18 (2004)
+
+\bibitem{Dempster1977}
+Dempster, A.P., Laird, N.M., Rubin, D.B.: Maximum likelihood from incomplete
+  data via the em algorithm.
+\newblock Journal of the royal statistical society. Series B (methodological)
+  pp. 1--38 (1977)
+
+\bibitem{Dy2004}
+Dy, J.G., Brodley, C.E.: Feature selection for unsupervised learning.
+\newblock Journal of Machine Learning Research \textbf{5}, 845--889 (2004)
+
+\bibitem{Elguebaly2011}
+Elguebaly, T., Bouguila, N.: Bayesian learning of finite generalized gaussian
+  mixture models on images.
+\newblock Signal Processing \textbf{91}(4), 801--820 (2011)
+
+\bibitem{Elguebaly2013}
+Elguebaly, T., Bouguila, N.: Simultaneous bayesian clustering and feature
+  selection using rjmcmc-based learning of finite generalized dirichlet mixture
+  models.
+\newblock Signal Processing \textbf{93}(6), 1531--1546 (2013)
+
+\bibitem{Elguebaly2014}
+Elguebaly, T., Bouguila, N.: Background subtraction using finite mixtures of
+  asymmetric gaussian distributions and shadow detection.
+\newblock Mach. Vis. Appl. \textbf{25}(5), 1145--1162 (2014)
+
+\bibitem{Elguebaly2015}
+Elguebaly, T., Bouguila, N.: Simultaneous high-dimensional clustering and
+  feature selection using asymmetric gaussian mixture models.
+\newblock Image and Vision Computing \textbf{34}, 27--41 (2015)
+
+\bibitem{Geman1987}
+Geman, S., Geman, D.: Stochastic relaxation, gibbs distributions, and the
+  bayesian restoration of images.
+\newblock In: Readings in Computer Vision, pp. 564--584. Elsevier (1987)
+
+\bibitem{Hartigan1979}
+Hartigan, J.A., Wong, M.A.: Algorithm as 136: A k-means clustering algorithm.
+\newblock Journal of the Royal Statistical Society. Series C (Applied
+  Statistics) \textbf{28}(1), 100--108 (1979)
+
+\bibitem{Hastings1970}
+Hastings, W.K.: Monte carlo sampling methods using markov chains and their
+  applications.
+\newblock Biometrika \textbf{57}(1), 97--109 (1970)
+
+\bibitem{Cisco2017}
+Investor.cisco.com: Cisco 2017 annual cybersecurity report (2018).
+\newblock
+  \urlprefix\url{https://investor.cisco.com/investor-relations/news-and-events/news/news-details/2017/Cisco-2017-Annual-Cybersecurity-Report-Chief-Security-Officers-Reveal-True-Cost-of-Breaches-And-The-Actions-That-Organizations-Are-Taking/default.aspx}
+
+\bibitem{Kohavi1997}
+Kohavi, R., John, G.H.: Wrappers for feature subset selection.
+\newblock Artif. Intell. \textbf{97}(1-2), 273--324 (1997)
+
+\bibitem{Lab2018}
+Lab, K.: Spam: share of global email traffic 2014-2017 (2018).
+\newblock
+  \urlprefix\url{https://www.statista.com/statistics/420391/spam-email-traffic-share/}
+
+\bibitem{Law2004}
+Law, M.H., Figueiredo, M.A., Jain, A.K.: Simultaneous feature selection and
+  clustering using mixture models.
+\newblock IEEE transactions on pattern analysis and machine intelligence
+  \textbf{26}(9), 1154--1166 (2004)
+
+\bibitem{Lee1998}
+Lee, W., Stolfo, S.J.: Data mining approaches for intrusion detection.
+\newblock In: A.D. Rubin (ed.) Proceedings of the 7th {USENIX} Security
+  Symposium, San Antonio, TX, USA, January 26-29, 1998. {USENIX} Association
+  (1998)
+
+\bibitem{Luengo2013}
+Luengo, D., Martino, L.: Fully adaptive gaussian mixture metropolis-hastings
+  algorithm.
+\newblock In: {IEEE} International Conference on Acoustics, Speech and Signal
+  Processing, {ICASSP} 2013, Vancouver, BC, Canada, May 26-31, 2013, pp.
+  6148--6152. {IEEE} (2013)
+
+\bibitem{Mao2005}
+Mao, K.Z.: Identifying critical variables of principal components for
+  unsupervised feature selection.
+\newblock {IEEE} Trans. Systems, Man, and Cybernetics, Part {B} \textbf{35}(2),
+  339--344 (2005)
+
+\bibitem{Hopkins2018}
+Mark~Hopkins Erik~Reeber, G.F.J.S.: Uci machine learning repository: Spambase
+  data set (2018).
+\newblock
+  \urlprefix\url{http://archive.ics.uci.edu/ml/datasets/Spambase?ref=datanews.io}
+
+\bibitem{Raudys1991}
+Raudys, S., Jain, A.K.: Small sample size effects in statistical pattern
+  recognition: Recommendations for practitioners.
+\newblock {IEEE} Trans. Pattern Anal. Mach. Intell. \textbf{13}(3), 252--264
+  (1991)
+
+\bibitem{Richardson1997}
+Richardson, S., Green, P.J.: On bayesian analysis of mixtures with an unknown
+  number of components (with discussion).
+\newblock Journal of the Royal Statistical Society: series B (statistical
+  methodology) \textbf{59}(4), 731--792 (1997)
+
+\bibitem{Stephens2000}
+Stephens, M.: Bayesian analysis of mixture models with an unknown number of
+  components-an alternative to reversible jump methods.
+\newblock Annals of statistics pp. 40--74 (2000)
+
+\bibitem{Tavallaee2009}
+Tavallaee, M., Bagheri, E., Lu, W., Ghorbani, A.A.: A detailed analysis of the
+  {KDD} {CUP} 99 data set.
+\newblock In: 2009 {IEEE} Symposium on Computational Intelligence for Security
+  and Defense Applications, {CISDA} 2009, Ottawa, Canada, July 8-10, 2009, pp.
+  1--6. {IEEE} (2009)
+
+\bibitem{Tsai2008}
+Tsai, C., Chiu, C.: Developing a feature weight self-adjustment mechanism for a
+  k-means clustering algorithm.
+\newblock Computational Statistics {\&} Data Analysis \textbf{52}(10),
+  4658--4672 (2008)
+
+\bibitem{Wen2015}
+Wen, C.K., Jin, S., Wong, K.K., Chen, J.C., Ting, P.: Channel estimation for
+  massive mimo using gaussian-mixture bayesian learning.
+\newblock IEEE Transactions on Wireless Communications \textbf{14}(3),
+  1356--1368 (2015)
+
+\bibitem{Yang2015}
+Yang, J., Liao, X., Yuan, X., Llull, P., Brady, D.J., Sapiro, G., Carin, L.:
+  Compressive sensing by learning a gaussian mixture model from measurements.
+\newblock IEEE Transactions on Image Processing \textbf{24}(1), 106--119 (2015)
+
+\end{thebibliography}
